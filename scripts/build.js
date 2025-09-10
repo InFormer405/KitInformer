@@ -15,11 +15,19 @@ const productURL = (sku, title) => `/products/${slug(`${sku}-${title}`)}/`;
 const catURL = name => `/category/${slug(name)}/`;
 const stateCatURL = state => `/category/divorce-kits/${slug(state)}/`;
 
-const clean = (s='') => String(s)
-  .replace(/[\u2018\u2019\u201B\u2032]/g, "'")   // curly apostrophes → '
-  .replace(/[\u201C\u201D\u2033]/g, '"')       // curly quotes → "
-  .replace(/[\u2013\u2014\u2212]/g, "-")       // en/em dashes → -
-  .replace(/\u00A0/g, " ")                     // non-breaking space → space
+const clean = (s = "") => String(s)
+  // real Unicode punctuation → plain ASCII
+  .replace(/[\u2018\u2019\u201B\u2032]/g, "'")   // curly apostrophes
+  .replace(/[\u201C\u201D\u2033]/g, '"')        // curly quotes
+  .replace(/[\u2013\u2014\u2212]/g, "-")        // en/em dashes
+  .replace(/\u00A0/g, " ")                      // non-breaking space
+  // common mojibake (mis-decoded UTF-8) → ASCII
+  .replace(/â€™/g, "'")
+  .replace(/â€˜/g, "'")
+  .replace(/â€œ|â€/g, '"')
+  .replace(/â€"|â€"/g, "-")
+  .replace(/Â/g, "")
+  // tidy
   .replace(/\s+/g, " ")
   .trim();
 
