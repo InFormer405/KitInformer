@@ -54,13 +54,13 @@ fetch('/search-index.json').then(r=>r.json()).then(data=>{
 
 const card = p => `<article class="card">
   <a href="${productURL(p.SKU, p.Title)}">
-    <img src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${clean(p.Title)}">
-    <h3>${clean(p.Title)}</h3>
+    <img src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${p.Title}">
+    <h3>${p.Title}</h3>
     <div class="meta">
       <span class="price">$${Number(p.PriceUSD).toFixed(2)}</span>
-      <span class="badge">${clean(p.ChildrenStatus || "")}</span>
+      <span class="badge">${p.ChildrenStatus || ""}</span>
     </div>
-    <p class="blurb">${clean(p.ShortDescription || "")}</p>
+    <p class="blurb">${p.ShortDescription || ""}</p>
   </a>
 </article>`;
 
@@ -70,7 +70,13 @@ async function main(){
   const txt = await res.text();
   const rows = parse(txt, { columns:true, skip_empty_lines:true });
 
-  const products = rows.filter(r => (r.IsActive||"").toString().toLowerCase()==="true" && (r.Category||"").toLowerCase()==="divorce kits");
+  const sanitizeRow = (row) =>
+    Object.fromEntries(Object.entries(row).map(([k, v]) => [k, clean(v)]));
+
+  const rowsSanitized = rows.map(sanitizeRow);
+  console.log("Rows read:", rows.length, "Sanitized:", rowsSanitized.length, "Sample title:", rowsSanitized[0]?.Title);
+
+  const products = rowsSanitized.filter(r => (r.IsActive||"").toString().toLowerCase()==="true" && (r.Category||"").toLowerCase()==="divorce kits");
 
   await ensureDir(OUT);
   await fs.promises.writeFile(path.join(OUT,"products.json"), JSON.stringify(products,null,2));
@@ -106,9 +112,9 @@ async function main(){
     ).slice(0,6);
     const buy = `<a class="btn" href="#" onclick="alert('Stripe Checkout wire-up comes in Step 5.')">Buy Now</a>`;
     const body = `<article class="pdp">
-      <img class="hero" src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${clean(p.Title)}">
-      <div class="meta"><h1>${clean(p.Title)}</h1><div class="price">$${Number(p.PriceUSD).toFixed(2)}</div>${buy}
-      <p class="short">${clean(p.ShortDescription||"")}</p><hr/><div class="long">${clean(p.LongDescription||"").replace(/\n/g,"<br>")}</div></div></article>
+      <img class="hero" src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${p.Title}">
+      <div class="meta"><h1>${p.Title}</h1><div class="price">$${Number(p.PriceUSD).toFixed(2)}</div>${buy}
+      <p class="short">${p.ShortDescription||""}</p><hr/><div class="long">${(p.LongDescription||"").replace(/\n/g,"<br>")}</div></div></article>
       ${related.length? `<section><h2>Customers also bought</h2><div class="grid">${related.map(card).join("")}</div></section>`:""}`;
     await fs.promises.writeFile(path.join(dir,"index.html"), page({title:`${p.Title} — InFormer`, desc:p.ShortDescription||p.Title, body}));
   }
