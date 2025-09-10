@@ -15,9 +15,17 @@ const productURL = (sku, title) => `/products/${slug(`${sku}-${title}`)}/`;
 const catURL = name => `/category/${slug(name)}/`;
 const stateCatURL = state => `/category/divorce-kits/${slug(state)}/`;
 
+const clean = (s='') => String(s)
+  .replace(/[\u2018\u2019\u201B\u2032]/g, "'")   // curly apostrophes → '
+  .replace(/[\u201C\u201D\u2033]/g, '"')       // curly quotes → "
+  .replace(/[\u2013\u2014\u2212]/g, "-")       // en/em dashes → -
+  .replace(/\u00A0/g, " ")                     // non-breaking space → space
+  .replace(/\s+/g, " ")
+  .trim();
+
 const page = ({title,desc="",body}) => `<!doctype html><html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title}</title><meta name="description" content="${desc.replace(/"/g,"&quot;")}">
+<title>${title}</title><meta name="description" content="${clean(desc).replace(/"/g,"&quot;")}">
 <link rel="stylesheet" href="/styles.css"></head>
 <body>
 <header class="hdr"><a class="logo" href="/">InFormer</a>
@@ -38,10 +46,13 @@ fetch('/search-index.json').then(r=>r.json()).then(data=>{
 
 const card = p => `<article class="card">
   <a href="${productURL(p.SKU, p.Title)}">
-    <img src="${p.CoverImageURL || "/placeholder.png"}" alt="${p.Title}">
-    <h3>${p.Title}</h3>
-    <div class="meta"><span class="price">$${Number(p.PriceUSD).toFixed(2)}</span><span class="badge">${p.ChildrenStatus || ""}</span></div>
-    <p class="blurb">${p.ShortDescription || ""}</p>
+    <img src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${clean(p.Title)}">
+    <h3>${clean(p.Title)}</h3>
+    <div class="meta">
+      <span class="price">$${Number(p.PriceUSD).toFixed(2)}</span>
+      <span class="badge">${clean(p.ChildrenStatus || "")}</span>
+    </div>
+    <p class="blurb">${clean(p.ShortDescription || "")}</p>
   </a>
 </article>`;
 
@@ -87,9 +98,9 @@ async function main(){
     ).slice(0,6);
     const buy = `<a class="btn" href="#" onclick="alert('Stripe Checkout wire-up comes in Step 5.')">Buy Now</a>`;
     const body = `<article class="pdp">
-      <img class="hero" src="${p.CoverImageURL || "/placeholder.png"}" alt="${p.Title}">
-      <div class="meta"><h1>${p.Title}</h1><div class="price">$${Number(p.PriceUSD).toFixed(2)}</div>${buy}
-      <p class="short">${p.ShortDescription||""}</p><hr/><div class="long">${(p.LongDescription||"").replace(/\n/g,"<br>")}</div></div></article>
+      <img class="hero" src="${p.CoverImageURL || "/placeholder.svg"}" onerror="this.src='/placeholder.svg'" alt="${clean(p.Title)}">
+      <div class="meta"><h1>${clean(p.Title)}</h1><div class="price">$${Number(p.PriceUSD).toFixed(2)}</div>${buy}
+      <p class="short">${clean(p.ShortDescription||"")}</p><hr/><div class="long">${clean(p.LongDescription||"").replace(/\n/g,"<br>")}</div></div></article>
       ${related.length? `<section><h2>Customers also bought</h2><div class="grid">${related.map(card).join("")}</div></section>`:""}`;
     await fs.promises.writeFile(path.join(dir,"index.html"), page({title:`${p.Title} — InFormer`, desc:p.ShortDescription||p.Title, body}));
   }
@@ -107,8 +118,17 @@ async function main(){
   const xml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${u}</loc></url>`).join("")}</urlset>`;
   await fs.promises.writeFile(path.join(OUT,"sitemap.xml"), xml);
 
-  const css = `.wrap{max-width:1100px;margin:0 auto;padding:24px}.hdr,.ftr{padding:12px 24px;background:#0b1b34;color:#fff}.logo{font-weight:800;color:#ffd700;text-decoration:none}.search{width:100%;max-width:460px;margin-left:16px;padding:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:16px 0}.card{background:#fff;border:1px solid #e6e6e6;border-radius:16px;overflow:hidden}.card img{width:100%;height:160px;object-fit:cover;background:#f5f5f5}.card h3{font-size:16px;margin:12px}.meta{display:flex;justify-content:space-between;align-items:center;margin:0 12px 8px}.price{font-weight:700}.badge{background:#eef;border-radius:999px;padding:2px 8px;font-size:12px}.blurb{margin:0 12px 16px;color:#444}.hero{width:100%;max-width:520px;border-radius:16px;background:#f5f5f5}.pdp{display:grid;grid-template-columns:1fr;gap:24px}@media(min-width:900px){.pdp{grid-template-columns:1fr 1fr}}.btn{display:inline-block;padding:10px 16px;border-radius:12px;background:#ffd700;color:#0b1b34;font-weight:800;text-decoration:none;margin:8px 0}.state-nav a{margin-right:8px}`;
+  const css = `.wrap{max-width:1100px;margin:0 auto;padding:24px}.hdr,.ftr{padding:12px 24px;background:#0b1b34;color:#fff}.logo{font-weight:800;color:#ffd700;text-decoration:none}.search{width:100%;max-width:460px;margin-left:16px;padding:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:16px 0}.card{background:#fff;border:1px solid #e6e6e6;border-radius:16px;overflow:hidden}.card img{width:100%;height:160px;object-fit:cover;background:#f5f5f5}.card h3{font-size:16px;margin:12px}.meta{display:flex;justify-content:space-between;align-items:center;margin:0 12px 8px}.price{font-weight:700}.badge{background:#eef;border-radius:999px;padding:2px 8px;font-size:12px}.blurb{margin:0 12px 16px;color:#444}.hero{width:100%;max-width:520px;border-radius:16px;background:#f5f5f5}.pdp{display:grid;grid-template-columns:1fr;gap:24px}@media(min-width:900px){.pdp{grid-template-columns:1fr 1fr}}.btn{display:inline-block;padding:10px 16px;border-radius:12px;background:#ffd700;color:#0b1b34;font-weight:800;text-decoration:none;margin:8px 0}.state-nav a{margin-right:8px}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:inherit;text-decoration:none}.card a:hover h3{text-decoration:underline}`;
   await fs.promises.writeFile(path.join(OUT,"styles.css"), css);
+
+  await fs.promises.writeFile(path.join(OUT,"placeholder.svg"),
+`<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360">
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#999">
+    Cover image
+  </text>
+</svg>`);
 
   console.log("✅ Build complete → public/ ready.");
 }
