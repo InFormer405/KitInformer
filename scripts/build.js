@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 import { parse } from "csv-parse/sync";
 
 const OUT = "public";
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPi8CVtd66ODWceUVpLZJPUr0UcBndWhhKrW3CEazY_XkF4rysf1S7uOk24UE5q2nfsXeS-xhqWJSY/pub?output=csv";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6m74xLHujDYqwMg936UdFhRxQdec31TUh350oCYW3HIRpqZNahBhNa9RWXWLdip7lo0oMQvzRUh0-/pub?output=csv";
 
 const SITE = { base: "https://example.com", title: "InFormer — DIY Legal Kits" };
 
