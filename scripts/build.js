@@ -15,19 +15,21 @@ const productURL = (sku, title) => `/products/${slug(`${sku}-${title}`)}/`;
 const catURL = name => `/category/${slug(name)}/`;
 const stateCatURL = state => `/category/divorce-kits/${slug(state)}/`;
 
-const clean = (s = "") => String(s)
-  // real Unicode punctuation → plain ASCII
-  .replace(/[\u2018\u2019\u201B\u2032]/g, "'")   // curly apostrophes
-  .replace(/[\u201C\u201D\u2033]/g, '"')        // curly quotes
-  .replace(/[\u2013\u2014\u2212]/g, "-")        // en/em dashes
-  .replace(/\u00A0/g, " ")                      // non-breaking space
-  // common mojibake (mis-decoded UTF-8) → ASCII
-  .replace(/â€™/g, "'")
-  .replace(/â€˜/g, "'")
-  .replace(/â€œ|â€/g, '"')
-  .replace(/â€"|â€"/g, "-")
+const fixEncoding = (s = "") => {
+  try { return decodeURIComponent(escape(String(s))); } 
+  catch { return String(s); }
+};
+
+const clean = (s = "") => String(fixEncoding(s))
+  .replace(/[\u2018\u2019\u201B\u2032]/g, "'")
+  .replace(/[\u201C\u201D\u2033]/g, '"')
+  .replace(/[\u2013\u2014\u2212]/g, "-")
+  .replace(/\u00A0/g, " ")
+  .replace(/â€™|Ã¢â‚¬â„¢|Ã¢Â€Â™/g, "'")
+  .replace(/â€˜|Ã¢â‚¬Ëœ|Ã¢Â€Âœ/g, "'")
+  .replace(/â€œ|â€|Ã¢â‚¬Å"|Ã¢â‚¬Â|Ã¢Â€Âœ|Ã¢Â€Â/g, '"')
+  .replace(/â€"|â€"|Ã¢â‚¬â€œ|Ã¢â‚¬â€"|Ã¢Â€Â"|Ã¢Â€Â"/g, "-")
   .replace(/Â/g, "")
-  // tidy
   .replace(/\s+/g, " ")
   .trim();
 
