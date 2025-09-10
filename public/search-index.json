@@ -1,7 +1,7 @@
 [
   {
     "sku": "INF-AL-WC",
-    "title": "Alabama Divorce Kit â With Children",
+    "title": "Alabama Divorce Kit - With Children",
     "price": "135",
     "state": "Alabama",
     "tags": "divorce, alabama, with-children, state-kits",
@@ -9,7 +9,7 @@
   },
   {
     "sku": "INF-AL-NC",
-    "title": "Alabama Divorce Kit â No Children",
+    "title": "Alabama Divorce Kit - No Children",
     "price": "115",
     "state": "Alabama",
     "tags": "divorce, alabama, no-children, state-kits",
@@ -17,7 +17,7 @@
   },
   {
     "sku": "INF-AK-WC",
-    "title": "Alaska Divorce Kit â With Children",
+    "title": "Alaska Divorce Kit - With Children",
     "price": "135",
     "state": "Alaska",
     "tags": "divorce, alaska, with-children, state-kits",
@@ -25,7 +25,7 @@
   },
   {
     "sku": "INF-AK-NC",
-    "title": "Alaska Divorce Kit â No Children",
+    "title": "Alaska Divorce Kit - No Children",
     "price": "115",
     "state": "Alaska",
     "tags": "divorce, alaska, no-children, state-kits",
@@ -33,7 +33,7 @@
   },
   {
     "sku": "INF-AZ-WC",
-    "title": "Arizona Divorce Kit â With Children",
+    "title": "Arizona Divorce Kit - With Children",
     "price": "135",
     "state": "Arizona",
     "tags": "divorce, arizona, with-children, state-kits",
@@ -41,7 +41,7 @@
   },
   {
     "sku": "INF-AZ-NC",
-    "title": "Arizona Divorce Kit â No Children",
+    "title": "Arizona Divorce Kit - No Children",
     "price": "115",
     "state": "Arizona",
     "tags": "divorce, arizona, no-children, state-kits",
@@ -49,7 +49,7 @@
   },
   {
     "sku": "INF-AR-WC",
-    "title": "Arkansas Divorce Kit â With Children",
+    "title": "Arkansas Divorce Kit - With Children",
     "price": "135",
     "state": "Arkansas",
     "tags": "divorce, arkansas, with-children, state-kits",
@@ -57,7 +57,7 @@
   },
   {
     "sku": "INF-AR-NC",
-    "title": "Arkansas Divorce Kit â No Children",
+    "title": "Arkansas Divorce Kit - No Children",
     "price": "115",
     "state": "Arkansas",
     "tags": "divorce, arkansas, no-children, state-kits",
@@ -65,7 +65,7 @@
   },
   {
     "sku": "INF-CA-WC",
-    "title": "California Divorce Kit â With Children",
+    "title": "California Divorce Kit - With Children",
     "price": "135",
     "state": "California",
     "tags": "divorce, california, with-children, state-kits",
@@ -73,7 +73,7 @@
   },
   {
     "sku": "INF-CA-NC",
-    "title": "California Divorce Kit â No Children",
+    "title": "California Divorce Kit - No Children",
     "price": "115",
     "state": "California",
     "tags": "divorce, california, no-children, state-kits",
@@ -81,7 +81,7 @@
   },
   {
     "sku": "INF-CO-WC",
-    "title": "Colorado Divorce Kit â With Children",
+    "title": "Colorado Divorce Kit - With Children",
     "price": "135",
     "state": "Colorado",
     "tags": "divorce, colorado, with-children, state-kits",
@@ -89,7 +89,7 @@
   },
   {
     "sku": "INF-CO-NC",
-    "title": "Colorado Divorce Kit â No Children",
+    "title": "Colorado Divorce Kit - No Children",
     "price": "115",
     "state": "Colorado",
     "tags": "divorce, colorado, no-children, state-kits",
@@ -97,7 +97,7 @@
   },
   {
     "sku": "INF-CT-WC",
-    "title": "Connecticut Divorce Kit â With Children",
+    "title": "Connecticut Divorce Kit - With Children",
     "price": "135",
     "state": "Connecticut",
     "tags": "divorce, connecticut, with-children, state-kits",
@@ -105,7 +105,7 @@
   },
   {
     "sku": "INF-CT-NC",
-    "title": "Connecticut Divorce Kit â No Children",
+    "title": "Connecticut Divorce Kit - No Children",
     "price": "115",
     "state": "Connecticut",
     "tags": "divorce, connecticut, no-children, state-kits",
@@ -113,7 +113,7 @@
   },
   {
     "sku": "INF-DE-WC",
-    "title": "Delaware Divorce Kit â With Children",
+    "title": "Delaware Divorce Kit - With Children",
     "price": "135",
     "state": "Delaware",
     "tags": "divorce, delaware, with-children, state-kits",
@@ -121,7 +121,7 @@
   },
   {
     "sku": "INF-DE-NC",
-    "title": "Delaware Divorce Kit â No Children",
+    "title": "Delaware Divorce Kit - No Children",
     "price": "115",
     "state": "Delaware",
     "tags": "divorce, delaware, no-children, state-kits",
@@ -129,7 +129,7 @@
   },
   {
     "sku": "INF-FL-WC",
-    "title": "Florida Divorce Kit â With Children",
+    "title": "Florida Divorce Kit - With Children",
     "price": "135",
     "state": "Florida",
     "tags": "divorce, florida, with-children, state-kits",
@@ -137,7 +137,7 @@
   },
   {
     "sku": "INF-FL-NC",
-    "title": "Florida Divorce Kit â No Children",
+    "title": "Florida Divorce Kit - No Children",
     "price": "115",
     "state": "Florida",
     "tags": "divorce, florida, no-children, state-kits",
@@ -145,7 +145,7 @@
   },
   {
     "sku": "INF-GA-WC",
-    "title": "Georgia Divorce Kit â With Children",
+    "title": "Georgia Divorce Kit - With Children",
     "price": "135",
     "state": "Georgia",
     "tags": "divorce, georgia, with-children, state-kits",
@@ -153,7 +153,7 @@
   },
   {
     "sku": "INF-GA-NC",
-    "title": "Georgia Divorce Kit â No Children",
+    "title": "Georgia Divorce Kit - No Children",
     "price": "115",
     "state": "Georgia",
     "tags": "divorce, georgia, no-children, state-kits",
@@ -161,7 +161,7 @@
   },
   {
     "sku": "INF-HI-WC",
-    "title": "Hawaii Divorce Kit â With Children",
+    "title": "Hawaii Divorce Kit - With Children",
     "price": "135",
     "state": "Hawaii",
     "tags": "divorce, hawaii, with-children, state-kits",
@@ -169,7 +169,7 @@
   },
   {
     "sku": "INF-HI-NC",
-    "title": "Hawaii Divorce Kit â No Children",
+    "title": "Hawaii Divorce Kit - No Children",
     "price": "115",
     "state": "Hawaii",
     "tags": "divorce, hawaii, no-children, state-kits",
@@ -177,7 +177,7 @@
   },
   {
     "sku": "INF-ID-WC",
-    "title": "Idaho Divorce Kit â With Children",
+    "title": "Idaho Divorce Kit - With Children",
     "price": "135",
     "state": "Idaho",
     "tags": "divorce, idaho, with-children, state-kits",
@@ -185,7 +185,7 @@
   },
   {
     "sku": "INF-ID-NC",
-    "title": "Idaho Divorce Kit â No Children",
+    "title": "Idaho Divorce Kit - No Children",
     "price": "115",
     "state": "Idaho",
     "tags": "divorce, idaho, no-children, state-kits",
@@ -193,7 +193,7 @@
   },
   {
     "sku": "INF-IL-WC",
-    "title": "Illinois Divorce Kit â With Children",
+    "title": "Illinois Divorce Kit - With Children",
     "price": "135",
     "state": "Illinois",
     "tags": "divorce, illinois, with-children, state-kits",
@@ -201,7 +201,7 @@
   },
   {
     "sku": "INF-IL-NC",
-    "title": "Illinois Divorce Kit â No Children",
+    "title": "Illinois Divorce Kit - No Children",
     "price": "115",
     "state": "Illinois",
     "tags": "divorce, illinois, no-children, state-kits",
@@ -209,7 +209,7 @@
   },
   {
     "sku": "INF-IN-WC",
-    "title": "Indiana Divorce Kit â With Children",
+    "title": "Indiana Divorce Kit - With Children",
     "price": "135",
     "state": "Indiana",
     "tags": "divorce, indiana, with-children, state-kits",
@@ -217,7 +217,7 @@
   },
   {
     "sku": "INF-IN-NC",
-    "title": "Indiana Divorce Kit â No Children",
+    "title": "Indiana Divorce Kit - No Children",
     "price": "115",
     "state": "Indiana",
     "tags": "divorce, indiana, no-children, state-kits",
@@ -225,7 +225,7 @@
   },
   {
     "sku": "INF-IA-WC",
-    "title": "Iowa Divorce Kit â With Children",
+    "title": "Iowa Divorce Kit - With Children",
     "price": "135",
     "state": "Iowa",
     "tags": "divorce, iowa, with-children, state-kits",
@@ -233,7 +233,7 @@
   },
   {
     "sku": "INF-IA-NC",
-    "title": "Iowa Divorce Kit â No Children",
+    "title": "Iowa Divorce Kit - No Children",
     "price": "115",
     "state": "Iowa",
     "tags": "divorce, iowa, no-children, state-kits",
@@ -241,7 +241,7 @@
   },
   {
     "sku": "INF-KS-WC",
-    "title": "Kansas Divorce Kit â With Children",
+    "title": "Kansas Divorce Kit - With Children",
     "price": "135",
     "state": "Kansas",
     "tags": "divorce, kansas, with-children, state-kits",
@@ -249,7 +249,7 @@
   },
   {
     "sku": "INF-KS-NC",
-    "title": "Kansas Divorce Kit â No Children",
+    "title": "Kansas Divorce Kit - No Children",
     "price": "115",
     "state": "Kansas",
     "tags": "divorce, kansas, no-children, state-kits",
@@ -257,7 +257,7 @@
   },
   {
     "sku": "INF-KY-WC",
-    "title": "Kentucky Divorce Kit â With Children",
+    "title": "Kentucky Divorce Kit - With Children",
     "price": "135",
     "state": "Kentucky",
     "tags": "divorce, kentucky, with-children, state-kits",
@@ -265,7 +265,7 @@
   },
   {
     "sku": "INF-KY-NC",
-    "title": "Kentucky Divorce Kit â No Children",
+    "title": "Kentucky Divorce Kit - No Children",
     "price": "115",
     "state": "Kentucky",
     "tags": "divorce, kentucky, no-children, state-kits",
@@ -273,7 +273,7 @@
   },
   {
     "sku": "INF-LA-WC",
-    "title": "Louisiana Divorce Kit â With Children",
+    "title": "Louisiana Divorce Kit - With Children",
     "price": "135",
     "state": "Louisiana",
     "tags": "divorce, louisiana, with-children, state-kits",
@@ -281,7 +281,7 @@
   },
   {
     "sku": "INF-LA-NC",
-    "title": "Louisiana Divorce Kit â No Children",
+    "title": "Louisiana Divorce Kit - No Children",
     "price": "115",
     "state": "Louisiana",
     "tags": "divorce, louisiana, no-children, state-kits",
@@ -289,7 +289,7 @@
   },
   {
     "sku": "INF-ME-WC",
-    "title": "Maine Divorce Kit â With Children",
+    "title": "Maine Divorce Kit - With Children",
     "price": "135",
     "state": "Maine",
     "tags": "divorce, maine, with-children, state-kits",
@@ -297,7 +297,7 @@
   },
   {
     "sku": "INF-ME-NC",
-    "title": "Maine Divorce Kit â No Children",
+    "title": "Maine Divorce Kit - No Children",
     "price": "115",
     "state": "Maine",
     "tags": "divorce, maine, no-children, state-kits",
@@ -305,7 +305,7 @@
   },
   {
     "sku": "INF-MD-WC",
-    "title": "Maryland Divorce Kit â With Children",
+    "title": "Maryland Divorce Kit - With Children",
     "price": "135",
     "state": "Maryland",
     "tags": "divorce, maryland, with-children, state-kits",
@@ -313,7 +313,7 @@
   },
   {
     "sku": "INF-MD-NC",
-    "title": "Maryland Divorce Kit â No Children",
+    "title": "Maryland Divorce Kit - No Children",
     "price": "115",
     "state": "Maryland",
     "tags": "divorce, maryland, no-children, state-kits",
@@ -321,7 +321,7 @@
   },
   {
     "sku": "INF-MA-WC",
-    "title": "Massachusetts Divorce Kit â With Children",
+    "title": "Massachusetts Divorce Kit - With Children",
     "price": "135",
     "state": "Massachusetts",
     "tags": "divorce, massachusetts, with-children, state-kits",
@@ -329,7 +329,7 @@
   },
   {
     "sku": "INF-MA-NC",
-    "title": "Massachusetts Divorce Kit â No Children",
+    "title": "Massachusetts Divorce Kit - No Children",
     "price": "115",
     "state": "Massachusetts",
     "tags": "divorce, massachusetts, no-children, state-kits",
@@ -337,7 +337,7 @@
   },
   {
     "sku": "INF-MI-WC",
-    "title": "Michigan Divorce Kit â With Children",
+    "title": "Michigan Divorce Kit - With Children",
     "price": "135",
     "state": "Michigan",
     "tags": "divorce, michigan, with-children, state-kits",
@@ -345,7 +345,7 @@
   },
   {
     "sku": "INF-MI-NC",
-    "title": "Michigan Divorce Kit â No Children",
+    "title": "Michigan Divorce Kit - No Children",
     "price": "115",
     "state": "Michigan",
     "tags": "divorce, michigan, no-children, state-kits",
@@ -353,7 +353,7 @@
   },
   {
     "sku": "INF-MN-WC",
-    "title": "Minnesota Divorce Kit â With Children",
+    "title": "Minnesota Divorce Kit - With Children",
     "price": "135",
     "state": "Minnesota",
     "tags": "divorce, minnesota, with-children, state-kits",
@@ -361,7 +361,7 @@
   },
   {
     "sku": "INF-MN-NC",
-    "title": "Minnesota Divorce Kit â No Children",
+    "title": "Minnesota Divorce Kit - No Children",
     "price": "115",
     "state": "Minnesota",
     "tags": "divorce, minnesota, no-children, state-kits",
@@ -369,7 +369,7 @@
   },
   {
     "sku": "INF-MS-WC",
-    "title": "Mississippi Divorce Kit â With Children",
+    "title": "Mississippi Divorce Kit - With Children",
     "price": "135",
     "state": "Mississippi",
     "tags": "divorce, mississippi, with-children, state-kits",
@@ -377,7 +377,7 @@
   },
   {
     "sku": "INF-MS-NC",
-    "title": "Mississippi Divorce Kit â No Children",
+    "title": "Mississippi Divorce Kit - No Children",
     "price": "115",
     "state": "Mississippi",
     "tags": "divorce, mississippi, no-children, state-kits",
@@ -385,7 +385,7 @@
   },
   {
     "sku": "INF-MO-WC",
-    "title": "Missouri Divorce Kit â With Children",
+    "title": "Missouri Divorce Kit - With Children",
     "price": "135",
     "state": "Missouri",
     "tags": "divorce, missouri, with-children, state-kits",
@@ -393,7 +393,7 @@
   },
   {
     "sku": "INF-MO-NC",
-    "title": "Missouri Divorce Kit â No Children",
+    "title": "Missouri Divorce Kit - No Children",
     "price": "115",
     "state": "Missouri",
     "tags": "divorce, missouri, no-children, state-kits",
@@ -401,7 +401,7 @@
   },
   {
     "sku": "INF-MT-WC",
-    "title": "Montana Divorce Kit â With Children",
+    "title": "Montana Divorce Kit - With Children",
     "price": "135",
     "state": "Montana",
     "tags": "divorce, montana, with-children, state-kits",
@@ -409,7 +409,7 @@
   },
   {
     "sku": "INF-MT-NC",
-    "title": "Montana Divorce Kit â No Children",
+    "title": "Montana Divorce Kit - No Children",
     "price": "115",
     "state": "Montana",
     "tags": "divorce, montana, no-children, state-kits",
@@ -417,7 +417,7 @@
   },
   {
     "sku": "INF-NE-WC",
-    "title": "Nebraska Divorce Kit â With Children",
+    "title": "Nebraska Divorce Kit - With Children",
     "price": "135",
     "state": "Nebraska",
     "tags": "divorce, nebraska, with-children, state-kits",
@@ -425,7 +425,7 @@
   },
   {
     "sku": "INF-NE-NC",
-    "title": "Nebraska Divorce Kit â No Children",
+    "title": "Nebraska Divorce Kit - No Children",
     "price": "115",
     "state": "Nebraska",
     "tags": "divorce, nebraska, no-children, state-kits",
@@ -433,7 +433,7 @@
   },
   {
     "sku": "INF-NV-WC",
-    "title": "Nevada Divorce Kit â With Children",
+    "title": "Nevada Divorce Kit - With Children",
     "price": "135",
     "state": "Nevada",
     "tags": "divorce, nevada, with-children, state-kits",
@@ -441,7 +441,7 @@
   },
   {
     "sku": "INF-NV-NC",
-    "title": "Nevada Divorce Kit â No Children",
+    "title": "Nevada Divorce Kit - No Children",
     "price": "115",
     "state": "Nevada",
     "tags": "divorce, nevada, no-children, state-kits",
@@ -449,7 +449,7 @@
   },
   {
     "sku": "INF-NH-WC",
-    "title": "New Hampshire Divorce Kit â With Children",
+    "title": "New Hampshire Divorce Kit - With Children",
     "price": "135",
     "state": "New Hampshire",
     "tags": "divorce, new-hampshire, with-children, state-kits",
@@ -457,7 +457,7 @@
   },
   {
     "sku": "INF-NH-NC",
-    "title": "New Hampshire Divorce Kit â No Children",
+    "title": "New Hampshire Divorce Kit - No Children",
     "price": "115",
     "state": "New Hampshire",
     "tags": "divorce, new-hampshire, no-children, state-kits",
@@ -465,7 +465,7 @@
   },
   {
     "sku": "INF-NJ-WC",
-    "title": "New Jersey Divorce Kit â With Children",
+    "title": "New Jersey Divorce Kit - With Children",
     "price": "135",
     "state": "New Jersey",
     "tags": "divorce, new-jersey, with-children, state-kits",
@@ -473,7 +473,7 @@
   },
   {
     "sku": "INF-NJ-NC",
-    "title": "New Jersey Divorce Kit â No Children",
+    "title": "New Jersey Divorce Kit - No Children",
     "price": "115",
     "state": "New Jersey",
     "tags": "divorce, new-jersey, no-children, state-kits",
@@ -481,7 +481,7 @@
   },
   {
     "sku": "INF-NM-WC",
-    "title": "New Mexico Divorce Kit â With Children",
+    "title": "New Mexico Divorce Kit - With Children",
     "price": "135",
     "state": "New Mexico",
     "tags": "divorce, new-mexico, with-children, state-kits",
@@ -489,7 +489,7 @@
   },
   {
     "sku": "INF-NM-NC",
-    "title": "New Mexico Divorce Kit â No Children",
+    "title": "New Mexico Divorce Kit - No Children",
     "price": "115",
     "state": "New Mexico",
     "tags": "divorce, new-mexico, no-children, state-kits",
@@ -497,7 +497,7 @@
   },
   {
     "sku": "INF-NY-WC",
-    "title": "New York Divorce Kit â With Children",
+    "title": "New York Divorce Kit - With Children",
     "price": "135",
     "state": "New York",
     "tags": "divorce, new-york, with-children, state-kits",
@@ -505,7 +505,7 @@
   },
   {
     "sku": "INF-NY-NC",
-    "title": "New York Divorce Kit â No Children",
+    "title": "New York Divorce Kit - No Children",
     "price": "115",
     "state": "New York",
     "tags": "divorce, new-york, no-children, state-kits",
@@ -513,7 +513,7 @@
   },
   {
     "sku": "INF-NC-WC",
-    "title": "North Carolina Divorce Kit â With Children",
+    "title": "North Carolina Divorce Kit - With Children",
     "price": "135",
     "state": "North Carolina",
     "tags": "divorce, north-carolina, with-children, state-kits",
@@ -521,7 +521,7 @@
   },
   {
     "sku": "INF-NC-NC",
-    "title": "North Carolina Divorce Kit â No Children",
+    "title": "North Carolina Divorce Kit - No Children",
     "price": "115",
     "state": "North Carolina",
     "tags": "divorce, north-carolina, no-children, state-kits",
@@ -529,7 +529,7 @@
   },
   {
     "sku": "INF-ND-WC",
-    "title": "North Dakota Divorce Kit â With Children",
+    "title": "North Dakota Divorce Kit - With Children",
     "price": "135",
     "state": "North Dakota",
     "tags": "divorce, north-dakota, with-children, state-kits",
@@ -537,7 +537,7 @@
   },
   {
     "sku": "INF-ND-NC",
-    "title": "North Dakota Divorce Kit â No Children",
+    "title": "North Dakota Divorce Kit - No Children",
     "price": "115",
     "state": "North Dakota",
     "tags": "divorce, north-dakota, no-children, state-kits",
@@ -545,7 +545,7 @@
   },
   {
     "sku": "INF-OH-WC",
-    "title": "Ohio Divorce Kit â With Children",
+    "title": "Ohio Divorce Kit - With Children",
     "price": "135",
     "state": "Ohio",
     "tags": "divorce, ohio, with-children, state-kits",
@@ -553,7 +553,7 @@
   },
   {
     "sku": "INF-OH-NC",
-    "title": "Ohio Divorce Kit â No Children",
+    "title": "Ohio Divorce Kit - No Children",
     "price": "115",
     "state": "Ohio",
     "tags": "divorce, ohio, no-children, state-kits",
@@ -561,7 +561,7 @@
   },
   {
     "sku": "INF-OK-WC",
-    "title": "Oklahoma Divorce Kit â With Children",
+    "title": "Oklahoma Divorce Kit - With Children",
     "price": "135",
     "state": "Oklahoma",
     "tags": "divorce, oklahoma, with-children, state-kits",
@@ -569,7 +569,7 @@
   },
   {
     "sku": "INF-OK-NC",
-    "title": "Oklahoma Divorce Kit â No Children",
+    "title": "Oklahoma Divorce Kit - No Children",
     "price": "115",
     "state": "Oklahoma",
     "tags": "divorce, oklahoma, no-children, state-kits",
@@ -577,7 +577,7 @@
   },
   {
     "sku": "INF-OR-WC",
-    "title": "Oregon Divorce Kit â With Children",
+    "title": "Oregon Divorce Kit - With Children",
     "price": "135",
     "state": "Oregon",
     "tags": "divorce, oregon, with-children, state-kits",
@@ -585,7 +585,7 @@
   },
   {
     "sku": "INF-OR-NC",
-    "title": "Oregon Divorce Kit â No Children",
+    "title": "Oregon Divorce Kit - No Children",
     "price": "115",
     "state": "Oregon",
     "tags": "divorce, oregon, no-children, state-kits",
@@ -593,7 +593,7 @@
   },
   {
     "sku": "INF-PA-WC",
-    "title": "Pennsylvania Divorce Kit â With Children",
+    "title": "Pennsylvania Divorce Kit - With Children",
     "price": "135",
     "state": "Pennsylvania",
     "tags": "divorce, pennsylvania, with-children, state-kits",
@@ -601,7 +601,7 @@
   },
   {
     "sku": "INF-PA-NC",
-    "title": "Pennsylvania Divorce Kit â No Children",
+    "title": "Pennsylvania Divorce Kit - No Children",
     "price": "115",
     "state": "Pennsylvania",
     "tags": "divorce, pennsylvania, no-children, state-kits",
@@ -609,7 +609,7 @@
   },
   {
     "sku": "INF-RI-WC",
-    "title": "Rhode Island Divorce Kit â With Children",
+    "title": "Rhode Island Divorce Kit - With Children",
     "price": "135",
     "state": "Rhode Island",
     "tags": "divorce, rhode-island, with-children, state-kits",
@@ -617,7 +617,7 @@
   },
   {
     "sku": "INF-RI-NC",
-    "title": "Rhode Island Divorce Kit â No Children",
+    "title": "Rhode Island Divorce Kit - No Children",
     "price": "115",
     "state": "Rhode Island",
     "tags": "divorce, rhode-island, no-children, state-kits",
@@ -625,7 +625,7 @@
   },
   {
     "sku": "INF-SC-WC",
-    "title": "South Carolina Divorce Kit â With Children",
+    "title": "South Carolina Divorce Kit - With Children",
     "price": "135",
     "state": "South Carolina",
     "tags": "divorce, south-carolina, with-children, state-kits",
@@ -633,7 +633,7 @@
   },
   {
     "sku": "INF-SC-NC",
-    "title": "South Carolina Divorce Kit â No Children",
+    "title": "South Carolina Divorce Kit - No Children",
     "price": "115",
     "state": "South Carolina",
     "tags": "divorce, south-carolina, no-children, state-kits",
@@ -641,7 +641,7 @@
   },
   {
     "sku": "INF-SD-WC",
-    "title": "South Dakota Divorce Kit â With Children",
+    "title": "South Dakota Divorce Kit - With Children",
     "price": "135",
     "state": "South Dakota",
     "tags": "divorce, south-dakota, with-children, state-kits",
@@ -649,7 +649,7 @@
   },
   {
     "sku": "INF-SD-NC",
-    "title": "South Dakota Divorce Kit â No Children",
+    "title": "South Dakota Divorce Kit - No Children",
     "price": "115",
     "state": "South Dakota",
     "tags": "divorce, south-dakota, no-children, state-kits",
@@ -657,7 +657,7 @@
   },
   {
     "sku": "INF-TN-WC",
-    "title": "Tennessee Divorce Kit â With Children",
+    "title": "Tennessee Divorce Kit - With Children",
     "price": "135",
     "state": "Tennessee",
     "tags": "divorce, tennessee, with-children, state-kits",
@@ -665,7 +665,7 @@
   },
   {
     "sku": "INF-TN-NC",
-    "title": "Tennessee Divorce Kit â No Children",
+    "title": "Tennessee Divorce Kit - No Children",
     "price": "115",
     "state": "Tennessee",
     "tags": "divorce, tennessee, no-children, state-kits",
@@ -673,7 +673,7 @@
   },
   {
     "sku": "INF-TX-WC",
-    "title": "Texas Divorce Kit â With Children",
+    "title": "Texas Divorce Kit - With Children",
     "price": "135",
     "state": "Texas",
     "tags": "divorce, texas, with-children, state-kits",
@@ -681,7 +681,7 @@
   },
   {
     "sku": "INF-TX-NC",
-    "title": "Texas Divorce Kit â No Children",
+    "title": "Texas Divorce Kit - No Children",
     "price": "115",
     "state": "Texas",
     "tags": "divorce, texas, no-children, state-kits",
@@ -689,7 +689,7 @@
   },
   {
     "sku": "INF-UT-WC",
-    "title": "Utah Divorce Kit â With Children",
+    "title": "Utah Divorce Kit - With Children",
     "price": "135",
     "state": "Utah",
     "tags": "divorce, utah, with-children, state-kits",
@@ -697,7 +697,7 @@
   },
   {
     "sku": "INF-UT-NC",
-    "title": "Utah Divorce Kit â No Children",
+    "title": "Utah Divorce Kit - No Children",
     "price": "115",
     "state": "Utah",
     "tags": "divorce, utah, no-children, state-kits",
@@ -705,7 +705,7 @@
   },
   {
     "sku": "INF-VT-WC",
-    "title": "Vermont Divorce Kit â With Children",
+    "title": "Vermont Divorce Kit - With Children",
     "price": "135",
     "state": "Vermont",
     "tags": "divorce, vermont, with-children, state-kits",
@@ -713,7 +713,7 @@
   },
   {
     "sku": "INF-VT-NC",
-    "title": "Vermont Divorce Kit â No Children",
+    "title": "Vermont Divorce Kit - No Children",
     "price": "115",
     "state": "Vermont",
     "tags": "divorce, vermont, no-children, state-kits",
@@ -721,7 +721,7 @@
   },
   {
     "sku": "INF-VA-WC",
-    "title": "Virginia Divorce Kit â With Children",
+    "title": "Virginia Divorce Kit - With Children",
     "price": "135",
     "state": "Virginia",
     "tags": "divorce, virginia, with-children, state-kits",
@@ -729,7 +729,7 @@
   },
   {
     "sku": "INF-VA-NC",
-    "title": "Virginia Divorce Kit â No Children",
+    "title": "Virginia Divorce Kit - No Children",
     "price": "115",
     "state": "Virginia",
     "tags": "divorce, virginia, no-children, state-kits",
@@ -737,7 +737,7 @@
   },
   {
     "sku": "INF-WA-WC",
-    "title": "Washington Divorce Kit â With Children",
+    "title": "Washington Divorce Kit - With Children",
     "price": "135",
     "state": "Washington",
     "tags": "divorce, washington, with-children, state-kits",
@@ -745,7 +745,7 @@
   },
   {
     "sku": "INF-WA-NC",
-    "title": "Washington Divorce Kit â No Children",
+    "title": "Washington Divorce Kit - No Children",
     "price": "115",
     "state": "Washington",
     "tags": "divorce, washington, no-children, state-kits",
@@ -753,7 +753,7 @@
   },
   {
     "sku": "INF-WV-WC",
-    "title": "West Virginia Divorce Kit â With Children",
+    "title": "West Virginia Divorce Kit - With Children",
     "price": "135",
     "state": "West Virginia",
     "tags": "divorce, west-virginia, with-children, state-kits",
@@ -761,7 +761,7 @@
   },
   {
     "sku": "INF-WV-NC",
-    "title": "West Virginia Divorce Kit â No Children",
+    "title": "West Virginia Divorce Kit - No Children",
     "price": "115",
     "state": "West Virginia",
     "tags": "divorce, west-virginia, no-children, state-kits",
@@ -769,7 +769,7 @@
   },
   {
     "sku": "INF-WI-WC",
-    "title": "Wisconsin Divorce Kit â With Children",
+    "title": "Wisconsin Divorce Kit - With Children",
     "price": "135",
     "state": "Wisconsin",
     "tags": "divorce, wisconsin, with-children, state-kits",
@@ -777,7 +777,7 @@
   },
   {
     "sku": "INF-WI-NC",
-    "title": "Wisconsin Divorce Kit â No Children",
+    "title": "Wisconsin Divorce Kit - No Children",
     "price": "115",
     "state": "Wisconsin",
     "tags": "divorce, wisconsin, no-children, state-kits",
@@ -785,7 +785,7 @@
   },
   {
     "sku": "INF-WY-WC",
-    "title": "Wyoming Divorce Kit â With Children",
+    "title": "Wyoming Divorce Kit - With Children",
     "price": "135",
     "state": "Wyoming",
     "tags": "divorce, wyoming, with-children, state-kits",
@@ -793,7 +793,7 @@
   },
   {
     "sku": "INF-WY-NC",
-    "title": "Wyoming Divorce Kit â No Children",
+    "title": "Wyoming Divorce Kit - No Children",
     "price": "115",
     "state": "Wyoming",
     "tags": "divorce, wyoming, no-children, state-kits",
