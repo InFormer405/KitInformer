@@ -1,0 +1,42 @@
+<!doctype html><html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connecticut Divorce Kits — InFormer</title><meta name="description" content="Divorce kits for Connecticut.">
+<link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header class="hdr"><a class="logo" href="/">InFormer</a>
+<input class="search" id="q" placeholder="Search kits (state, tags, title)"/></header>
+<main class="wrap"><h1>Divorce Kits — Connecticut</h1><div class="grid"><article class="card">
+  <a href="/products/inf-ct-wc-connecticut-divorce-kit-with-children/">
+    <img src="/placeholder.svg" onerror="this.src='/placeholder.svg'" alt="Connecticut Divorce Kit - With Children">
+    <h3>Connecticut Divorce Kit - With Children</h3>
+    <div class="meta">
+      <span class="price">$0.00</span>
+      <span class="badge">With Children</span>
+    </div>
+    <p class="blurb">Complete DIY divorce forms and instructions for Connecticut (with minor children).</p>
+  </a>
+</article><article class="card">
+  <a href="/products/inf-ct-nc-connecticut-divorce-kit-no-children/">
+    <img src="/placeholder.svg" onerror="this.src='/placeholder.svg'" alt="Connecticut Divorce Kit - No Children">
+    <h3>Connecticut Divorce Kit - No Children</h3>
+    <div class="meta">
+      <span class="price">$0.00</span>
+      <span class="badge">No Children</span>
+    </div>
+    <p class="blurb">DIY divorce forms and instructions for Connecticut (no minor children).</p>
+  </a>
+</article></div></main>
+<footer class="ftr">· <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></footer>
+<script>
+fetch('/search-index.json').then(r=>r.json()).then(data=>{
+ const q=document.getElementById('q'); if(!q)return;
+ q.addEventListener('input',()=>{
+  const v=q.value.toLowerCase();
+  const hits=data.filter(d=> (d.title+' '+d.state+' '+(d.tags||'')).toLowerCase().includes(v));
+  const list=document.getElementById('searchResults'); if(!list)return;
+  list.innerHTML=hits.slice(0,40).map(h=>`<li><a href="${h.url}">${h.title}</a> — $${h.price}</li>`).join('');
+ });
+});
+</script>
+<script src="/scripts/state.js?v=11"></script>
+</body></html>
