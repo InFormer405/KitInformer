@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Alabama",
+    "slug": "alabama",
+    "avgFilingFee": 300,
+    "filingFeeText": "Average filing fee is about $300+ (varies by county and may change).",
+    "residencyText": "Residency requirements vary; confirm current rules for your county.",
+    "waitingPeriodText": "Waiting periods vary based on circumstances; confirm with your local court.",
+    "feeWaiverName": "Pauper’s Affidavit",
+    "stripeLinks": {
+      "withoutChildren": "https://buy.stripe.com/test_8x228r4qR5iNbHVc3yeUU00",
+      "withChildren": "https://buy.stripe.com/test_cNiaEX0aBdPjaDR0kQeUU01"
+    },
+    "images": {
+      "withoutChildren": "/images/alabama-without-children.png",
+      "withChildren": "/images/alabama-with-children.png"
+    }
+  }
+]

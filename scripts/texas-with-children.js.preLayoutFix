@@ -1,0 +1,132 @@
+// public/scripts/texas-with-children.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("TEXAS JS LOADED ✅");
+
+  const grid = document.getElementById("product-grid");
+  if (!grid) return;
+
+  // --- helpers ---
+  const skuToStateAbbr = (sku) => String(sku || "").split("-")[1] || "";
+  const skuToChildrenCode = (sku) => String(sku || "").split("-")[2] || ""; // WC / NC
+
+  const coverFromSku = (sku) => {
+    const abbr = skuToStateAbbr(sku);
+    const kids = skuToChildrenCode(sku) === "WC" ? "WithChildren" : "NoChildren";
+    return `/kits/${abbr}_${kids}_CoverPhoto.png`;
+  };
+
+  const slugify = (s) =>
+    String(s || "")
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+
+  const productUrlFromSkuAndTitle = (sku, title) =>
+    `/products/${String(sku || "").toLowerCase()}-${slugify(title)}/`;
+
+  const money = (n) => {
+    const num = Number(n);
+    if (Number.isFinite(num)) return `$${num.toFixed(2)}`;
+    return `$${String(n || "").trim()}`;
+  };
+
+  const isWithChildren = (p) => {
+    // supports both "With Children" string and boolean true
+    const cs = String(p.ChildrenStatus || p.childrenStatus || "").toLowerCase();
+    if (cs.includes("with")) return true;
+    if (cs.includes("no")) return false;
+    if (p.children === true) return true;
+    if (p.children === false) return false;
+
+    // fallback to SKU code
+    return skuToChildrenCode(p.SKU) === "WC";
+  };
+
+  const isTexas = (p) => {
+    const st = String(p.State || p.state || "").toLowerCase();
+    const sub = String(p.Subcategory || p.subcategory || "").toLowerCase();
+    const abbr = skuToStateAbbr(p.SKU).toLowerCase();
+    return st === "texas" || sub === "texas" || abbr === "tx";
+  };
+
+  const getTitle = (p) => p.Title || p.title || "";
+  const getShort = (p) => p.ShortDescription || p.shortDescription || p.description || "";
+  const getPrice = (p) => p.PriceUSD || p.priceUSD || p.price || "";
+  const getCover = (p) => {
+    const raw = (p.CoverImageURL && String(p.CoverImageURL).trim()) || "";
+    return raw ? raw : coverFromSku(p.SKU);
+  };
+
+  let all = [];
+
+  function render(list) {
+    grid.innerHTML = "";
+
+    list.forEach((p) => {
+      const title = getTitle(p);
+      const href = productUrlFromSkuAndTitle(p.SKU, title);
+      const imgSrc = getCover(p);
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <a href="${href}">
+          <img src="${imgSrc}" alt="${title}"
+               onerror="this.onerror=null; this.src='/placeholder.svg';" />
+        </a>
+
+        <div class="price">${money(getPrice(p))}</div>
+        <div class="pill">With Children</div>
+
+        <h2>
+          <a href="${href}">${title}</a>
+        </h2>
+
+        <p>${getShort(p)}</p>
+      `;
+
+      grid.appendChild(card);
+    });
+  }
+
+  function applyFilter() {
+    const q = String(document.getElementById("searchInput")?.value || "")
+      .toLowerCase()
+      .trim();
+
+    if (!q) return render(all);
+
+    const filtered = all.filter((p) => {
+      const blob = [
+        p.SKU,
+        getTitle(p),
+        getShort(p),
+        p.State,
+        p.Subcategory,
+        p.ChildrenStatus,
+        p.Tags,
+      ]
+        .map((x) => String(x || "").toLowerCase())
+        .join(" ");
+
+      return blob.includes(q);
+    });
+
+    render(filtered);
+  }
+
+  // --- load ---
+  fetch("/products.json")
+    .then((res) => res.json())
+    .then((products) => {
+      all = (products || []).filter((p) => isTexas(p) && isWithChildren(p));
+      render(all);
+
+      const search = document.getElementById("searchInput");
+      if (search) search.addEventListener("input", applyFilter);
+    })
+    .catch((err) => console.error("Product load error:", err));
+});
