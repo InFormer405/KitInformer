@@ -4,7 +4,7 @@ import path from "path";
 const ROOT = process.cwd();
 const DATA = path.join(ROOT, "data");
 const TPL = path.join(ROOT, "templates");
-const OUT = path.join(ROOT, "public", "_gen");
+const OUT = path.join(ROOT, "public");
 
 const site = JSON.parse(fs.readFileSync(path.join(DATA, "site.json")));
 const states = JSON.parse(fs.readFileSync(path.join(DATA, "states.json")));
