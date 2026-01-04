@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Colorado Divorce Kit (DIY Forms) | With Children ($99.00) or No Children ($75.00)</title>
+  <meta name="description" content="Complete DIY Colorado divorce forms and instructions. Choose: No Children ($75.00) or With Children ($99.00). Instant access, simple steps, and clear guidance." />
+
+  <link rel="canonical" href="/category/divorce-kits/colorado/">
+
+  <!-- Use your existing global styles -->
+  <link rel="stylesheet" href="/styles.css?v=300" />
+
+  <style>
+    /* Page-only layout helpers (kept small on purpose) */
+    .page { max-width: 980px; margin: 0 auto; padding: 18px; }
+    .hero { background: rgba(255,255,255,.06); border-radius: 18px; padding: 18px; }
+    .hero h1 { margin: 0 0 8px; line-height: 1.15; }
+    .sub { opacity: .9; margin: 0; }
+    .twoCol { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 14px; }
+    @media (min-width: 760px){ .twoCol { grid-template-columns: 1fr 1fr; } }
+    .ctaCard { background: rgba(255,255,255,.06); border-radius: 18px; overflow: hidden; }
+    .ctaBody { padding: 14px; }
+    .ctaTop { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+    .priceBig { font-weight: 800; font-size: 28px; line-height: 1; }
+    .pill { box-shadow: 0 0 10px rgba(45,124,240,.65), 0 0 22px rgba(45,124,240,.35); }
+    .btnRow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 12px; text-decoration: none; font-weight: 800; }
+    .btnPrimary { background: #2d7cf0; color: #fff; }
+    .btnGhost { background: rgba(255,255,255,.08); color: #fff; }
+    .section { margin-top: 18px; background: rgba(255,255,255,.04); border-radius: 18px; padding: 16px; }
+    .section h2 { margin: 0 0 10px; }
+    .faq details { background: rgba(255,255,255,.04); border-radius: 14px; padding: 12px; margin: 10px 0; }
+    .faq summary { cursor: pointer; font-weight: 800; }
+    .small { opacity: .9; }
+  
+/* hide trustNote debug overlay */
+#trustNoteDbg{display:none !important;}
+</style>
+<style id="txLandingOverrides">
+/* STEP 1: Layout Polish */
+
+/* STEP 2: Typography Polish */
+
+/* STEP 3: Card Hierarchy & Separation */
+
+/* STEP 4: CTA Clarity & Tap Targets */
+
+/* STEP 5: Decision Clarity (No Children vs With Children) */
+
+/* STEP 6: Above-the-Fold Tightening */
+
+/* STEP 7: Trust & Reassurance */
+
+/* subtle reassurance text styling */
+.trustNote{
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255,255,255,.75);
+  margin-top: 10px;
+}
+
+/* visually tie reassurance to price row */
+.priceRow + .trustNote{
+  margin-top: 6px;
+}
+
+/* mobile: keep it readable, not loud */
+@media (max-width: 480px){
+  .trustNote{
+    font-size: 13.5px;
+  }
+}
+
+
+/* reduce dead space before first cards */
+main > *:first-child{
+  margin-bottom: 12px !important;
+}
+
+/* pull first product cards upward slightly */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){
+  margin-top: 12px;
+}
+
+/* mobile: ensure both options start appearing sooner */
+@media (max-width: 480px){
+  h1, h2{
+    margin-bottom: 10px;
+  }
+  .hero, .intro, .lead{
+    margin-bottom: 14px;
+  }
+}
+
+
+/* tighten the price row and make it read as a single unit */
+:is(.priceRow,.topRow,.row,.headerRow){
+  row-gap: 10px;
+}
+
+/* keep the “Best if …” line readable and consistent */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) p{
+  max-width: 42ch;
+}
+
+/* visually group pill + price so decision feels clean */
+:is(.priceRow,.topRow,.row,.headerRow) :is(.pill,.tag,.badge){
+  transform: translateY(1px);
+}
+
+/* mobile: give each card a bit more separation for scanning */
+@media (max-width: 480px){
+  :is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){
+    margin-bottom: 18px;
+  }
+}
+
+
+/* primary CTA emphasis */
+:is(a.btn,a.button,button.btn,button.button,.btnPrimary,.primaryBtn){
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+/* breathing room above CTA */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel)
+:is(a.btn,a.button,button.btn,button.button,.btnPrimary,.primaryBtn){
+  margin-top: 14px;
+}
+
+/* ensure tap comfort on mobile */
+@media (max-width: 480px){
+  :is(a.btn,a.button,button.btn,button.button,.btnPrimary,.primaryBtn){
+    min-height: 48px;
+    font-size: 1rem;
+  }
+}
+
+
+/* core card surface */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.035),
+    rgba(0,0,0,0.18)
+  );
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+/* spacing between stacked cards */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel)
++ :is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){
+  margin-top: 20px;
+}
+
+/* image-to-body separation (no borders) */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) img{
+  margin-bottom: 14px;
+}
+
+/* prevent cards from blending into page edges */
+main, .main{
+  padding-bottom: 32px;
+}
+
+:root{
+  --tx-text: rgba(255,255,255,.90);
+  --tx-muted: rgba(255,255,255,.72);
+}
+
+/* global readability */
+body{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* headings: cleaner scale on mobile */
+h1{
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+h2{
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+/* paragraphs: less gray haze, more legible */
+p, li{
+  color: var(--tx-muted);
+}
+
+/* keep long text from feeling too wide */
+:is(main,.main,.container,.wrap) p{
+  max-width: 62ch;
+}
+
+/* card body text spacing */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) p{
+  margin-bottom: 10px;
+}
+
+/* tighten bullets if any */
+ul, ol{
+  padding-left: 1.1em;
+}
+li{ margin: 6px 0; }
+
+/* small devices: keep headers from looking gigantic */
+@media (max-width:420px){
+  h1{ font-size: clamp(30px, 7.6vw, 44px); }
+  h2{ font-size: clamp(22px, 5.6vw, 30px); }
+}
+
+:root{ --tx-gap:18px; --tx-radius:22px; }
+
+/* normalize spacing */
+main, .main, body{ -webkit-text-size-adjust:100%; }
+
+/* cards (supports multiple possible classnames) */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){
+  border-radius: var(--tx-radius) !important;
+}
+
+/* tighten vertical rhythm inside cards */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) :is(h1,h2,h3,p){
+  margin-top: 0 !important;
+}
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) p{
+  line-height: 1.35;
+}
+
+/* price row alignment: keep price and pill aligned & wrapped nicely */
+:is(.priceRow,.topRow,.row,.headerRow){
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+/* lock baseline so it looks cleaner */
+.priceBig{ line-height:1; letter-spacing:-0.5px; }
+
+/* pills/buttons never squish weirdly */
+.pill{ white-space:nowrap; }
+
+/* images in cards */
+:is(.kitCard,.optionCard,.productCard,.card,.tile,.panel) img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+}
+
+/* CTA buttons: consistent sizing on mobile */
+:is(a.btn,a.button,button.btn,button.button,.btnPrimary,.primaryBtn){
+  min-height:46px;
+  padding:12px 18px;
+  border-radius:14px;
+}
+
+/* mobile: slightly tighter padding */
+@media (max-width:420px){
+  :root{ --tx-gap:16px; --tx-radius:20px; }
+  :is(.kitCard,.optionCard,.productCard,.card,.tile,.panel){ padding:16px !important; }
+}
+
+/* Colorado landing page overrides */
+.priceBig, .price {
+  color: #d4af37 !important;
+  font-weight: 800 !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.6);
+}
+
+/* Normalize pills (works for both div.pill and span.pill) */
+.pill {
+  color: #d4af37 !important;
+  border: 1px solid #d4af37 !important;
+  background: transparent !important;
+  display: inline-block !important;
+  padding: 6px 12px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
+
+/* Stop huge images on mobile */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.hero img, .heroImage img, .cover img, .card img, .kit img {
+  width: 100% !important;
+  max-height: 280px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+
+/* Force pill text blue */
+.pill{color:#4da3ff !important;}
+
+
+
+
+
+/* Hard bevel bright gold price (solid, punchy) */
+.priceBig{
+  color:#f6d46b !important;
+  -webkit-text-stroke: 1px rgba(70,45,0,.55);
+  text-shadow:
+    0 -1px 0 rgba(255,255,255,.70),
+    -1px -1px 0 rgba(255,255,255,.40),
+    0 2px 0 rgba(150,95,0,.85),
+    1px 3px 0 rgba(95,55,0,.85),
+    0 7px 14px rgba(0,0,0,.60),
+    0 0 14px rgba(255,215,0,.22);
+  filter: saturate(1.25) contrast(1.18);
+}
+</style>
+<style>
+/* Premium metallic gold price (clean glyphs) */
+.priceBig{
+  font-family: Roboto, "Noto Sans", Arial, sans-serif !important;
+  font-weight: 900 !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  letter-spacing: -0.02em !important;
+
+  background: linear-gradient(
+    135deg,
+    #fff6c7 0%,
+    #f9d976 18%,
+    #f1c44f 35%,
+    #d9a93a 55%,
+    #f6d86b 72%,
+    #fff2b0 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.35),
+    0 2px 4px rgba(0,0,0,.45);
+}
+</style>
+<style>
+/* PRICE: force clean glyphs (fix weird  9 on Android) */
+.priceBig{
+  font-family: Roboto, "Noto Sans", Arial, sans-serif !important;
+  font-weight: 900 !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+  letter-spacing: -0.02em !important;
+  color: #f6d86b !important;
+  background: none !important;
+  -webkit-text-fill-color: #f6d86b !important;
+  -webkit-text-stroke: 0 !important;
+  filter: none !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,.45) !important;
+}
+</style>
+<style>
+/* Clean professional gold price (Android-friendly) */
+.priceBig{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: #f6d86b !important;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.22),
+    0 2px 10px rgba(0,0,0,.55);
+}
+</style>
+<style id="priceGoldMatch">
+/* Pro gold price (Android/Chrome safe) */
+.priceBig, #txNoChildrenPrice, #txWithChildrenPrice{
+  background:none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+
+  /* clean gold (no gradients = no weird 9/) */
+  color:#f6c84e !important;
+  -webkit-text-fill-color:#f6c84e !important;
+
+  /* “harder” edge + bevel feel */
+  -webkit-text-stroke: 1px rgba(92,58,0,.55);
+
+  /* bevel/shine + depth */
+  text-shadow:
+    0 -1px 0 rgba(255,255,255,.40),
+    0  1px 0 rgba(255,255,255,.18),
+    0  2px 0 rgba(70,40,0,.45),
+    0  6px 10px rgba(0,0,0,.35),
+    0 14px 20px rgba(0,0,0,.55) !important;
+
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+</style>
+<style>
+/* PRO metallic gold price (Android/Chrome safe) */
+.price-wrap { display:flex; align-items:center; gap:10px; }
+.price-svg { height:46px; display:block; }
+</style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="hero">
+      <h1>Colorado Divorce Kit (DIY Forms + Instructions)</h1>
+      <p class="sub">Choose the right version for your situation. Two options, clear pricing, and a simple process.</p>
+
+      <div class="twoCol">
+        <div class="ctaCard" id="nochildren">
+          <div id="txNoChildrenCard"></div>
+          <div class="ctaBody">
+            <div class="ctaTop">
+              <div class="priceBig" id="txNoChildrenPrice">$75.00</div>
+              <span class="pill" style="color:#4da3ff;border:1px solid #d4af37;background:transparent;">No Children</span>
+            </div>
+            <div class="small">Best if there are no minor children together.</div>
+            <div class="btnRow">
+              <a class="btn btnPrimary" id="txNoChildrenLink" href="#">View kit</a>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="ctaCard">
+          <div id="txWithChildrenCard"></div>
+          <div class="ctaBody">
+            <div class="ctaTop">
+              <div class="priceBig" id="txWithChildrenPrice">$99.00</div>
+              <span class="pill" style="color:#4da3ff;border:1px solid #d4af37;background:transparent;">With Children</span>
+            </div>
+            <div class="small">Best if you have minor children together and need parenting terms addressed.</div>
+            <div class="btnRow">
+              <a class="btn btnPrimary" id="txWithChildrenLink" href="#">View kit</a>
+              <a class="btn btnGhost" href="/contact.html">Questions?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>What you get</h2>
+      <ul class="small">
+        <li>DIY Colorado divorce forms + instructions</li>
+        <li>Clear, step-by-step guidance</li>
+        <li>Instant access (no waiting)</li>
+      </ul>
+    </div>
+
+    <div class="section faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Which one should I buy?</summary>
+        <div class="small" style="margin-top:10px;">
+          If you and your spouse have minor children together, choose <b>With Children ($99.00)</b>.
+          Otherwise choose <b>No Children ($75.00)</b>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I switch if I pick the wrong one?</summary>
+        <div class="small" style="margin-top:10px;">
+          If you purchased the wrong version, contact us and we’ll help you get the correct one.
+        </div>
+      </details>
+    </div>
+
+    <div class="section small">
+      <b>Tip:</b> For “with children,” people often just need the correct kit under $200 — that’s why the price is <b>$99.00</b>.
+    </div>
+  </div>
+
+  <!-- Script fills the cards with the correct Colorado kit images + links from products.json -->
+  <script src="/scripts/state.js?v=3"></script>
+<script id="trustNoteInjector">
+(function(){
+  function ins(){
+    var cards = document.querySelectorAll("a,button");
+    var seen = new Set();
+    var inserted = 0;
+
+    cards.forEach(function(btn){
+      if(!btn.textContent) return;
+      if(btn.textContent.toLowerCase().indexOf("view kit") === -1) return;
+
+      var card = btn.closest("div");
+      if(!card || seen.has(card)) return;
+      seen.add(card);
+
+      if(card.querySelector(".trustNote")) return;
+
+      var price = card.querySelector("*:not(script)");
+      if(!price) return;
+
+      var div = document.createElement("div");
+      div.className = "trustNote";
+      div.textContent = "Colorado-specific forms • Step-by-step instructions • Instant download";
+      div.style.cssText = "margin-top:8px;font-size:12px;line-height:1.2;color:#d9d9d9;opacity:.95";
+
+      price.parentNode.insertBefore(div, price.nextSibling);
+      inserted++;
+    });
+
+    var dbg = document.createElement("div");
+    dbg.id = "trustNoteDbg";
+    dbg.style.cssText =
+      "position:fixed;left:10px;bottom:10px;z-index:99999;" +
+      "background:rgba(0,0,0,.8);color:#fff;padding:6px 10px;" +
+      "border-radius:10px;font:12px/1.2 system-ui";
+    dbg.textContent = "trustNotes inserted: " + inserted;
+    document.body.appendChild(dbg);
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", ins);
+  } else {
+    ins();
+  }
+})();
+</script>
+
+</body>
+</html>
