@@ -1,0 +1,8 @@
+{
+  "task_id": "stripe_discovery_001",
+  "actions": [
+    {
+      "type": "noop"
+    }
+  ]
+}

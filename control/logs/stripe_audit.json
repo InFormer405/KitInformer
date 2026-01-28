@@ -1,0 +1,17 @@
+{
+  "task_id": "audit-stripe-links-001",
+  "type": "filesystem_audit",
+  "scope": [
+    "public",
+    "core_backup"
+  ],
+  "search_patterns": [
+    "stripe.com",
+    "checkout.stripe.com"
+  ],
+  "output": {
+    "format": "json",
+    "path": "control/logs/stripe_audit.json"
+  },
+  "mode": "read_only"
+}
