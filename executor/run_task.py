@@ -51,10 +51,25 @@ def main():
 
     task_id = data.get("task_id", "N/A")
     description = data.get("description", "No description provided.")
+    
+    # Validation logic
+    actions = data.get("actions")
+    if actions is None:
+        print("Validation Error: 'actions' field is missing.", file=sys.stderr)
+        sys.exit(1)
+    if not isinstance(actions, list):
+        print("Validation Error: 'actions' must be a list.", file=sys.stderr)
+        sys.exit(1)
+    for i, action in enumerate(actions):
+        if not isinstance(action, dict):
+            print(f"Validation Error: Action at index {i} must be an object.", file=sys.stderr)
+            sys.exit(1)
+        if "type" not in action:
+            print(f"Validation Error: Action at index {i} is missing 'type' field.", file=sys.stderr)
+            sys.exit(1)
+
     print(f"Starting Task ID: {task_id}")
     print(f"Description: {description}\n")
-
-    actions = data.get("actions", [])
     report_data = []
 
     for action in actions:
