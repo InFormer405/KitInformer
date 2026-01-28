@@ -1,0 +1,13 @@
+{
+  "task_id": "test_task_001",
+  "task_type": "system_test",
+  "description": "Initial executor validation task",
+  "actions": [
+    {
+      "type": "log",
+      "message": "Executor control plane is live and processing tasks."
+    }
+  ],
+  "created_by": "rube",
+  "priority": "low"
+}
