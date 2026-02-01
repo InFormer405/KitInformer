@@ -25,6 +25,39 @@
 
   <h2>Alabama Divorce Kits</h2>
 
+  <div id="product-list">
+    <!-- Products will be loaded here from Supabase -->
+    <p>Loading products...</p>
+  </div>
+
+  <script type="module">
+    import { getProductsByState } from "../../supabase-products.js";
+
+    async function loadProducts() {
+      try {
+        const products = await getProductsByState("Alabama", "With Children");
+        console.log("Fetched products for Alabama (With Children):", products);
+
+        const container = document.getElementById('product-list');
+        if (products && products.length > 0) {
+          container.innerHTML = products.map(product => `
+            <section>
+              <h3>${product.title || 'Alabama Divorce Kit'}</h3>
+              <p><strong>$${product.price || '0'} — One-time payment</strong></p>
+            </section>
+          `).join('');
+        } else {
+          container.innerHTML = '<p>No products found for this state.</p>';
+        }
+      } catch (err) {
+        console.error("Failed to load products:", err);
+        document.getElementById('product-list').innerHTML = '<p>Error loading products.</p>';
+      }
+    }
+
+    loadProducts();
+  </script>
+
   <section>
     <h3>Alabama Divorce Kit — No Children</h3>
 
