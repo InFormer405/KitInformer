@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
+  <script>
+    // Configuration constants for the state page
+    const STATE_NAME = "Alabama";
+    const STATE_SLUG = "alabama";
+    const CHILDREN_STATUS = "With Children"; // Possible values: "With Children", "No Children"
+  </script>
 
-  <title>Alabama Divorce & Legal Form Kits | InFormer</title>
+  <title><script>document.write(STATE_NAME)</script> Divorce & Legal Form Kits | InFormer</title>
 
-  <meta name="description" content="Download Alabama-specific divorce and legal form kits. Professionally structured documents with step-by-step guidance and a free Alabama filing fee waiver." />
+  <meta name="description" content="Download state-specific divorce and legal form kits. Professionally structured documents with step-by-step guidance and a free filing fee waiver." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -15,15 +22,15 @@
 
 <body>
 
-  <h1>Alabama Legal Form Kits</h1>
+  <h1><script>document.write(STATE_NAME)</script> Legal Form Kits</h1>
 
   <p>
     InFormer provides professionally structured legal form kits specifically
-    designed for use in Alabama courts. Our kits are built for clarity,
+    designed for use in <script>document.write(STATE_NAME)</script> courts. Our kits are built for clarity,
     accuracy, and real-world acceptance.
   </p>
 
-  <h2>Alabama Divorce Kits</h2>
+  <h2><script>document.write(STATE_NAME)</script> Divorce Kits</h2>
 
   <div id="product-list">
     <!-- Products will be loaded here from Supabase -->
@@ -35,19 +42,19 @@
 
     async function loadProducts() {
       try {
-        const products = await getProductsByState("Alabama", "With Children");
-        console.log("Fetched products for Alabama (With Children):", products);
+        const products = await getProductsByState(STATE_NAME, CHILDREN_STATUS);
+        console.log(`Fetched products for ${STATE_NAME} (${CHILDREN_STATUS}):`, products);
 
         const container = document.getElementById('product-list');
         if (products && products.length > 0) {
           container.innerHTML = products.map(product => `
             <section>
-              <h3>${product.title || 'Alabama Divorce Kit'}</h3>
+              <h3>${product.title || (STATE_NAME + ' Divorce Kit')}</h3>
               <p><strong>$${product.price || '0'} — One-time payment</strong></p>
             </section>
           `).join('');
         } else {
-          container.innerHTML = '<p>No products found for this state.</p>';
+          container.innerHTML = `<p>No products found for ${STATE_NAME} with ${CHILDREN_STATUS.toLowerCase()}.</p>`;
         }
       } catch (err) {
         console.error("Failed to load products:", err);
@@ -59,12 +66,12 @@
   </script>
 
   <section>
-    <h3>Alabama Divorce Kit — No Children</h3>
+    <h3><script>document.write(STATE_NAME)</script> Divorce Kit — No Children</h3>
 
     <p>
-      Designed for uncontested Alabama divorces without minor children.
-      Includes correctly formatted Alabama divorce forms, step-by-step
-      filing instructions, and a <strong>free Alabama filing fee waiver
+      Designed for uncontested <script>document.write(STATE_NAME)</script> divorces without minor children.
+      Includes correctly formatted <script>document.write(STATE_NAME)</script> divorce forms, step-by-step
+      filing instructions, and a <strong>free <script>document.write(STATE_NAME)</script> filing fee waiver
       (Pauper’s Affidavit)</strong>.
     </p>
 
@@ -80,12 +87,12 @@
   <hr />
 
   <section>
-    <h3>Alabama Divorce Kit — With Children</h3>
+    <h3><script>document.write(STATE_NAME)</script> Divorce Kit — With Children</h3>
 
     <p>
-      Complete Alabama divorce kit for cases involving minor children.
+      Complete <script>document.write(STATE_NAME)</script> divorce kit for cases involving minor children.
       Includes parenting and child-related forms, filing guidance, and a
-      <strong>free Alabama filing fee waiver</strong>.
+      <strong>free <script>document.write(STATE_NAME)</script> filing fee waiver</strong>.
     </p>
 
     <p><strong>$199 — One-time payment</strong></p>
@@ -100,7 +107,7 @@
   <h2>Why Choose InFormer?</h2>
 
   <ul>
-    <li>Alabama-specific forms — not generic templates</li>
+    <li><script>document.write(STATE_NAME)</script>-specific forms — not generic templates</li>
     <li>Step-by-step filing instructions included</li>
     <li>Free filing fee waiver included with every kit</li>
     <li>No subscriptions or hidden fees</li>
