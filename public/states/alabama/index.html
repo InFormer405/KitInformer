@@ -43,47 +43,54 @@
   </div>
 
   <script type="module">
-    import { getProductsByState } from "../../supabase-products.js";
-
     /**
      * Renders state-specific text into the DOM
      */
     function renderStateText() {
-      const { STATE_NAME } = CONFIG;
-      
-      // Update Title
-      document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
-      
-      // Update Headings & Paragraphs
-      const elements = {
-        '#main-heading': `${STATE_NAME} Legal Form Kits`,
-        '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
-        '#kits-heading': `${STATE_NAME} Divorce Kits`,
-        '#no-children-title': `${STATE_NAME} Divorce Kit — No Children`,
-        '#no-children-desc': `Designed for uncontested ${STATE_NAME} divorces without minor children. Includes correctly formatted ${STATE_NAME} divorce forms, step-by-step filing instructions, and a free ${STATE_NAME} filing fee waiver (Pauper’s Affidavit).`,
-        '#with-children-title': `${STATE_NAME} Divorce Kit — With Children`,
-        '#with-children-desc': `Complete ${STATE_NAME} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${STATE_NAME} filing fee waiver.`,
-        '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
-      };
+      try {
+        const { STATE_NAME } = CONFIG;
+        
+        // Update Title
+        document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
+        
+        // Update Headings & Paragraphs
+        const elements = {
+          '#main-heading': `${STATE_NAME} Legal Form Kits`,
+          '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
+          '#kits-heading': `${STATE_NAME} Divorce Kits`,
+          '#no-children-title': `${STATE_NAME} Divorce Kit — No Children`,
+          '#no-children-desc': `Designed for uncontested ${STATE_NAME} divorces without minor children. Includes correctly formatted ${STATE_NAME} divorce forms, step-by-step filing instructions, and a free ${STATE_NAME} filing fee waiver (Pauper's Affidavit).`,
+          '#with-children-title': `${STATE_NAME} Divorce Kit — With Children`,
+          '#with-children-desc': `Complete ${STATE_NAME} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${STATE_NAME} filing fee waiver.`,
+          '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
+        };
 
-      for (const [selector, text] of Object.entries(elements)) {
-        const el = document.querySelector(selector);
-        if (el) el.textContent = text;
+        for (const [selector, text] of Object.entries(elements)) {
+          const el = document.querySelector(selector);
+          if (el) el.textContent = text;
+        }
+        
+        // Handle the <strong> tags in descriptions which textContent would strip
+        const noChildrenStrong = document.querySelector('#no-children-desc-strong');
+        if (noChildrenStrong) noChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver (Pauper's Affidavit)`;
+        
+        const withChildrenStrong = document.querySelector('#with-children-desc-strong');
+        if (withChildrenStrong) withChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver`;
+      } catch (err) {
+        console.error("Failed to render state text:", err);
       }
-      
-      // Handle the <strong> tags in descriptions which textContent would strip
-      const noChildrenStrong = document.querySelector('#no-children-desc-strong');
-      if (noChildrenStrong) noChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver (Pauper’s Affidavit)`;
-      
-      const withChildrenStrong = document.querySelector('#with-children-desc-strong');
-      if (withChildrenStrong) withChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver`;
     }
 
     async function loadProducts() {
-      const { STATE_NAME, CHILDREN_STATUS, DEBUG } = CONFIG;
       const container = document.getElementById('product-list');
+      if (!container) return;
 
       try {
+        const { STATE_NAME, CHILDREN_STATUS, DEBUG } = CONFIG;
+        
+        // Dynamic import to gracefully handle module load failures
+        const { getProductsByState } = await import("../../supabase-products.js");
+        
         const products = await getProductsByState(STATE_NAME, CHILDREN_STATUS);
         
         if (DEBUG) {
@@ -101,14 +108,21 @@
           container.innerHTML = `<p>No products found for ${STATE_NAME} with ${CHILDREN_STATUS.toLowerCase()}.</p>`;
         }
       } catch (err) {
-        if (DEBUG) console.error("Failed to load products:", err);
-        container.innerHTML = '<p>Error loading products. Please try again later.</p>';
+        console.error("Failed to load products:", err);
+        container.innerHTML = '<p>Unable to load products. Please check back later.</p>';
       }
     }
 
-    // Initialize page
-    renderStateText();
-    loadProducts();
+    // Initialize page when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        renderStateText();
+        loadProducts();
+      });
+    } else {
+      renderStateText();
+      loadProducts();
+    }
   </script>
 
   <section>
@@ -118,7 +132,7 @@
       Designed for uncontested divorces without minor children.
       Includes correctly formatted divorce forms, step-by-step
       filing instructions, and a <strong id="no-children-desc-strong">free filing fee waiver
-      (Pauper’s Affidavit)</strong>.
+      (Pauper's Affidavit)</strong>.
     </p>
 
     <p><strong>$175 — One-time payment</strong></p>

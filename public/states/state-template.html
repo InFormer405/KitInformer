@@ -2,71 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{{STATE}} Legal Form Kits | InFormer</title>
+  
+  <script>
+    /**
+     * PAGE CONFIGURATION
+     * This object is used to drive the dynamic content on the page.
+     * All state-specific strings are injected via DOM-based rendering.
+     */
+    const CONFIG = {
+      STATE_NAME: "{{STATE}}",
+      STATE_SLUG: "{{state-slug}}",
+      CHILDREN_STATUS: "With Children", // Possible values: "With Children", "No Children"
+      DEBUG: false // Set to true to enable console logging
+    };
+  </script>
 
-  <meta name="description" content="Download {{STATE}}-specific legal form kits. Professionally structured documents designed for speed, clarity, and acceptance." />
+  <title id="page-title">Divorce & Legal Form Kits | InFormer</title>
+
+  <meta name="description" content="Download state-specific divorce and legal form kits. Professionally structured documents with step-by-step guidance and a free filing fee waiver." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="canonical" href="https://informerlegalforms.com/states/{{state-slug}}/" />
   <meta name="robots" content="index, follow" />
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-      background: #ffffff;
-      color: #111;
-    }
-    header {
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      margin-top: 1rem;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <h1>{{STATE}} Legal Form Kits</h1>
 
-    <p>
-      InFormer provides professionally structured legal form kits
-      specifically designed for use in {{STATE}}.
+  <h1 id="main-heading">Legal Form Kits</h1>
+
+  <p id="intro-text">
+    InFormer provides professionally structured legal form kits specifically
+    designed for use in court. Our kits are built for clarity,
+    accuracy, and real-world acceptance.
+  </p>
+
+  <h2 id="kits-heading">Divorce Kits</h2>
+
+  <div id="product-list">
+    <!-- Products will be loaded here from Supabase -->
+    <p>Loading products...</p>
+  </div>
+
+  <script type="module">
+    /**
+     * Renders state-specific text into the DOM
+     */
+    function renderStateText() {
+      try {
+        const { STATE_NAME } = CONFIG;
+        
+        // Update Title
+        document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
+        
+        // Update Headings & Paragraphs
+        const elements = {
+          '#main-heading': `${STATE_NAME} Legal Form Kits`,
+          '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
+          '#kits-heading': `${STATE_NAME} Divorce Kits`,
+          '#no-children-title': `${STATE_NAME} Divorce Kit — No Children`,
+          '#no-children-desc': `Designed for uncontested ${STATE_NAME} divorces without minor children. Includes correctly formatted ${STATE_NAME} divorce forms, step-by-step filing instructions, and a free ${STATE_NAME} filing fee waiver (Pauper's Affidavit).`,
+          '#with-children-title': `${STATE_NAME} Divorce Kit — With Children`,
+          '#with-children-desc': `Complete ${STATE_NAME} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${STATE_NAME} filing fee waiver.`,
+          '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
+        };
+
+        for (const [selector, text] of Object.entries(elements)) {
+          const el = document.querySelector(selector);
+          if (el) el.textContent = text;
+        }
+        
+        // Handle the <strong> tags in descriptions which textContent would strip
+        const noChildrenStrong = document.querySelector('#no-children-desc-strong');
+        if (noChildrenStrong) noChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver (Pauper's Affidavit)`;
+        
+        const withChildrenStrong = document.querySelector('#with-children-desc-strong');
+        if (withChildrenStrong) withChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver`;
+      } catch (err) {
+        console.error("Failed to render state text:", err);
+      }
+    }
+
+    async function loadProducts() {
+      const container = document.getElementById('product-list');
+      if (!container) return;
+
+      try {
+        const { STATE_NAME, CHILDREN_STATUS, DEBUG } = CONFIG;
+        
+        // Dynamic import to gracefully handle module load failures
+        const { getProductsByState } = await import("../../supabase-products.js");
+        
+        const products = await getProductsByState(STATE_NAME, CHILDREN_STATUS);
+        
+        if (DEBUG) {
+          console.log(`Fetched products for ${STATE_NAME} (${CHILDREN_STATUS}):`, products);
+        }
+
+        if (products && products.length > 0) {
+          container.innerHTML = products.map(product => `
+            <section>
+              <h3>${product.title || (STATE_NAME + ' Divorce Kit')}</h3>
+              <p><strong>$${product.price || '0'} — One-time payment</strong></p>
+            </section>
+          `).join('');
+        } else {
+          container.innerHTML = `<p>No products found for ${STATE_NAME} with ${CHILDREN_STATUS.toLowerCase()}.</p>`;
+        }
+      } catch (err) {
+        console.error("Failed to load products:", err);
+        container.innerHTML = '<p>Unable to load products. Please check back later.</p>';
+      }
+    }
+
+    // Initialize page when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        renderStateText();
+        loadProducts();
+      });
+    } else {
+      renderStateText();
+      loadProducts();
+    }
+  </script>
+
+  <section>
+    <h3 id="no-children-title">Divorce Kit — No Children</h3>
+
+    <p id="no-children-desc">
+      Designed for uncontested divorces without minor children.
+      Includes correctly formatted divorce forms, step-by-step
+      filing instructions, and a <strong id="no-children-desc-strong">free filing fee waiver
+      (Pauper's Affidavit)</strong>.
     </p>
 
-    <h2>Available Kits</h2>
-    <ul>
-      <li>{{STATE}} Divorce Kit</li>
-      <li>{{STATE}} Family Law Forms</li>
-      <li>{{STATE}} Civil & Small Claims Forms</li>
-    </ul>
+    <p><strong>$175 — One-time payment</strong></p>
 
-    <h2>Why InFormer?</h2>
     <p>
-      Our kits are structured for clarity, speed, and maximum acceptance
-      based on {{STATE}} requirements.
+      <a href="YOUR_NO_CHILDREN_STRIPE_LINK" target="_blank" rel="noopener">
+        Purchase No-Children Divorce Kit
+      </a>
     </p>
-  </header>
+  </section>
+
+  <hr />
+
+  <section>
+    <h3 id="with-children-title">Divorce Kit — With Children</h3>
+
+    <p id="with-children-desc">
+      Complete divorce kit for cases involving minor children.
+      Includes parenting and child-related forms, filing guidance, and a
+      <strong id="with-children-desc-strong">free filing fee waiver</strong>.
+    </p>
+
+    <p><strong>$199 — One-time payment</strong></p>
+
+    <p>
+      <a href="YOUR_WITH_CHILDREN_STRIPE_LINK" target="_blank" rel="noopener">
+        Purchase With-Children Divorce Kit
+      </a>
+    </p>
+  </section>
+
+  <h2>Why Choose InFormer?</h2>
+
+  <ul>
+    <li id="why-choose-list-item">State-specific forms — not generic templates</li>
+    <li>Step-by-step filing instructions included</li>
+    <li>Free filing fee waiver included with every kit</li>
+    <li>No subscriptions or hidden fees</li>
+    <li>Instant digital download</li>
+  </ul>
 
   <footer>
-    © <span id="year"></span> InFormer. All rights reserved.
+    <p>
+      © <span id="current-year"></span> InFormer.
+      All rights reserved.
+    </p>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <p style="font-size: 0.85rem; color: #555;">
+      InFormer is not a law firm and does not provide legal advice. These
+      materials are intended for informational and document preparation
+      purposes only.
+    </p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

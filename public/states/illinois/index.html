@@ -2,37 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
+  <script>
+    /**
+     * PAGE CONFIGURATION
+     * This object is used to drive the dynamic content on the page.
+     * All state-specific strings are injected via DOM-based rendering.
+     */
+    const CONFIG = {
+      STATE_NAME: "Illinois",
+      STATE_SLUG: "illinois",
+      CHILDREN_STATUS: "With Children", // Possible values: "With Children", "No Children"
+      DEBUG: false // Set to true to enable console logging
+    };
+  </script>
 
-  <title>Illinois Divorce & Legal Form Kits | InFormer</title>
+  <title id="page-title">Divorce & Legal Form Kits | InFormer</title>
 
-  <meta name="description" content="Download Illinois-specific divorce and legal form kits. Professionally structured documents with step-by-step guidance and a free Illinois filing fee waiver." />
-
+  <meta name="description" content="Download state-specific divorce and legal form kits. Professionally structured documents with step-by-step guidance and a free filing fee waiver." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="canonical" href="https://informerlegalforms.com/states/illinois/" />
   <meta name="robots" content="index, follow" />
 </head>
 
 <body>
 
-  <h1>Illinois Legal Form Kits</h1>
+  <h1 id="main-heading">Legal Form Kits</h1>
 
-  <p>
+  <p id="intro-text">
     InFormer provides professionally structured legal form kits specifically
-    designed for use in Illinois courts. Our kits are built for clarity,
+    designed for use in court. Our kits are built for clarity,
     accuracy, and real-world acceptance.
   </p>
 
-  <h2>Illinois Divorce Kits</h2>
+  <h2 id="kits-heading">Divorce Kits</h2>
+
+  <div id="product-list">
+    <!-- Products will be loaded here from Supabase -->
+    <p>Loading products...</p>
+  </div>
+
+  <script type="module">
+    /**
+     * Renders state-specific text into the DOM
+     */
+    function renderStateText() {
+      try {
+        const { STATE_NAME } = CONFIG;
+        
+        // Update Title
+        document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
+        
+        // Update Headings & Paragraphs
+        const elements = {
+          '#main-heading': `${STATE_NAME} Legal Form Kits`,
+          '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
+          '#kits-heading': `${STATE_NAME} Divorce Kits`,
+          '#no-children-title': `${STATE_NAME} Divorce Kit — No Children`,
+          '#no-children-desc': `Designed for uncontested ${STATE_NAME} divorces without minor children. Includes correctly formatted ${STATE_NAME} divorce forms, step-by-step filing instructions, and a free ${STATE_NAME} filing fee waiver (Pauper's Affidavit).`,
+          '#with-children-title': `${STATE_NAME} Divorce Kit — With Children`,
+          '#with-children-desc': `Complete ${STATE_NAME} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${STATE_NAME} filing fee waiver.`,
+          '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
+        };
+
+        for (const [selector, text] of Object.entries(elements)) {
+          const el = document.querySelector(selector);
+          if (el) el.textContent = text;
+        }
+        
+        // Handle the <strong> tags in descriptions which textContent would strip
+        const noChildrenStrong = document.querySelector('#no-children-desc-strong');
+        if (noChildrenStrong) noChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver (Pauper's Affidavit)`;
+        
+        const withChildrenStrong = document.querySelector('#with-children-desc-strong');
+        if (withChildrenStrong) withChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver`;
+      } catch (err) {
+        console.error("Failed to render state text:", err);
+      }
+    }
+
+    async function loadProducts() {
+      const container = document.getElementById('product-list');
+      if (!container) return;
+
+      try {
+        const { STATE_NAME, CHILDREN_STATUS, DEBUG } = CONFIG;
+        
+        // Dynamic import to gracefully handle module load failures
+        const { getProductsByState } = await import("../../supabase-products.js");
+        
+        const products = await getProductsByState(STATE_NAME, CHILDREN_STATUS);
+        
+        if (DEBUG) {
+          console.log(`Fetched products for ${STATE_NAME} (${CHILDREN_STATUS}):`, products);
+        }
+
+        if (products && products.length > 0) {
+          container.innerHTML = products.map(product => `
+            <section>
+              <h3>${product.title || (STATE_NAME + ' Divorce Kit')}</h3>
+              <p><strong>$${product.price || '0'} — One-time payment</strong></p>
+            </section>
+          `).join('');
+        } else {
+          container.innerHTML = `<p>No products found for ${STATE_NAME} with ${CHILDREN_STATUS.toLowerCase()}.</p>`;
+        }
+      } catch (err) {
+        console.error("Failed to load products:", err);
+        container.innerHTML = '<p>Unable to load products. Please check back later.</p>';
+      }
+    }
+
+    // Initialize page when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        renderStateText();
+        loadProducts();
+      });
+    } else {
+      renderStateText();
+      loadProducts();
+    }
+  </script>
 
   <section>
-    <h3>Illinois Divorce Kit — No Children</h3>
+    <h3 id="no-children-title">Divorce Kit — No Children</h3>
 
-    <p>
-      Designed for uncontested Illinois divorces without minor children.
-      Includes correctly formatted Illinois divorce forms, step-by-step
-      filing instructions, and a <strong>free Illinois filing fee waiver
-      (Pauper’s Affidavit)</strong>.
+    <p id="no-children-desc">
+      Designed for uncontested divorces without minor children.
+      Includes correctly formatted divorce forms, step-by-step
+      filing instructions, and a <strong id="no-children-desc-strong">free filing fee waiver
+      (Pauper's Affidavit)</strong>.
     </p>
 
     <p><strong>$175 — One-time payment</strong></p>
@@ -47,12 +147,12 @@
   <hr />
 
   <section>
-    <h3>Illinois Divorce Kit — With Children</h3>
+    <h3 id="with-children-title">Divorce Kit — With Children</h3>
 
-    <p>
-      Complete Illinois divorce kit for cases involving minor children.
+    <p id="with-children-desc">
+      Complete divorce kit for cases involving minor children.
       Includes parenting and child-related forms, filing guidance, and a
-      <strong>free Illinois filing fee waiver</strong>.
+      <strong id="with-children-desc-strong">free filing fee waiver</strong>.
     </p>
 
     <p><strong>$199 — One-time payment</strong></p>
@@ -67,7 +167,7 @@
   <h2>Why Choose InFormer?</h2>
 
   <ul>
-    <li>Illinois-specific forms — not generic templates</li>
+    <li id="why-choose-list-item">State-specific forms — not generic templates</li>
     <li>Step-by-step filing instructions included</li>
     <li>Free filing fee waiver included with every kit</li>
     <li>No subscriptions or hidden fees</li>
@@ -76,9 +176,12 @@
 
   <footer>
     <p>
-      © <script>document.write(new Date().getFullYear())</script> InFormer.
+      © <span id="current-year"></span> InFormer.
       All rights reserved.
     </p>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
     <p style="font-size: 0.85rem; color: #555;">
       InFormer is not a law firm and does not provide legal advice. These
