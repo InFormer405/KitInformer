@@ -1,15 +1,21 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-// Initialize the Supabase JS client using environment variables
-// Note: In a client-side module, process.env is usually not available directly 
-// unless provided by a bundler. For Replit, these are typically handled by 
-// the server injecting them or using a configuration.
-// Since this is a client-side module as requested, we'll assume the environment 
-// provides these values or they are shimmed.
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY;
+// Safety check for environment variables in client-side environment
+// process.env is usually not available in the browser without a bundler.
+// We fallback to empty strings to prevent the constructor from crashing.
+const supabaseUrl = (typeof process !== 'undefined' && process.env) ? process.env.SUPABASE_URL : '';
+const supabaseKey = (typeof process !== 'undefined' && process.env) ? process.env.SUPABASE_KEY : '';
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+let supabase;
+try {
+    if (supabaseUrl && supabaseKey) {
+        supabase = createClient(supabaseUrl, supabaseKey);
+    } else {
+        console.warn('Supabase credentials missing. Supabase functionality will be disabled.');
+    }
+} catch (err) {
+    console.error('Failed to initialize Supabase client:', err);
+}
 
 /**
  * Queries the 'kits' table for products matching state and children status.
@@ -18,17 +24,27 @@ const supabase = createClient(supabaseUrl, supabaseKey);
  * @returns {Promise<Array>}
  */
 export async function getProductsByState(state, children_status) {
-    const { data, error } = await supabase
-        .from('kits')
-        .select('*')
-        .eq('state', state)
-        .eq('children_status', children_status);
-
-    if (error) {
-        console.error('Error fetching products by state:', error);
+    if (!supabase) {
+        console.warn('Supabase not initialized. Returning empty product list.');
         return [];
     }
-    return data;
+    
+    try {
+        const { data, error } = await supabase
+            .from('kits')
+            .select('*')
+            .eq('state', state)
+            .eq('children_status', children_status);
+
+        if (error) {
+            console.error('Error fetching products by state:', error);
+            return [];
+        }
+        return data || [];
+    } catch (err) {
+        console.error('Unexpected error in getProductsByState:', err);
+        return [];
+    }
 }
 
 /**
@@ -37,15 +53,25 @@ export async function getProductsByState(state, children_status) {
  * @returns {Promise<Object|null>}
  */
 export async function getProductBySKU(sku) {
-    const { data, error } = await supabase
-        .from('kits')
-        .select('*')
-        .eq('sku', sku)
-        .single();
-
-    if (error) {
-        console.error('Error fetching product by SKU:', error);
+    if (!supabase) {
+        console.warn('Supabase not initialized. Returning null.');
         return null;
     }
-    return data;
+
+    try {
+        const { data, error } = await supabase
+            .from('kits')
+            .select('*')
+            .eq('sku', sku)
+            .single();
+
+        if (error) {
+            console.error('Error fetching product by SKU:', error);
+            return null;
+        }
+        return data;
+    } catch (err) {
+        console.error('Unexpected error in getProductBySKU:', err);
+        return null;
+    }
 }
