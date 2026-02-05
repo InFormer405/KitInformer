@@ -4,16 +4,11 @@
   <meta charset="UTF-8" />
   
   <script>
-    /**
-     * PAGE CONFIGURATION
-     * This object is used to drive the dynamic content on the page.
-     * All state-specific strings are injected via DOM-based rendering.
-     */
     const CONFIG = {
       STATE_NAME: "Utah",
       STATE_SLUG: "utah",
-      CHILDREN_STATUS: "With Children", // Possible values: "With Children", "No Children"
-      DEBUG: false // Set to true to enable console logging
+      CHILDREN_STATUS: "With Children",
+      DEBUG: false
     };
   </script>
 
@@ -23,13 +18,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://informerlegalforms.com/states/utah/" />
   <meta name="robots" content="index, follow" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #1a1a2e;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #1a1a2e;
+    }
+    
+    .intro-text {
+      font-size: 1.125rem;
+      color: #4a4a68;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .product-card {
+      background: #1a1a2e;
+      border-radius: 16px;
+      overflow: hidden;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-image-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #2d2d44;
+      overflow: hidden;
+    }
+    
+    .product-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .product-image-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+    }
+    
+    .product-image-placeholder svg {
+      width: 64px;
+      height: 64px;
+      opacity: 0.5;
+    }
+    
+    .product-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .product-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem 0;
+      color: #ffffff;
+    }
+    
+    .product-description {
+      font-size: 0.9375rem;
+      color: #a0a0b8;
+      margin: 0 0 1rem 0;
+      flex: 1;
+      line-height: 1.5;
+    }
+    
+    .product-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 1rem 0;
+    }
+    
+    .product-price span {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #a0a0b8;
+    }
+    
+    .product-cta {
+      display: inline-block;
+      background: #6366f1;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.875rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+    
+    .product-cta:hover {
+      background: #4f46e5;
+    }
+    
+    .loading-text {
+      color: #6b7280;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .why-choose {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .why-choose h2 {
+      margin-top: 0;
+    }
+    
+    .why-choose ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    
+    .why-choose li {
+      margin-bottom: 0.75rem;
+      color: #4a4a68;
+    }
+    
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    .disclaimer {
+      max-width: 600px;
+      margin: 1rem auto 0;
+      color: #9ca3af;
+      font-size: 0.8125rem;
+    }
+  </style>
 </head>
 
 <body>
 
+<div class="container">
   <h1 id="main-heading">Legal Form Kits</h1>
 
-  <p id="intro-text">
+  <p id="intro-text" class="intro-text">
     InFormer provides professionally structured legal form kits specifically
     designed for use in court. Our kits are built for clarity,
     accuracy, and real-world acceptance.
@@ -37,158 +225,168 @@
 
   <h2 id="kits-heading">Divorce Kits</h2>
 
-  <div id="product-list">
-    <!-- Products will be loaded here from Supabase -->
-    <p>Loading products...</p>
+  <div id="product-list" class="product-grid">
+    <p class="loading-text">Loading products...</p>
   </div>
 
-  <script type="module">
-    /**
-     * Renders state-specific text into the DOM
-     */
-    function renderStateText() {
-      try {
-        const { STATE_NAME } = CONFIG;
-        
-        // Update Title
-        document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
-        
-        // Update Headings & Paragraphs
-        const elements = {
-          '#main-heading': `${STATE_NAME} Legal Form Kits`,
-          '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
-          '#kits-heading': `${STATE_NAME} Divorce Kits`,
-          '#no-children-title': `${STATE_NAME} Divorce Kit — No Children`,
-          '#no-children-desc': `Designed for uncontested ${STATE_NAME} divorces without minor children. Includes correctly formatted ${STATE_NAME} divorce forms, step-by-step filing instructions, and a free ${STATE_NAME} filing fee waiver (Pauper's Affidavit).`,
-          '#with-children-title': `${STATE_NAME} Divorce Kit — With Children`,
-          '#with-children-desc': `Complete ${STATE_NAME} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${STATE_NAME} filing fee waiver.`,
-          '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
-        };
-
-        for (const [selector, text] of Object.entries(elements)) {
-          const el = document.querySelector(selector);
-          if (el) el.textContent = text;
-        }
-        
-        // Handle the <strong> tags in descriptions which textContent would strip
-        const noChildrenStrong = document.querySelector('#no-children-desc-strong');
-        if (noChildrenStrong) noChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver (Pauper's Affidavit)`;
-        
-        const withChildrenStrong = document.querySelector('#with-children-desc-strong');
-        if (withChildrenStrong) withChildrenStrong.textContent = `free ${STATE_NAME} filing fee waiver`;
-      } catch (err) {
-        console.error("Failed to render state text:", err);
-      }
-    }
-
-    async function loadProducts() {
-      const container = document.getElementById('product-list');
-      if (!container) return;
-
-      try {
-        const { STATE_NAME, CHILDREN_STATUS, DEBUG } = CONFIG;
-        
-        // Dynamic import to gracefully handle module load failures
-        const { getProductsByState } = await import("../../supabase-products.js");
-        
-        const products = await getProductsByState(STATE_NAME, CHILDREN_STATUS);
-        
-        if (DEBUG) {
-          console.log(`Fetched products for ${STATE_NAME} (${CHILDREN_STATUS}):`, products);
-        }
-
-        if (products && products.length > 0) {
-          container.innerHTML = products.map(product => `
-            <section>
-              <h3>${product.title || (STATE_NAME + ' Divorce Kit')}</h3>
-              <p><strong>$${product.price || '0'} — One-time payment</strong></p>
-            </section>
-          `).join('');
-        } else {
-          container.innerHTML = `<p>No products found for ${STATE_NAME} with ${CHILDREN_STATUS.toLowerCase()}.</p>`;
-        }
-      } catch (err) {
-        console.error("Failed to load products:", err);
-        container.innerHTML = '<p>Unable to load products. Please check back later.</p>';
-      }
-    }
-
-    // Initialize page when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        renderStateText();
-        loadProducts();
-      });
-    } else {
-      renderStateText();
-      loadProducts();
-    }
-  </script>
-
-  <section>
-    <h3 id="no-children-title">Divorce Kit — No Children</h3>
-
-    <p id="no-children-desc">
-      Designed for uncontested divorces without minor children.
-      Includes correctly formatted divorce forms, step-by-step
-      filing instructions, and a <strong id="no-children-desc-strong">free filing fee waiver
-      (Pauper's Affidavit)</strong>.
-    </p>
-
-    <p><strong>$175 — One-time payment</strong></p>
-
-    <p>
-      <a href="YOUR_NO_CHILDREN_STRIPE_LINK" target="_blank" rel="noopener">
-        Purchase No-Children Divorce Kit
-      </a>
-    </p>
-  </section>
-
-  <hr />
-
-  <section>
-    <h3 id="with-children-title">Divorce Kit — With Children</h3>
-
-    <p id="with-children-desc">
-      Complete divorce kit for cases involving minor children.
-      Includes parenting and child-related forms, filing guidance, and a
-      <strong id="with-children-desc-strong">free filing fee waiver</strong>.
-    </p>
-
-    <p><strong>$199 — One-time payment</strong></p>
-
-    <p>
-      <a href="YOUR_WITH_CHILDREN_STRIPE_LINK" target="_blank" rel="noopener">
-        Purchase With-Children Divorce Kit
-      </a>
-    </p>
-  </section>
-
-  <h2>Why Choose InFormer?</h2>
-
-  <ul>
-    <li id="why-choose-list-item">State-specific forms — not generic templates</li>
-    <li>Step-by-step filing instructions included</li>
-    <li>Free filing fee waiver included with every kit</li>
-    <li>No subscriptions or hidden fees</li>
-    <li>Instant digital download</li>
-  </ul>
+  <div class="why-choose">
+    <h2>Why Choose InFormer?</h2>
+    <ul>
+      <li id="why-choose-list-item">State-specific forms — not generic templates</li>
+      <li>Step-by-step filing instructions included</li>
+      <li>Free filing fee waiver included with every kit</li>
+      <li>No subscriptions or hidden fees</li>
+      <li>Instant digital download</li>
+    </ul>
+  </div>
 
   <footer>
-    <p>
-      © <span id="current-year"></span> InFormer.
-      All rights reserved.
-    </p>
-    <script>
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-
-    <p style="font-size: 0.85rem; color: #555;">
+    <p>© <span id="current-year"></span> InFormer. All rights reserved.</p>
+    <p class="disclaimer">
       InFormer is not a law firm and does not provide legal advice. These
       materials are intended for informational and document preparation
       purposes only.
     </p>
   </footer>
+</div>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<script type="module">
+  const PLACEHOLDER_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+    <rect x="8" y="12" width="48" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+    <circle cx="20" cy="24" r="4" stroke="currentColor" stroke-width="2"/>
+    <path d="M8 40l12-8 8 6 16-12 12 10" stroke="currentColor" stroke-width="2" fill="none"/>
+  </svg>`;
+
+  function renderStateText() {
+    try {
+      const { STATE_NAME } = CONFIG;
+      
+      document.title = `${STATE_NAME} Divorce & Legal Form Kits | InFormer`;
+      
+      const elements = {
+        '#main-heading': `${STATE_NAME} Legal Form Kits`,
+        '#intro-text': `InFormer provides professionally structured legal form kits specifically designed for use in ${STATE_NAME} courts. Our kits are built for clarity, accuracy, and real-world acceptance.`,
+        '#kits-heading': `${STATE_NAME} Divorce Kits`,
+        '#why-choose-list-item': `${STATE_NAME}-specific forms — not generic templates`
+      };
+
+      for (const [selector, text] of Object.entries(elements)) {
+        const el = document.querySelector(selector);
+        if (el) el.textContent = text;
+      }
+    } catch (err) {
+      console.error("Failed to render state text:", err);
+    }
+  }
+
+  function getImagePath(product, stateName, stateSlug) {
+    if (product.image_url) {
+      return product.image_url;
+    }
+    const childrenType = (product.children_status || '').toLowerCase().includes('with') ? 'with-children' : 'no-children';
+    return `/images/products/${stateSlug}-${childrenType}.jpg`;
+  }
+
+  function createProductCard(product, stateName, stateSlug) {
+    const imagePath = getImagePath(product, stateName, stateSlug);
+    const title = product.title || `${stateName} Divorce Kit`;
+    const price = product.price || 175;
+    const description = product.description || `Complete ${stateName} divorce document kit with state-specific forms, step-by-step filing instructions, and free filing fee waiver included.`;
+    const stripeLink = product.stripe_link || '#';
+    const sku = product.sku || '';
+    
+    return `
+      <article class="product-card" data-sku="${sku}">
+        <div class="product-image-container">
+          <img 
+            src="${imagePath}" 
+            alt="${title}" 
+            class="product-image"
+            loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="product-image-placeholder" style="display: none;">
+            ${PLACEHOLDER_SVG}
+          </div>
+        </div>
+        <div class="product-content">
+          <h3 class="product-title">${title}</h3>
+          <p class="product-description">${description}</p>
+          <p class="product-price">$${price} <span>One-time payment</span></p>
+          <a href="${stripeLink}" class="product-cta" target="_blank" rel="noopener">
+            Purchase Kit
+          </a>
+        </div>
+      </article>
+    `;
+  }
+
+  function createFallbackCards(stateName, stateSlug) {
+    const products = [
+      {
+        title: `${stateName} Divorce Kit — No Children`,
+        description: `Designed for uncontested ${stateName} divorces without minor children. Includes correctly formatted ${stateName} divorce forms, step-by-step filing instructions, and a free ${stateName} filing fee waiver.`,
+        price: 175,
+        children_status: 'No Children',
+        stripe_link: '#'
+      },
+      {
+        title: `${stateName} Divorce Kit — With Children`,
+        description: `Complete ${stateName} divorce kit for cases involving minor children. Includes parenting and child-related forms, filing guidance, and a free ${stateName} filing fee waiver.`,
+        price: 199,
+        children_status: 'With Children',
+        stripe_link: '#'
+      }
+    ];
+    
+    return products.map(p => createProductCard(p, stateName, stateSlug)).join('');
+  }
+
+  async function loadProducts() {
+    const container = document.getElementById('product-list');
+    if (!container) return;
+
+    const { STATE_NAME, STATE_SLUG, DEBUG } = CONFIG;
+
+    try {
+      const { getProductsByState } = await import("../../supabase-products.js");
+      
+      const [noChildrenProducts, withChildrenProducts] = await Promise.all([
+        getProductsByState(STATE_NAME, 'No Children'),
+        getProductsByState(STATE_NAME, 'With Children')
+      ]);
+      
+      const allProducts = [...(noChildrenProducts || []), ...(withChildrenProducts || [])];
+      
+      if (DEBUG) {
+        console.log(`Fetched products for ${STATE_NAME}:`, allProducts);
+      }
+
+      if (allProducts.length > 0) {
+        container.innerHTML = allProducts.map(p => createProductCard(p, STATE_NAME, STATE_SLUG)).join('');
+      } else {
+        container.innerHTML = createFallbackCards(STATE_NAME, STATE_SLUG);
+      }
+    } catch (err) {
+      console.error("Failed to load products:", err);
+      container.innerHTML = createFallbackCards(STATE_NAME, STATE_SLUG);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      renderStateText();
+      loadProducts();
+    });
+  } else {
+    renderStateText();
+    loadProducts();
+  }
+</script>
 
 </body>
 </html>

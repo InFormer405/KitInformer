@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2d3748"/>
+  <g fill="#4a5568">
+    <rect x="160" y="100" width="80" height="60" rx="4"/>
+    <circle cx="180" cy="120" r="8"/>
+    <polygon points="160,160 200,130 240,160"/>
+  </g>
+  <text x="200" y="200" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="14">Legal Form Kit</text>
+</svg>

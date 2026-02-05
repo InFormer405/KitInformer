@@ -11,6 +11,8 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 ### February 2026
+- **Product Card Styling**: Implemented dark card-based design with rounded corners, image support, and graceful image fallback
+- **Image Support**: Added product image containers with 16:9 aspect ratio and SVG placeholder fallback
 - **Error Handling Improvements**: Added defensive error handling to `supabase-products.js` and state pages to prevent white page issues when JavaScript fails
 - **Dynamic Imports**: State pages now use dynamic imports for the Supabase module to gracefully handle load failures
 - **State Registry**: Created `public/states/registry.json` containing all 50 US states for automation
@@ -22,6 +24,7 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Static HTML pages**: The `public/` directory contains pre-built HTML pages for the main site and individual state landing pages
 - **Configuration-driven state pages**: Each state page uses a `CONFIG` object for state-specific values
+- **Dark card design**: Products displayed in dark (#1a1a2e) cards with rounded corners, image slots, and CTA buttons
 - **Client-side data fetching**: JavaScript modules (ES modules via CDN) fetch product data from Supabase directly in the browser
 - **Error resilience**: Pages render visible HTML content even if JavaScript fails to load or execute
 - **No build process**: Pure HTML/CSS/JS without bundling or transpilation
@@ -31,6 +34,14 @@ Preferred communication style: Simple, everyday language.
 - Each page has a `CONFIG` object with `STATE_NAME`, `STATE_SLUG`, `CHILDREN_STATUS`, and `DEBUG` flags
 - DOM-based rendering replaces `document.write()` for automation safety
 - Dynamic imports with try/catch ensure graceful degradation
+
+### Product Card Design
+- Dark background (#1a1a2e) with 16px border-radius
+- Image container with 16:9 aspect ratio at top
+- Graceful image fallback: SVG placeholder shown if image fails to load
+- Image path convention: `/images/products/{state-slug}-{children-status}.jpg`
+- Alternative: product.image_url field from Supabase if available
+- Purple (#6366f1) CTA buttons with hover states
 
 ### Backend Architecture
 - **Task executor system**: Python-based task queue in `executor/` and `control/` directories
@@ -43,12 +54,11 @@ Preferred communication style: Simple, everyday language.
 
 ### Data Layer
 - **Supabase**: PostgreSQL-based backend for storing kit/product information
-- **Table structure**: `kits` table with fields including `state`, `children_status`, `sku`, `title`, `price`
+- **Table structure**: `kits` table with fields including `state`, `children_status`, `sku`, `title`, `price`, `image_url` (optional)
 - **Row-Level Security (RLS)**: Enabled on the kits table
 
 ### Product Structure
-- Two product variants per state: "No Children" and "With Children"
-- Consistent pricing at $175 per kit
+- Two product variants per state: "No Children" ($175) and "With Children" ($199)
 - Each kit includes: state-specific forms, filing instructions, and fee waiver documents
 
 ## Key Files
@@ -57,7 +67,10 @@ Preferred communication style: Simple, everyday language.
 - `public/index.html` - Main landing page
 - `public/supabase-products.js` - Supabase client module with error handling
 - `public/states/registry.json` - Centralized state registry for automation
+- `public/states/state-template.html` - Master template for state pages
 - `public/states/{state}/index.html` - State-specific landing pages
+- `public/images/placeholder.svg` - Fallback image for missing product images
+- `public/images/products/` - Directory for product images
 
 ### Executor System
 - `executor.py` - Main task executor control loop
@@ -96,3 +109,4 @@ Preferred communication style: Simple, everyday language.
 - Build output directory: `public`
 - No server-side processing required for frontend
 - Supabase credentials must be available client-side (consider using environment injection or a config endpoint for production)
+- Product images should be placed in `/images/products/` with naming convention `{state-slug}-{children-status}.jpg`
