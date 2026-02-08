@@ -19,5 +19,36 @@
       <a href="/states/california/">California Legal Form Kits</a>
     </li>
   </ul>
+
+  <!-- Future product rendering target -->
+  <div id="products"></div>
+
+  <!-- Product logic -->
+  <script type="module">
+    import { getProductsByState } from './supabase-products.js';
+
+    function getCoverImagePath(state, childrenStatus) {
+      const folder = childrenStatus ? 'with-children' : 'no-children';
+      return `/images/products/raw/${folder}/${state.toLowerCase()}-${folder}.png`;
+    }
+
+    // Example (temporary demo — safe to remove later)
+    async function demo() {
+      const products = await getProductsByState('CA', false);
+
+      const container = document.getElementById('products');
+
+      products.forEach(product => {
+        const img = document.createElement('img');
+        img.src = getCoverImagePath(product.state, product.children_status);
+        img.alt = `${product.state} legal kit`;
+
+        container.appendChild(img);
+      });
+    }
+
+    // Uncomment when ready to test Supabase rendering
+    // demo();
+  </script>
 </body>
 </html>
