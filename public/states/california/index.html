@@ -33,6 +33,47 @@
       border-radius: 999px;
       line-height: 1.4;
     }
+    .product-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 640px) {
+      .product-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .product-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: #ffffff;
+    }
+    .product-card h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: #1a1a2e;
+    }
+    .product-card .kit-pill {
+      margin-bottom: 0.75rem;
+    }
+    .product-card .price-display {
+      margin: 0.75rem 0 0.25rem 0;
+    }
+    .product-card .product-note {
+      font-size: 0.8125rem;
+      color: #888;
+      margin: 0 0 0.75rem 0;
+    }
+    .product-card p.product-desc {
+      font-size: 0.9375rem;
+      color: #444;
+      line-height: 1.5;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -70,6 +111,26 @@
         Every InFormer kit includes the standard court fee waiver forms used in California,
         at no additional cost. Approval is determined by the court.
       </p>
+    </section>
+
+    <section>
+      <h2>California Divorce Form Kits</h2>
+      <div class="product-cards">
+        <div class="product-card">
+          <h3>California Divorce Kit</h3>
+          <span class="kit-pill">No Children</span>
+          <p class="price-display">$175</p>
+          <p class="product-note">One-time payment</p>
+          <p class="product-desc">Complete DIY divorce forms and instructions for California (no minor children).</p>
+        </div>
+        <div class="product-card">
+          <h3>California Divorce Kit</h3>
+          <span class="kit-pill">With Children</span>
+          <p class="price-display">$199</p>
+          <p class="product-note">One-time payment</p>
+          <p class="product-desc">Complete DIY divorce forms and instructions for California (with minor children).</p>
+        </div>
+      </div>
     </section>
 
     <section class="kits-section">
