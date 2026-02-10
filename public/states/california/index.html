@@ -14,7 +14,19 @@
       margin: 0.25rem 0;
     }
     .filing-fee-section {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .filing-fee-box {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+    .filing-fee-box .price-display {
+      margin-bottom: 0.5rem;
+    }
+    .filing-fee-box p {
+      margin-top: 0.5rem;
     }
     .filing-fee-section + .kits-section {
       margin-top: 0.5rem;
@@ -37,7 +49,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.25rem;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       margin-bottom: 2rem;
     }
     @media (min-width: 640px) {
@@ -104,13 +116,15 @@
 
     <section class="filing-fee-section">
       <h2>Typical Divorce Filing Fees in California</h2>
-      <p class="price-display">$250 – $435</p>
-      <p class="muted">Filing fees vary by county and individual circumstances.</p>
-      <p>Many courts allow eligible filers to request a waiver of these fees.</p>
-      <p>
-        Every InFormer kit includes the standard court fee waiver forms used in California,
-        at no additional cost. Approval is determined by the court.
-      </p>
+      <div class="filing-fee-box">
+        <p class="price-display">$250 – $435</p>
+        <p class="muted">Filing fees vary by county and individual circumstances.</p>
+        <p>Many courts allow eligible filers to request a waiver of these fees.</p>
+        <p>
+          Every InFormer kit includes the standard court fee waiver forms used in California,
+          at no additional cost. Approval is determined by the court.
+        </p>
+      </div>
     </section>
 
     <section>
