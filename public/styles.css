@@ -114,14 +114,26 @@ footer p {
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  margin: 12px 0 4px 0;
-  background: linear-gradient(180deg, #ffd86b 0%, #e6b84f 40%, #c9972c 100%);
+  background: linear-gradient(
+    180deg,
+    #fff4c9 0%,
+    #f7d774 18%,
+    #e0b84f 35%,
+    #ffd978 50%,
+    #c9972e 70%,
+    #f5d06a 85%,
+    #fff4c9 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 18px rgba(255, 200, 80, 0.35);
+  background-clip: text;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.35),
+    0 2px 6px rgba(0,0,0,0.6);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.25));
 }
 
 .product-card .price {
