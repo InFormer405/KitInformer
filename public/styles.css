@@ -124,6 +124,25 @@ footer p {
   text-shadow: 0 0 18px rgba(255, 200, 80, 0.35);
 }
 
+.product-card .price {
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fff4b8 20%,
+    #f7d046 45%,
+    #d4a017 70%,
+    #a87400 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.7),
+    0 0 14px rgba(247, 208, 70, 0.5);
+}
+
 .price-note {
   font-size: 0.8125rem;
   color: #9ca3af;
