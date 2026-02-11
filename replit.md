@@ -24,7 +24,7 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Static HTML pages**: The `public/` directory contains pre-built HTML pages for the main site and individual state landing pages
 - **Configuration-driven state pages**: Each state page uses a `CONFIG` object for state-specific values
-- **Dark card design**: Products displayed in dark (#1a1a2e) cards with rounded corners, image slots, and CTA buttons
+- **Dark premium design system**: External stylesheet at `public/styles.css` with dark background (#0b0f14), serif headings, gold accents (#D4AF37)
 - **Client-side data fetching**: JavaScript modules (ES modules via CDN) fetch product data from Supabase directly in the browser
 - **Error resilience**: Pages render visible HTML content even if JavaScript fails to load or execute
 - **No build process**: Pure HTML/CSS/JS without bundling or transpilation
@@ -35,13 +35,15 @@ Preferred communication style: Simple, everyday language.
 - DOM-based rendering replaces `document.write()` for automation safety
 - Dynamic imports with try/catch ensure graceful degradation
 
-### Product Card Design
-- Dark background (#1a1a2e) with 16px border-radius
-- Image container with 16:9 aspect ratio at top
-- Graceful image fallback: SVG placeholder shown if image fails to load
+### Design System (public/styles.css)
+- **Body**: Dark background (#0b0f14), light text (#f5f5f5), sans-serif body, serif headings
+- **Product cards** (.product-card): Background #11161d, gold border accent rgba(212,175,55,0.15), 18px radius, hover lift with gold glow
+- **Pricing** (.price): Gold (#D4AF37), 2rem, weight 700
+- **Pills** (.pill): Blue gradient (#2563eb → #1d4ed8), rounded, blue glow shadow
+- **Product images** (.product-image): 14px radius, full width, hidden gracefully on error via onerror
+- **Filing fee box** (.filing-fee-box): Semi-transparent dark container, gold price at 1.35rem
+- **Layout** (.product-grid): Responsive grid — 1 column mobile, 2 columns at 640px+
 - Image path convention: `/images/products/{state-slug}-{children-status}.jpg`
-- Alternative: product.image_url field from Supabase if available
-- Purple (#6366f1) CTA buttons with hover states
 
 ### Backend Architecture
 - **Task executor system**: Python-based task queue in `executor/` and `control/` directories

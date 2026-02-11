@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0b0f14;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+  color: #d1d5db;
+}
+
+a {
+  color: #D4AF37;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header, main, footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 3rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-card {
+  background: #11161d;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 18px;
+  padding: 28px;
+  transition: all 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+}
+
+.product-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.price {
+  color: #D4AF37;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.price-note {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin: 0 0 0.75rem 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+  margin-bottom: 0.75rem;
+}
+
+.product-desc {
+  font-size: 0.9375rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.filing-fee-section {
+  margin-bottom: 2rem;
+}
+
+.filing-fee-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.filing-fee-box h2 {
+  margin-bottom: 0.5rem;
+}
+
+.filing-fee-price {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #D4AF37;
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.filing-fee-box p {
+  margin-top: 0.5rem;
+  color: #9ca3af;
+}
+
+section {
+  margin-bottom: 2rem;
+}
