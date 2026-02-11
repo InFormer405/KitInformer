@@ -131,16 +131,21 @@ footer p {
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    #fff4b8 20%,
-    #f7d046 45%,
-    #d4a017 70%,
-    #a87400 100%
+    #fff9d6 8%,
+    #ffe27a 18%,
+    #f7d046 30%,
+    #e0b83a 42%,
+    #fff4b8 50%,
+    #d4a017 65%,
+    #b8860b 80%,
+    #7a5400 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow:
-    0 3px 8px rgba(0, 0, 0, 0.7),
-    0 0 14px rgba(247, 208, 70, 0.5);
+    0 2px 4px rgba(0,0,0,0.8),
+    0 0 12px rgba(255,215,0,0.4),
+    0 0 20px rgba(255,215,0,0.25);
 }
 
 .price-note {
