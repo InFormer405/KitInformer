@@ -112,11 +112,13 @@ footer p {
 }
 
 .price {
-  color: #D4AF37;
+  color: #E6C35C;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   letter-spacing: 0.5px;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
+  text-shadow:
+    0 0 8px rgba(230, 195, 92, 0.6),
+    0 0 18px rgba(230, 195, 92, 0.4);
   margin: 12px 0;
 }
 
@@ -149,16 +151,18 @@ footer p {
 }
 
 .filing-fee-box {
-  background: #121826;
+  background: linear-gradient(145deg, #141922, #0f141b);
   border: 1px solid rgba(255, 215, 0, 0.15);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
 .filing-fee-box .price {
-  color: #D4AF37 !important;
-  font-weight: 700;
+  color: #E6C35C !important;
+  text-shadow:
+    0 0 10px rgba(230, 195, 92, 0.6),
+    0 0 20px rgba(230, 195, 92, 0.4);
 }
 
 .filing-fee-box h2 {
