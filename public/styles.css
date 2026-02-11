@@ -96,7 +96,8 @@ footer p {
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  transition: all 0.25s ease;
 }
 
 .product-card h3 {
@@ -112,8 +113,10 @@ footer p {
 
 .price {
   color: #D4AF37;
-  font-size: 2rem;
   font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
   margin: 12px 0;
 }
 
@@ -154,7 +157,8 @@ footer p {
 }
 
 .filing-fee-box .price {
-  color: #D4AF37;
+  color: #D4AF37 !important;
+  font-weight: 700;
 }
 
 .filing-fee-box h2 {
