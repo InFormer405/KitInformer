@@ -146,11 +146,15 @@ footer p {
 }
 
 .filing-fee-box {
-  background: #1a1f27;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #121826;
+  border: 1px solid rgba(255, 215, 0, 0.15);
   border-radius: 18px;
   padding: 32px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.filing-fee-box .price {
+  color: #D4AF37;
 }
 
 .filing-fee-box h2 {
