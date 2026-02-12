@@ -121,22 +121,20 @@ footer p {
   letter-spacing: -0.02em;
   background: linear-gradient(
     90deg,
-    #b58828 0%,
-    #cca030 15%,
-    #e6be42 30%,
-    #f5da65 50%,
-    #e6be42 70%,
-    #cca030 85%,
-    #b58828 100%
+    #8f6b1f 0%,
+    #cfa437 20%,
+    #fff2a8 40%,
+    #ffffff 50%,
+    #fff2a8 60%,
+    #cfa437 80%,
+    #8f6b1f 100%
   );
-  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   text-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.6),
-    0 0 6px rgba(212, 175, 55, 0.35);
+    0 1px 1px rgba(0, 0, 0, 0.65);
 }
 
 .price-note {
