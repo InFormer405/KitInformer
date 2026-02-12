@@ -135,8 +135,8 @@ footer p {
   background-clip: text;
   color: transparent;
   text-shadow:
-    0 0 4px rgba(255, 215, 100, 0.6),
-    0 0 10px rgba(212, 175, 55, 0.4);
+    0 1px 1px rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(212, 175, 55, 0.35);
 }
 
 .price-note {
