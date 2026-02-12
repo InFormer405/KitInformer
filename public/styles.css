@@ -114,7 +114,8 @@ footer p {
 }
 
 .gold-price {
-  display: inline-block;
+  display: block;
+  margin-top: 10px;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -157,9 +158,8 @@ footer p {
   line-height: 1;
   white-space: nowrap;
   box-shadow:
-    0 0 8px 2px rgba(21, 101, 255, 0.5),
-    0 0 20px 6px rgba(21, 101, 255, 0.25),
-    0 0 40px 10px rgba(21, 101, 255, 0.1);
+    0 0 6px 2px rgba(21, 101, 255, 0.4),
+    0 0 14px 4px rgba(21, 101, 255, 0.2);
 }
 
 .product-desc {
