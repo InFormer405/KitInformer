@@ -113,51 +113,24 @@ footer p {
   margin-bottom: 14px;
 }
 
-.price {
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+.gold-price {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   background: linear-gradient(
-    180deg,
-    #fff4c9 0%,
-    #f7d774 18%,
-    #e0b84f 35%,
-    #ffd978 50%,
-    #c9972e 70%,
-    #f5d06a 85%,
-    #fff4c9 100%
+    90deg,
+    #cca030 0%,
+    #e6be42 18%,
+    #f2d45c 38%,
+    #f5da65 50%,
+    #e6be42 65%,
+    #cca030 82%,
+    #b58828 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.35),
-    0 2px 6px rgba(0,0,0,0.6);
-  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.25));
-}
-
-.product-card .price {
-  font-size: 2.3rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #fff9d6 8%,
-    #ffe27a 18%,
-    #f7d046 30%,
-    #e0b83a 42%,
-    #fff4b8 50%,
-    #d4a017 65%,
-    #b8860b 80%,
-    #7a5400 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    0 2px 4px rgba(0,0,0,0.8),
-    0 0 12px rgba(255,215,0,0.4),
-    0 0 20px rgba(255,215,0,0.25);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 .price-note {
@@ -166,16 +139,22 @@ footer p {
   margin: 0 0 0.75rem 0;
 }
 
-.pill {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.85rem;
+.blue-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1565ff;
   color: #ffffff;
-  background: linear-gradient(90deg, #2f6bff, #1f4fe0);
-  box-shadow: 0 0 18px rgba(47, 107, 255, 0.5);
-  margin-bottom: 0.75rem;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow:
+    0 0 8px 2px rgba(21, 101, 255, 0.5),
+    0 0 20px 6px rgba(21, 101, 255, 0.25),
+    0 0 40px 10px rgba(21, 101, 255, 0.1);
 }
 
 .product-desc {
