@@ -183,22 +183,35 @@ footer p {
   position: relative;
 }
 
-.filing-fee-box::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 28px;
-  right: 28px;
-  height: 2px;
-  background: rgba(47, 107, 255, 0.6);
-  border-radius: 2px;
+.filing-fee-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #d1d5db;
+  text-shadow: none;
 }
 
-.filing-fee-box h3 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #9ca3af;
-  text-shadow: none;
+.filing-fee-box .price,
+.filing-fee-box h3 span,
+.filing-fee-box strong {
+  color: #d1d5db !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.filing-fee-box::after {
+  content: "";
+  display: block;
+  margin-top: 18px;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 107, 255, 0.9),
+    rgba(47, 107, 255, 0.4)
+  );
+  border-radius: 3px;
 }
 
 .filing-fee-box h2 {
