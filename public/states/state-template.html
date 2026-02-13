@@ -321,7 +321,7 @@
             alt="${title}" 
             class="product-image"
             loading="lazy"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            onerror="this.onerror=null;this.src='/images/products/placeholder.svg';"
           />
           <div class="product-image-placeholder" style="display: none;">
             ${PLACEHOLDER_SVG}
