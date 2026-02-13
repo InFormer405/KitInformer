@@ -122,26 +122,22 @@ footer p {
 
 .gold-price {
   display: inline-block;
-  margin: 0;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.02em;
   background: linear-gradient(
     90deg,
-    #8f6b1f 0%,
-    #cfa437 20%,
-    #fff2a8 40%,
-    #ffffff 50%,
-    #fff2a8 60%,
-    #cfa437 80%,
-    #8f6b1f 100%
+    #cca030 0%,
+    #e6be42 18%,
+    #f2d45c 38%,
+    #f5da65 50%,
+    #e6be42 65%,
+    #cca030 82%,
+    #b58828 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
-  text-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.65);
 }
 
 .price-note {
