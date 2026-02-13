@@ -283,12 +283,26 @@
     }
   }
 
+  const STATE_ABBR_MAP = {
+    'Alabama':'al','Alaska':'ak','Arizona':'az','Arkansas':'ar','California':'ca',
+    'Colorado':'co','Connecticut':'ct','Delaware':'de','Florida':'fl','Georgia':'ga',
+    'Hawaii':'hi','Idaho':'id','Illinois':'il','Indiana':'in','Iowa':'ia',
+    'Kansas':'ks','Kentucky':'ky','Louisiana':'la','Maine':'me','Maryland':'md',
+    'Massachusetts':'ma','Michigan':'mi','Minnesota':'mn','Mississippi':'ms','Missouri':'mo',
+    'Montana':'mt','Nebraska':'ne','Nevada':'nv','New Hampshire':'nh','New Jersey':'nj',
+    'New Mexico':'nm','New York':'ny','North Carolina':'nc','North Dakota':'nd','Ohio':'oh',
+    'Oklahoma':'ok','Oregon':'or','Pennsylvania':'pa','Rhode Island':'ri','South Carolina':'sc',
+    'South Dakota':'sd','Tennessee':'tn','Texas':'tx','Utah':'ut','Vermont':'vt',
+    'Virginia':'va','Washington':'wa','West Virginia':'wv','Wisconsin':'wi','Wyoming':'wy'
+  };
+
   function getImagePath(product, stateName, stateSlug) {
     if (product.image_url) {
       return product.image_url;
     }
     const childrenType = (product.children_status || '').toLowerCase().includes('with') ? 'with-children' : 'no-children';
-    return `/images/products/${stateSlug}-${childrenType}.jpg`;
+    const stateAbbr = (product.state || STATE_ABBR_MAP[stateName] || '').toLowerCase();
+    return `/images/products/raw/${childrenType}/${stateAbbr}-${childrenType}.png`;
   }
 
   function createProductCard(product, stateName, stateSlug) {
