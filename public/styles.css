@@ -183,6 +183,13 @@ footer p {
     0 20px 50px rgba(0, 0, 0, 0.65);
 }
 
+.filing-fee-box .price,
+.filing-fee-box h3 {
+  color: #9BB8FF;
+  font-weight: 600;
+  text-shadow: none;
+}
+
 .filing-fee-box h2 {
   font-weight: 800;
   margin-bottom: 0.5rem;
