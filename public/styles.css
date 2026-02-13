@@ -116,20 +116,21 @@ footer p {
 .price-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin: 6px 0 10px 0;
+  gap: 16px;
+  margin: 8px 0 12px 0;
 }
 
 .gold-price {
-  display: inline-block;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
   letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
   background: linear-gradient(
     90deg,
-    #cca030 0%,
-    #e6be42 18%,
-    #f2d45c 38%,
+    #b58828 0%,
+    #cca030 18%,
+    #e6be42 35%,
     #f5da65 50%,
     #e6be42 65%,
     #cca030 82%,
