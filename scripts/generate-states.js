@@ -66,20 +66,21 @@ function generateArticleSchema(state) {
   };
 }
 
-function generateRelatedStates(state) {
+function generateRelatedStates(state, stateIndex) {
   const others = states.filter(s => s.slug !== state.slug);
-  for (let i = others.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [others[i], others[j]] = [others[j], others[i]];
+  const offset = (stateIndex * 7) % others.length;
+  const selected = [];
+  for (let i = 0; i < 5; i++) {
+    selected.push(others[(offset + i * 9) % others.length]);
   }
-  const selected = others.slice(0, 4);
-  const links = selected.map(s =>
-    `          <li><a href="/states/${s.slug}/">${s.name} Divorce Filing Requirements</a></li>`
+  const unique = [...new Map(selected.map(s => [s.slug, s])).values()].slice(0, 5);
+  const links = unique.map(s =>
+    `          <li><a href="/states/${s.slug}/">${s.name} Divorce Forms &amp; Filing Requirements</a></li>`
   ).join('\n');
   return `
     <section class="related-states">
       <div class="container">
-        <h2>Explore Divorce Filing Requirements in Other States</h2>
+        <h2>Explore Divorce Forms in Other States</h2>
         <ul>
 ${links}
         </ul>
@@ -151,7 +152,7 @@ function generateConversionLayer(state) {
 `;
 }
 
-function generateHTML(state) {
+function generateHTML(state, stateIndex) {
   const firstCitation = state.citations.length > 0 ? state.citations[0] : null;
   const citationSource = firstCitation ? `<p><em>Source: ${firstCitation.title}</em></p>` : '';
 
@@ -162,7 +163,7 @@ function generateHTML(state) {
   const faqSchema = JSON.stringify(generateFAQSchema(state), null, 2);
   const articleSchema = JSON.stringify(generateArticleSchema(state), null, 2);
   const conversionLayer = generateConversionLayer(state);
-  const relatedStates = generateRelatedStates(state);
+  const relatedStates = generateRelatedStates(state, stateIndex);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -186,10 +187,11 @@ function generateHTML(state) {
   <header>
     <section class="state-intro">
       <h1>${state.name} Divorce Forms & Filing Requirements</h1>
+      <p class="last-verified">Last Verified: February 2026</p>
       <p>
         ${state.name} divorce laws require specific formatting, disclosures, and filing procedures.
-        Our ${state.name} divorce form kits are structured to match court expectations and reduce
-        avoidable rejection issues.
+        Our <a href="/#divorce-forms-by-state">State-Specific Divorce Forms</a> for ${state.name}
+        are structured to match court expectations and reduce avoidable rejection issues.
       </p>
     </section>
   </header>
@@ -360,12 +362,13 @@ ${articleSchema}
 
 let generated = 0;
 
-for (const state of states) {
+for (let i = 0; i < states.length; i++) {
+  const state = states[i];
   const stateDir = path.join(publicDir, state.slug);
   fs.mkdirSync(stateDir, { recursive: true });
 
   const filePath = path.join(stateDir, 'index.html');
-  const html = generateHTML(state);
+  const html = generateHTML(state, i);
   fs.writeFileSync(filePath, html, 'utf-8');
 
   console.log(`Generated: public/states/${state.slug}/index.html`);
