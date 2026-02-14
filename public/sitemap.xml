@@ -1,68 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://informerlegal.com/</loc>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- States index -->
   <url>
     <loc>https://informerlegal.com/states/</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- State pages -->
-  <url><loc>https://informerlegal.com/states/alabama/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/alaska/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/arizona/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/arkansas/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/california/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://informerlegal.com/states/colorado/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/connecticut/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/delaware/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/georgia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/hawaii/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/idaho/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/illinois/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/indiana/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/iowa/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/kansas/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/kentucky/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/louisiana/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/maine/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/maryland/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/massachusetts/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/michigan/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/minnesota/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/mississippi/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/missouri/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/montana/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/nebraska/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/nevada/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/new-hampshire/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/new-jersey/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/new-mexico/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/new-york/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/north-carolina/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/north-dakota/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/ohio/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/oklahoma/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/oregon/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/pennsylvania/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/rhode-island/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/south-carolina/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/south-dakota/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/tennessee/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/utah/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/vermont/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/virginia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/washington/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/west-virginia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/wisconsin/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://informerlegal.com/states/wyoming/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://informerlegal.com/states/alabama/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/arizona/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/california/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/colorado/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/florida/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/georgia/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/illinois/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/indiana/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/michigan/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/minnesota/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/missouri/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/new-york/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/north-carolina/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/ohio/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/pennsylvania/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/tennessee/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/texas/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/virginia/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/washington/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/wisconsin/</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
