@@ -398,5 +398,405 @@ export const states = [
     ],
 
     last_verified: "January 2026"
+  },
+  {
+    name: "Arizona",
+    slug: "arizona",
+    abbreviation: "AZ",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in Arizona for at least 90 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Arizona requires a mandatory 60-day waiting period from the date the respondent is served before a divorce decree can be entered.",
+
+    filing_fee_range:
+      "Filing fees typically range from $300 to $350 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Arizona is a no-fault divorce state. The sole ground for dissolution is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Arizona requires both parents to attend a court-approved parent information program when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Arizona courts allow individuals who cannot afford filing fees to submit an Application to Defer Fees to request a waiver or deferral of court costs.",
+
+    citations: [
+      {
+        title: "Arizona Judicial Branch – Self-Service Center: Divorce",
+        url: "https://www.azcourts.gov/selfservicecenter/Self-Service-Forms/Divorce-702"
+      },
+      {
+        title: "Arizona Judicial Branch – Family Court Forms",
+        url: "https://www.azcourts.gov/selfservicecenter/Self-Service-Forms"
+      },
+      {
+        title: "Arizona Judicial Branch – Fee Deferral Information",
+        url: "https://www.azcourts.gov/selfservicecenter/Self-Service-Forms/Deferral-of-Fees"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Washington",
+    slug: "washington",
+    abbreviation: "WA",
+
+    residency_requirement:
+      "The petitioner must be a resident of Washington State at the time of filing. There is no minimum residency duration required before filing.",
+
+    waiting_period:
+      "Washington requires a mandatory 90-day waiting period from the date the petition is filed and served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $314, though fees may vary slightly by county. Additional surcharges may apply.",
+
+    fault_type:
+      "Washington is a no-fault divorce state. The sole ground for dissolution is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Washington requires both parents to complete an approved parenting seminar when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Washington courts allow individuals who meet income criteria to file a motion and declaration for a waiver of civil fees and surcharges.",
+
+    citations: [
+      {
+        title: "Washington Courts – Divorce Information",
+        url: "https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_resources.display&fileID=divorce"
+      },
+      {
+        title: "Washington Courts – Family Law Forms",
+        url: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=25"
+      },
+      {
+        title: "Washington Courts – Fee Waiver Information",
+        url: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=50"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Virginia",
+    slug: "virginia",
+    abbreviation: "VA",
+
+    residency_requirement:
+      "At least one spouse must have been a resident and domiciliary of Virginia for at least six months before filing for divorce.",
+
+    waiting_period:
+      "Virginia requires a separation period of at least six months if there are no minor children and a separation agreement is in place, or one year if minor children are involved or there is no agreement.",
+
+    filing_fee_range:
+      "Filing fees typically range from $85 to $100 for the initial filing, though additional service and court costs may apply depending on the circuit court.",
+
+    fault_type:
+      "Virginia allows both no-fault and fault-based divorce. The no-fault ground requires living separate and apart for the required statutory period.",
+
+    parenting_class_required:
+      "Virginia requires parents involved in custody or visitation disputes to attend a court-approved parent education seminar in most judicial circuits.",
+
+    fee_waiver_available:
+      "Virginia courts allow individuals who qualify based on income to petition the court to proceed in forma pauperis to waive filing fees.",
+
+    citations: [
+      {
+        title: "Virginia's Judicial System – Self-Help: Divorce",
+        url: "https://www.vacourts.gov/courts/circuit/resources/self_help_divorce.html"
+      },
+      {
+        title: "Virginia's Judicial System – Court Forms",
+        url: "https://www.vacourts.gov/forms/circuit.html"
+      },
+      {
+        title: "Virginia's Judicial System – Fee Waiver Information",
+        url: "https://www.vacourts.gov/courts/circuit/resources/self_help.html"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Tennessee",
+    slug: "tennessee",
+    abbreviation: "TN",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Tennessee for at least six months before filing. If the grounds for divorce arose outside of Tennessee, the residency requirement is extended to one year.",
+
+    waiting_period:
+      "Tennessee requires a mandatory 60-day waiting period for divorces without minor children and a 90-day waiting period when minor children are involved.",
+
+    filing_fee_range:
+      "Filing fees typically range from $250 to $350 depending on the county. Additional service and processing fees may apply.",
+
+    fault_type:
+      "Tennessee allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences.",
+
+    parenting_class_required:
+      "Tennessee requires both parents to complete a court-approved parenting education course when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Tennessee courts allow individuals who cannot afford filing fees to file a Uniform Civil Affidavit of Indigency to request a waiver of court costs.",
+
+    citations: [
+      {
+        title: "Tennessee State Courts – Divorce Information",
+        url: "https://www.tncourts.gov/programs/self-help-center/divorce"
+      },
+      {
+        title: "Tennessee State Courts – Self-Help Center",
+        url: "https://www.tncourts.gov/programs/self-help-center"
+      },
+      {
+        title: "Tennessee State Courts – Court Forms",
+        url: "https://www.tncourts.gov/programs/self-help-center/forms"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Indiana",
+    slug: "indiana",
+    abbreviation: "IN",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Indiana for at least six months and a resident of the county of filing for at least three months before filing for dissolution.",
+
+    waiting_period:
+      "Indiana requires a mandatory 60-day waiting period from the date the petition is filed before a final dissolution decree can be entered.",
+
+    filing_fee_range:
+      "Filing fees typically range from $150 to $200 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Indiana is a no-fault divorce state. The sole ground for dissolution is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Indiana does not have a statewide parenting class requirement, but many counties require parents to attend a parenting coordination or education program when minor children are involved.",
+
+    fee_waiver_available:
+      "Indiana courts allow individuals who qualify based on income to file a verified petition for waiver of filing fees.",
+
+    citations: [
+      {
+        title: "Indiana Judiciary – Self-Service Legal Center",
+        url: "https://www.in.gov/courts/selfservice/"
+      },
+      {
+        title: "Indiana Judiciary – Dissolution of Marriage Forms",
+        url: "https://www.in.gov/courts/selfservice/forms/dissolution/"
+      },
+      {
+        title: "Indiana Judiciary – Fee Waiver Information",
+        url: "https://www.in.gov/courts/selfservice/forms/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Missouri",
+    slug: "missouri",
+    abbreviation: "MO",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Missouri for at least 90 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Missouri requires a mandatory 30-day waiting period from the date the petition is filed before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees typically range from $125 to $225 depending on the county and type of filing.",
+
+    fault_type:
+      "Missouri is a no-fault divorce state. The sole ground for dissolution is that the marriage is irretrievably broken with no reasonable likelihood of preservation.",
+
+    parenting_class_required:
+      "Missouri requires parents to complete a court-approved parenting education program when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Missouri courts allow individuals who meet income criteria to file a Motion to Proceed In Forma Pauperis to waive court filing fees.",
+
+    citations: [
+      {
+        title: "Missouri Courts – Self-Represented Litigants: Divorce",
+        url: "https://www.courts.mo.gov/page.jsp?id=735"
+      },
+      {
+        title: "Missouri Courts – Court Forms",
+        url: "https://www.courts.mo.gov/page.jsp?id=525"
+      },
+      {
+        title: "Missouri Courts – Fee Waiver Information",
+        url: "https://www.courts.mo.gov/page.jsp?id=15435"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Wisconsin",
+    slug: "wisconsin",
+    abbreviation: "WI",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Wisconsin for at least six months and a resident of the county of filing for at least 30 days before filing for divorce.",
+
+    waiting_period:
+      "Wisconsin requires a mandatory 120-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $185 to $230 depending on the county. Additional fees may apply for service and other court costs.",
+
+    fault_type:
+      "Wisconsin is a no-fault divorce state. The sole ground for divorce is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Wisconsin does not have a statewide parenting class mandate, but many counties require parents to attend a parenting education program when minor children are involved.",
+
+    fee_waiver_available:
+      "Wisconsin courts allow individuals who meet income guidelines to file a Petition for Waiver of Fees and Costs to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Wisconsin Court System – Divorce Information",
+        url: "https://www.wicourts.gov/services/public/selfhelp/divorce.htm"
+      },
+      {
+        title: "Wisconsin Court System – Court Forms",
+        url: "https://www.wicourts.gov/forms1/circuit.htm"
+      },
+      {
+        title: "Wisconsin Court System – Fee Waiver Information",
+        url: "https://www.wicourts.gov/services/public/selfhelp/feewaiver.htm"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Colorado",
+    slug: "colorado",
+    abbreviation: "CO",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in Colorado for at least 91 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Colorado requires a mandatory 91-day waiting period from the date the petition is filed and the respondent is served before a decree of dissolution can be entered.",
+
+    filing_fee_range:
+      "Filing fees are approximately $230, though fees may vary by judicial district. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Colorado is a no-fault divorce state. The sole ground for dissolution is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Colorado requires both parents to complete a court-approved parenting class when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Colorado courts allow individuals who meet income criteria to file a Motion to File Without Payment to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Colorado Judicial Branch – Self-Help: Divorce",
+        url: "https://www.courts.state.co.us/Self_Help/divorce/"
+      },
+      {
+        title: "Colorado Judicial Branch – Court Forms",
+        url: "https://www.courts.state.co.us/Forms/Forms_List.cfm"
+      },
+      {
+        title: "Colorado Judicial Branch – Fee Waiver Information",
+        url: "https://www.courts.state.co.us/Self_Help/feewaiver/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Minnesota",
+    slug: "minnesota",
+    abbreviation: "MN",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Minnesota for at least 180 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Minnesota does not impose a mandatory waiting period for uncontested dissolutions, but the court may delay proceedings if it finds a reasonable prospect of reconciliation.",
+
+    filing_fee_range:
+      "Filing fees are approximately $365 to $400 depending on the county. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "Minnesota is a no-fault divorce state. The sole ground for dissolution is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Minnesota requires both parents to attend a parent education program when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Minnesota courts allow individuals who meet income guidelines to file a Fee Waiver Application (IFP) to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Minnesota Judicial Branch – Divorce Information",
+        url: "https://www.mncourts.gov/Help-Topics/Divorce.aspx"
+      },
+      {
+        title: "Minnesota Judicial Branch – Court Forms",
+        url: "https://www.mncourts.gov/GetForms.aspx"
+      },
+      {
+        title: "Minnesota Judicial Branch – Fee Waiver Information",
+        url: "https://www.mncourts.gov/Help-Topics/Fee-Waiver.aspx"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Alabama",
+    slug: "alabama",
+    abbreviation: "AL",
+
+    residency_requirement:
+      "At least one spouse must have been a bona fide resident of Alabama for at least six months before filing for divorce.",
+
+    waiting_period:
+      "Alabama requires a mandatory 30-day waiting period from the date the complaint is filed before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees typically range from $250 to $350 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Alabama allows both no-fault and fault-based divorce. The no-fault ground is an irretrievable breakdown of the marriage or incompatibility.",
+
+    parenting_class_required:
+      "Alabama does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Alabama courts allow individuals who meet income criteria to file a request to proceed in forma pauperis to waive court filing fees.",
+
+    citations: [
+      {
+        title: "Alabama Judicial System – Court Self-Help",
+        url: "https://www.alacourt.gov/SelfHelp.aspx"
+      },
+      {
+        title: "Alabama Judicial System – Court Forms",
+        url: "https://www.alacourt.gov/CourtForms.aspx"
+      },
+      {
+        title: "Alabama Judicial System – Fee Information",
+        url: "https://www.alacourt.gov/CourtCosts.aspx"
+      }
+    ],
+
+    last_verified: "January 2026"
   }
 ];
