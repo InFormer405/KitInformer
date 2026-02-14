@@ -89,6 +89,70 @@ ${links}
 `;
 }
 
+function generateVisibleFAQ(state, stateIndex) {
+  const v = stateIndex % 5;
+
+  const residencyIntros = [
+    `To file for divorce in ${state.name}, you must meet specific residency criteria.`,
+    `${state.name} requires that certain residency conditions be satisfied before a divorce petition can be filed.`,
+    `Before initiating divorce proceedings in ${state.name}, residency standards must be met.`,
+    `Residency eligibility is a prerequisite for filing divorce paperwork in ${state.name}.`,
+    `${state.name} courts require proof of residency before accepting a divorce filing.`
+  ];
+
+  const waitingIntros = [
+    `The timeline for finalizing a divorce in ${state.name} depends on mandatory waiting periods and court processing.`,
+    `${state.name} law establishes a specific timeframe that must pass before a divorce becomes final.`,
+    `After filing, ${state.name} imposes a required waiting period before the court can issue a final divorce decree.`,
+    `How quickly a divorce is finalized in ${state.name} is governed by statutory waiting requirements.`,
+    `${state.name} divorce proceedings follow a mandatory timeline set by state statute.`
+  ];
+
+  const costIntros = [
+    `Filing for divorce in ${state.name} involves court fees that vary by county.`,
+    `Court filing fees are required when submitting divorce paperwork in ${state.name}.`,
+    `The cost of filing for divorce in ${state.name} includes mandatory court fees.`,
+    `${state.name} courts charge filing fees when a divorce petition is submitted.`,
+    `Divorce filing costs in ${state.name} are set by the court system and may vary by jurisdiction.`
+  ];
+
+  const waiverIntros = [
+    `Individuals who cannot afford court fees in ${state.name} may be eligible for a fee waiver.`,
+    `${state.name} courts offer fee waiver options for those who meet financial eligibility criteria.`,
+    `If filing fees present a financial hardship, ${state.name} courts may grant a waiver.`,
+    `Fee waiver programs are available in ${state.name} for eligible individuals filing for divorce.`,
+    `${state.name} provides a process for requesting a waiver of divorce filing fees.`
+  ];
+
+  return `
+    <section class="section faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions About Divorce in ${state.name}</h2>
+
+        <div class="faq-item">
+          <h3>What are the residency requirements for divorce in ${state.name}?</h3>
+          <p>${residencyIntros[v]} ${state.residency_requirement}</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How long does a divorce take in ${state.name}?</h3>
+          <p>${waitingIntros[v]} ${state.waiting_period}</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How much does it cost to file for divorce in ${state.name}?</h3>
+          <p>${costIntros[v]} ${state.filing_fee_range}</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can divorce filing fees be waived in ${state.name}?</h3>
+          <p>${waiverIntros[v]} ${state.fee_waiver_available}</p>
+        </div>
+      </div>
+    </section>
+`;
+}
+
 function generateConversionLayer(state) {
   return `
     <section class="conversion-layer">
@@ -164,6 +228,7 @@ function generateHTML(state, stateIndex) {
   const articleSchema = JSON.stringify(generateArticleSchema(state), null, 2);
   const conversionLayer = generateConversionLayer(state);
   const relatedStates = generateRelatedStates(state, stateIndex);
+  const visibleFAQ = generateVisibleFAQ(state, stateIndex);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -302,6 +367,7 @@ ${citationsList}
       </div>
     </section>
 
+${visibleFAQ}
 ${relatedStates}
 
   </main>

@@ -322,6 +322,22 @@ section {
   margin-bottom: 0.5rem;
 }
 
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.4rem;
+}
+
+.faq-item p {
+  color: #bfc9d4;
+  line-height: 1.6;
+}
+
 .last-verified {
   font-size: 0.875rem;
   color: #8fa2b7;
