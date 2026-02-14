@@ -1398,5 +1398,605 @@ export const states = [
     ],
 
     last_verified: "January 2026"
+  },
+  {
+    name: "Alaska",
+    slug: "alaska",
+    abbreviation: "AK",
+
+    residency_requirement:
+      "There is no minimum residency duration required to file for divorce in Alaska. The petitioner must be a resident of Alaska at the time of filing.",
+
+    waiting_period:
+      "Alaska requires a mandatory 30-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $250. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "Alaska allows both no-fault and fault-based divorce. The no-fault ground is incompatibility of temperament.",
+
+    parenting_class_required:
+      "Alaska does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Alaska courts allow individuals who meet income criteria to file an Exemption from Filing Fee application to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Alaska Court System – Self-Help: Divorce",
+        url: "https://courts.alaska.gov/shc/family/divorce.htm"
+      },
+      {
+        title: "Alaska Court System – Family Law Forms",
+        url: "https://courts.alaska.gov/shc/family/forms.htm"
+      },
+      {
+        title: "Alaska Court System – Fee Exemption Information",
+        url: "https://courts.alaska.gov/shc/family/fees.htm"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Hawaii",
+    slug: "hawaii",
+    abbreviation: "HI",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Hawaii for at least six months before filing for divorce. The petition must be filed in the circuit where the petitioner resides.",
+
+    waiting_period:
+      "Hawaii does not impose a mandatory waiting period after filing for an uncontested divorce. However, contested cases may require additional time for court scheduling.",
+
+    filing_fee_range:
+      "Filing fees are approximately $200 to $275 depending on the circuit. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Hawaii is a no-fault divorce state. The sole ground for divorce is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Hawaii does not have a statewide parenting class mandate, but individual family courts may order parenting education programs when minor children are involved.",
+
+    fee_waiver_available:
+      "Hawaii courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Hawaii State Judiciary – Family Court: Divorce",
+        url: "https://www.courts.state.hi.us/self-help/divorce"
+      },
+      {
+        title: "Hawaii State Judiciary – Court Forms",
+        url: "https://www.courts.state.hi.us/self-help/forms"
+      },
+      {
+        title: "Hawaii State Judiciary – Fee Waiver Information",
+        url: "https://www.courts.state.hi.us/self-help/fee_waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Montana",
+    slug: "montana",
+    abbreviation: "MT",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in Montana for at least 90 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Montana requires a mandatory 20-day waiting period from the date the respondent is served before a dissolution decree can be entered.",
+
+    filing_fee_range:
+      "Filing fees are approximately $200 to $230 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Montana is a no-fault divorce state. The sole ground for dissolution is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Montana does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Montana courts allow individuals who meet income criteria to file an Application to Proceed Without Prepayment of Costs to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Montana Judicial Branch – Self-Help Law Center",
+        url: "https://courts.mt.gov/selfhelp"
+      },
+      {
+        title: "Montana Judicial Branch – Court Forms",
+        url: "https://courts.mt.gov/selfhelp/forms"
+      },
+      {
+        title: "Montana Judicial Branch – Fee Waiver Information",
+        url: "https://courts.mt.gov/selfhelp/fees"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Wyoming",
+    slug: "wyoming",
+    abbreviation: "WY",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Wyoming for at least 60 days before filing for divorce.",
+
+    waiting_period:
+      "Wyoming requires a mandatory 20-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $130 to $175 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Wyoming is a no-fault divorce state. The sole ground for divorce is irreconcilable differences.",
+
+    parenting_class_required:
+      "Wyoming does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Wyoming courts allow individuals who meet income criteria to file a Motion to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Wyoming Judicial Branch – Self-Help Center",
+        url: "https://www.courts.state.wy.us/self-help-center/"
+      },
+      {
+        title: "Wyoming Judicial Branch – Court Forms",
+        url: "https://www.courts.state.wy.us/court-forms/"
+      },
+      {
+        title: "Wyoming Judicial Branch – Court Information",
+        url: "https://www.courts.state.wy.us/district-courts/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "North Dakota",
+    slug: "north-dakota",
+    abbreviation: "ND",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of North Dakota for at least six months before filing for divorce.",
+
+    waiting_period:
+      "North Dakota requires a mandatory 60-day waiting period from the date the summons and complaint are served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $80 to $130 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "North Dakota allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences.",
+
+    parenting_class_required:
+      "North Dakota requires parents to complete a court-approved parenting education program when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "North Dakota courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "North Dakota Courts – Self-Help Center: Divorce",
+        url: "https://www.ndcourts.gov/legal-self-help/divorce"
+      },
+      {
+        title: "North Dakota Courts – Court Forms",
+        url: "https://www.ndcourts.gov/legal-self-help/forms"
+      },
+      {
+        title: "North Dakota Courts – Fee Waiver Information",
+        url: "https://www.ndcourts.gov/legal-self-help"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "South Dakota",
+    slug: "south-dakota",
+    abbreviation: "SD",
+
+    residency_requirement:
+      "At least one spouse must be a resident of South Dakota at the time of filing and must have been a resident of the state at the time the cause of action arose, or must be a resident at the time of filing and must have been a resident for a continuous period of time as prescribed by statute.",
+
+    waiting_period:
+      "South Dakota requires a mandatory 60-day waiting period from the date the summons and complaint are served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $95 to $130 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "South Dakota allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences.",
+
+    parenting_class_required:
+      "South Dakota does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "South Dakota courts allow individuals who meet income criteria to file an Affidavit of Inability to Pay to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "South Dakota Unified Judicial System – Self-Help: Divorce",
+        url: "https://ujs.sd.gov/Self-Help/Divorce.aspx"
+      },
+      {
+        title: "South Dakota Unified Judicial System – Court Forms",
+        url: "https://ujs.sd.gov/Self-Help/Forms.aspx"
+      },
+      {
+        title: "South Dakota Unified Judicial System – Court Information",
+        url: "https://ujs.sd.gov/Circuit_Court/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Vermont",
+    slug: "vermont",
+    abbreviation: "VT",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Vermont for at least six months before filing for divorce. The final hearing cannot take place until at least six months after the defendant has been served.",
+
+    waiting_period:
+      "Vermont requires that at least six months pass from the date the defendant is served before a final divorce hearing can be held.",
+
+    filing_fee_range:
+      "Filing fees are approximately $295. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "Vermont allows both no-fault and fault-based divorce. The no-fault ground requires living separate and apart for six consecutive months.",
+
+    parenting_class_required:
+      "Vermont does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Vermont courts allow individuals who meet income criteria to file an Application to Waive Filing Fees and Service Costs to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Vermont Judiciary – Divorce Information",
+        url: "https://www.vermontjudiciary.org/family/divorce"
+      },
+      {
+        title: "Vermont Judiciary – Court Forms",
+        url: "https://www.vermontjudiciary.org/forms"
+      },
+      {
+        title: "Vermont Judiciary – Fee Waiver Information",
+        url: "https://www.vermontjudiciary.org/about-vermont-judiciary/fee-waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "New Hampshire",
+    slug: "new-hampshire",
+    abbreviation: "NH",
+
+    residency_requirement:
+      "Both parties must have been domiciled in New Hampshire at the time of filing, or the petitioner must have been domiciled in the state for one year before filing.",
+
+    waiting_period:
+      "New Hampshire does not impose a mandatory waiting period after filing, but the court must find that irreconcilable differences have caused the breakdown of the marriage.",
+
+    filing_fee_range:
+      "Filing fees are approximately $252 for a petition for divorce. Additional fees may apply for service of process.",
+
+    fault_type:
+      "New Hampshire allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences that have caused the breakdown of the marriage.",
+
+    parenting_class_required:
+      "New Hampshire requires parents to attend a court-approved parent education program (Impact of Divorce on Children) when minor children are involved.",
+
+    fee_waiver_available:
+      "New Hampshire courts allow individuals who meet income criteria to file a Motion to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "New Hampshire Judicial Branch – Divorce Information",
+        url: "https://www.courts.nh.gov/self-help/divorce"
+      },
+      {
+        title: "New Hampshire Judicial Branch – Court Forms",
+        url: "https://www.courts.nh.gov/forms"
+      },
+      {
+        title: "New Hampshire Judicial Branch – Fee Waiver Information",
+        url: "https://www.courts.nh.gov/self-help/fee-waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Rhode Island",
+    slug: "rhode-island",
+    abbreviation: "RI",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in Rhode Island for at least one year before filing for divorce.",
+
+    waiting_period:
+      "Rhode Island requires a mandatory 60-day waiting period after a decision is entered by the Family Court before the divorce becomes final (known as the nisi period).",
+
+    filing_fee_range:
+      "Filing fees are approximately $160 to $200. Additional fees may apply for service of process and court costs.",
+
+    fault_type:
+      "Rhode Island allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences that have caused the breakdown of the marriage.",
+
+    parenting_class_required:
+      "Rhode Island does not have a statewide parenting class requirement, but the Family Court may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Rhode Island courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Rhode Island Judiciary – Family Court: Divorce",
+        url: "https://www.courts.ri.gov/Courts/FamilyCourt/Pages/Divorce.aspx"
+      },
+      {
+        title: "Rhode Island Judiciary – Court Forms",
+        url: "https://www.courts.ri.gov/PublicResources/forms/Pages/default.aspx"
+      },
+      {
+        title: "Rhode Island Judiciary – Court Information",
+        url: "https://www.courts.ri.gov/Courts/FamilyCourt/Pages/default.aspx"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Delaware",
+    slug: "delaware",
+    abbreviation: "DE",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Delaware for at least six months before filing for divorce.",
+
+    waiting_period:
+      "Delaware does not impose a mandatory post-filing waiting period for uncontested divorces. However, for no-fault divorce, the parties must have been separated for at least six months before filing.",
+
+    filing_fee_range:
+      "Filing fees are approximately $160 to $200 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Delaware is a no-fault divorce state. The sole ground for divorce is that the marriage is irretrievably broken.",
+
+    parenting_class_required:
+      "Delaware requires both parents to complete a court-approved parenting education program when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Delaware courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Delaware Courts – Family Court: Divorce",
+        url: "https://courts.delaware.gov/family/divorce/"
+      },
+      {
+        title: "Delaware Courts – Court Forms",
+        url: "https://courts.delaware.gov/forms/family.aspx"
+      },
+      {
+        title: "Delaware Courts – Fee Waiver Information",
+        url: "https://courts.delaware.gov/help/fees/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "West Virginia",
+    slug: "west-virginia",
+    abbreviation: "WV",
+
+    residency_requirement:
+      "At least one spouse must have been a bona fide resident of West Virginia for at least one year before filing for divorce, unless the marriage was performed in West Virginia and one spouse has continued to reside there.",
+
+    waiting_period:
+      "West Virginia does not impose a mandatory waiting period after filing for an uncontested divorce based on irreconcilable differences with a separation agreement.",
+
+    filing_fee_range:
+      "Filing fees are approximately $135 to $175 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "West Virginia allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences or one year of living separate and apart.",
+
+    parenting_class_required:
+      "West Virginia does not have a statewide parenting class requirement, but individual courts may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "West Virginia courts allow individuals who meet income criteria to file a Petition to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "West Virginia Judiciary – Self-Help: Divorce",
+        url: "https://www.courtswv.gov/legal-community/self-help-resources.html"
+      },
+      {
+        title: "West Virginia Judiciary – Court Forms",
+        url: "https://www.courtswv.gov/legal-community/court-forms.html"
+      },
+      {
+        title: "West Virginia Judiciary – Court Information",
+        url: "https://www.courtswv.gov/courts/circuit-courts.html"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Louisiana",
+    slug: "louisiana",
+    abbreviation: "LA",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in Louisiana at the time of filing. The petition must be filed in the parish where either spouse is domiciled.",
+
+    waiting_period:
+      "Louisiana requires a mandatory 180-day waiting period (living separate and apart) for divorces without minor children, and a 365-day waiting period when minor children are involved, before a divorce can be granted under no-fault grounds.",
+
+    filing_fee_range:
+      "Filing fees are approximately $200 to $400 depending on the parish. Additional fees may apply for service of process and court costs.",
+
+    fault_type:
+      "Louisiana allows both no-fault and fault-based divorce. The no-fault ground requires living separate and apart for the required statutory period.",
+
+    parenting_class_required:
+      "Louisiana requires both parents to attend a court-approved parenting education seminar when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Louisiana courts allow individuals who meet income criteria to file a Pauper's Petition to request a waiver of court filing fees and costs.",
+
+    citations: [
+      {
+        title: "Louisiana Supreme Court – Self-Help Resource Center",
+        url: "https://www.lasc.org/press_room/self_help_resource_center"
+      },
+      {
+        title: "Louisiana Judiciary – Court Information",
+        url: "https://www.lasc.org/About_the_Court"
+      },
+      {
+        title: "Louisiana Judiciary – District Courts",
+        url: "https://www.lasc.org/court_structure"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Maine",
+    slug: "maine",
+    abbreviation: "ME",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Maine for at least six months before filing for divorce, or the marriage must have been performed in Maine and one spouse must be a resident at the time of filing.",
+
+    waiting_period:
+      "Maine requires a mandatory 60-day waiting period from the date the complaint is filed before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $120 to $175. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Maine is a no-fault divorce state. The sole ground for divorce is irreconcilable marital differences.",
+
+    parenting_class_required:
+      "Maine requires both parents to attend a court-approved parent education program when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Maine courts allow individuals who meet income criteria to file an Application to Proceed Without Payment of Fees to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Maine Judicial Branch – Divorce Information",
+        url: "https://www.courts.maine.gov/fees_forms/family/divorce.html"
+      },
+      {
+        title: "Maine Judicial Branch – Court Forms",
+        url: "https://www.courts.maine.gov/fees_forms/forms/index.html"
+      },
+      {
+        title: "Maine Judicial Branch – Fee Waiver Information",
+        url: "https://www.courts.maine.gov/fees_forms/fees/fee_waiver.html"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Connecticut",
+    slug: "connecticut",
+    abbreviation: "CT",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Connecticut for at least 12 months before a divorce can be granted. The action may be filed before the 12-month period if the grounds arose after moving to Connecticut.",
+
+    waiting_period:
+      "Connecticut requires a mandatory 90-day waiting period from the date the complaint is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $360. Additional fees may apply for service of process and court costs.",
+
+    fault_type:
+      "Connecticut allows both no-fault and fault-based divorce. The no-fault ground is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Connecticut requires both parents to attend a court-approved parenting education program when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Connecticut courts allow individuals who meet income criteria to file an Application for Waiver of Fees to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Connecticut Judicial Branch – Divorce Information",
+        url: "https://www.jud.ct.gov/lawlib/law/divorce.htm"
+      },
+      {
+        title: "Connecticut Judicial Branch – Court Forms",
+        url: "https://www.jud.ct.gov/webforms/"
+      },
+      {
+        title: "Connecticut Judicial Branch – Fee Waiver Information",
+        url: "https://www.jud.ct.gov/faq/fee_waiver.htm"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "New Mexico",
+    slug: "new-mexico",
+    abbreviation: "NM",
+
+    residency_requirement:
+      "At least one spouse must have been domiciled in New Mexico for at least six months before filing for dissolution of marriage.",
+
+    waiting_period:
+      "New Mexico requires a mandatory 30-day waiting period from the date the petition is filed before a dissolution decree can be entered.",
+
+    filing_fee_range:
+      "Filing fees are approximately $130 to $200 depending on the judicial district. Additional fees may apply for service of process.",
+
+    fault_type:
+      "New Mexico is a no-fault divorce state. The sole ground for dissolution is incompatibility.",
+
+    parenting_class_required:
+      "New Mexico requires parents to complete a court-approved parenting education program when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "New Mexico courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "New Mexico Courts – Self-Help: Divorce",
+        url: "https://www.nmcourts.gov/self-help/divorce-702.aspx"
+      },
+      {
+        title: "New Mexico Courts – Court Forms",
+        url: "https://www.nmcourts.gov/self-help/forms.aspx"
+      },
+      {
+        title: "New Mexico Courts – Fee Waiver Information",
+        url: "https://www.nmcourts.gov/self-help/"
+      }
+    ],
+
+    last_verified: "January 2026"
   }
 ];
