@@ -236,6 +236,54 @@ function generateHTML(state) {
       </div>
     </section>
 ${conversionLayer}
+    <section class="comparison-section">
+      <div class="container">
+        <h2>How InFormer Compares</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>InFormer Legal Forms</th>
+              <th>Typical Online Divorce Service</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>State-Specific Forms</td>
+              <td>Yes</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Flat Upfront Pricing</td>
+              <td>Yes</td>
+              <td>Often Subscription</td>
+            </tr>
+            <tr>
+              <td>Monthly Fees</td>
+              <td>No</td>
+              <td>Common</td>
+            </tr>
+            <tr>
+              <td>Attorney Upsells</td>
+              <td>No</td>
+              <td>Frequent</td>
+            </tr>
+            <tr>
+              <td>Fee Waiver Forms Included</td>
+              <td>Yes</td>
+              <td>Rare</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="comparison-note">
+          InFormer provides structured self-help legal forms.
+          We do not provide legal advice.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <h2>Sources & Verification</h2>
