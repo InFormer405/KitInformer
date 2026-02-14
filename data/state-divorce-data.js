@@ -798,5 +798,605 @@ export const states = [
     ],
 
     last_verified: "January 2026"
+  },
+  {
+    name: "New Jersey",
+    slug: "new-jersey",
+    abbreviation: "NJ",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of New Jersey for at least 12 months before filing for divorce, except in cases based on adultery.",
+
+    waiting_period:
+      "New Jersey does not impose a mandatory waiting period after filing. However, for no-fault divorce based on irreconcilable differences, the differences must have existed for at least six months before filing.",
+
+    filing_fee_range:
+      "Filing fees are approximately $300 to $325. Additional fees may apply for motions, service of process, and other court filings.",
+
+    fault_type:
+      "New Jersey allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences that have lasted at least six months.",
+
+    parenting_class_required:
+      "New Jersey does not have a statewide parenting class requirement, but individual courts may order parenting education programs when minor children are involved.",
+
+    fee_waiver_available:
+      "New Jersey courts allow individuals who meet income guidelines to apply for a fee waiver by filing a Case Information Statement and application for waiver of fees.",
+
+    citations: [
+      {
+        title: "New Jersey Courts – Divorce Information",
+        url: "https://www.njcourts.gov/self-help/divorce"
+      },
+      {
+        title: "New Jersey Courts – Family Division Forms",
+        url: "https://www.njcourts.gov/forms/family"
+      },
+      {
+        title: "New Jersey Courts – Fee Waiver Information",
+        url: "https://www.njcourts.gov/self-help/fee-waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Massachusetts",
+    slug: "massachusetts",
+    abbreviation: "MA",
+
+    residency_requirement:
+      "If the cause of divorce occurred within the state, either spouse may file in Massachusetts. If the cause occurred outside the state, the filing spouse must have been a resident for at least one year.",
+
+    waiting_period:
+      "Massachusetts requires a mandatory 120-day waiting period (called a nisi period) after the court grants a divorce judgment before it becomes final.",
+
+    filing_fee_range:
+      "Filing fees are approximately $200 to $220 for a joint petition. A complaint for divorce filing fee is approximately $280. Additional surcharges may apply.",
+
+    fault_type:
+      "Massachusetts allows both no-fault and fault-based divorce. The no-fault ground is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Massachusetts requires both parents to attend a court-approved parent education program when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Massachusetts courts allow individuals who meet income criteria to file an Affidavit of Indigency to request a waiver of court filing fees and costs.",
+
+    citations: [
+      {
+        title: "Massachusetts Court System – Divorce Information",
+        url: "https://www.mass.gov/topics/divorce"
+      },
+      {
+        title: "Massachusetts Trial Court – Court Forms",
+        url: "https://www.mass.gov/lists/probate-and-family-court-forms"
+      },
+      {
+        title: "Massachusetts Trial Court – Fee Waiver Information",
+        url: "https://www.mass.gov/info-details/request-a-fee-waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Maryland",
+    slug: "maryland",
+    abbreviation: "MD",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Maryland for at least six months before filing. If the grounds for divorce occurred outside Maryland, the residency requirement extends to one year.",
+
+    waiting_period:
+      "Maryland does not impose a mandatory waiting period after filing for an uncontested divorce based on mutual consent. For divorces based on separation, a six-month separation period is required before filing.",
+
+    filing_fee_range:
+      "Filing fees are approximately $165 to $215 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Maryland allows both no-fault and fault-based divorce. No-fault grounds include mutual consent and a six-month separation.",
+
+    parenting_class_required:
+      "Maryland requires parents to attend a court-approved parent education program in many counties when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Maryland courts allow individuals who meet financial eligibility requirements to file a Request for Waiver of Prepaid Costs to waive court filing fees.",
+
+    citations: [
+      {
+        title: "Maryland Courts – Divorce Information",
+        url: "https://www.mdcourts.gov/legalhelp/family/divorce"
+      },
+      {
+        title: "Maryland Courts – Court Forms",
+        url: "https://www.mdcourts.gov/courtforms"
+      },
+      {
+        title: "Maryland Courts – Fee Waiver Information",
+        url: "https://www.mdcourts.gov/legalhelp/feewaiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "South Carolina",
+    slug: "south-carolina",
+    abbreviation: "SC",
+
+    residency_requirement:
+      "If both spouses are residents of South Carolina, at least one must have lived in the state for three months before filing. If only one spouse is a resident, the residency requirement is one year.",
+
+    waiting_period:
+      "South Carolina does not impose a mandatory post-filing waiting period for fault-based divorces. For a no-fault divorce, the parties must live separate and apart for at least one year before filing.",
+
+    filing_fee_range:
+      "Filing fees are approximately $150 to $200 depending on the county. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "South Carolina allows both no-fault and fault-based divorce. The no-fault ground requires living separate and apart without cohabitation for at least one year.",
+
+    parenting_class_required:
+      "South Carolina does not have a statewide parenting class requirement, but many family courts require parents to complete a parenting education program when minor children are involved.",
+
+    fee_waiver_available:
+      "South Carolina courts allow individuals who cannot afford filing fees to file an Application to Proceed In Forma Pauperis to request a waiver of court costs.",
+
+    citations: [
+      {
+        title: "South Carolina Judicial Branch – Family Court",
+        url: "https://www.sccourts.org/familyCourt/"
+      },
+      {
+        title: "South Carolina Judicial Branch – Court Forms",
+        url: "https://www.sccourts.org/forms/"
+      },
+      {
+        title: "South Carolina Judicial Branch – Self-Help Resources",
+        url: "https://www.sccourts.org/selfhelp/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Kentucky",
+    slug: "kentucky",
+    abbreviation: "KY",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Kentucky for 180 days before filing for dissolution of marriage.",
+
+    waiting_period:
+      "Kentucky requires a mandatory 60-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $150 to $200 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Kentucky is a no-fault divorce state. The sole ground for dissolution is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Kentucky does not have a statewide parenting class mandate, but many courts require parents to attend a parenting education program when minor children are involved.",
+
+    fee_waiver_available:
+      "Kentucky courts allow individuals who meet income criteria to file a Motion to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Kentucky Court of Justice – Divorce Information",
+        url: "https://kycourts.gov/Courts/Circuit-Court/Pages/divorce.aspx"
+      },
+      {
+        title: "Kentucky Court of Justice – Court Forms",
+        url: "https://kycourts.gov/resources/legalforms/Pages/default.aspx"
+      },
+      {
+        title: "Kentucky Court of Justice – Fee Waiver Information",
+        url: "https://kycourts.gov/Courts/Pages/default.aspx"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Oregon",
+    slug: "oregon",
+    abbreviation: "OR",
+
+    residency_requirement:
+      "If the marriage took place in Oregon, there is no residency requirement. If the marriage took place outside Oregon, at least one spouse must have been a resident for six months before filing.",
+
+    waiting_period:
+      "Oregon does not impose a mandatory waiting period for dissolution of marriage proceedings.",
+
+    filing_fee_range:
+      "Filing fees are approximately $280 to $310. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "Oregon is a no-fault divorce state. The sole ground for dissolution is irreconcilable differences.",
+
+    parenting_class_required:
+      "Oregon requires parents to complete a court-approved parenting education program in many counties when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Oregon courts allow individuals who meet income guidelines to file a Petition for Deferral or Waiver of Filing Fees and Court Costs.",
+
+    citations: [
+      {
+        title: "Oregon Judicial Department – Dissolution of Marriage",
+        url: "https://www.courts.oregon.gov/programs/family/dissolution/Pages/default.aspx"
+      },
+      {
+        title: "Oregon Judicial Department – Court Forms",
+        url: "https://www.courts.oregon.gov/forms/Pages/default.aspx"
+      },
+      {
+        title: "Oregon Judicial Department – Fee Waiver Information",
+        url: "https://www.courts.oregon.gov/forms/Pages/fee-waiver.aspx"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Nevada",
+    slug: "nevada",
+    abbreviation: "NV",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Nevada for at least six weeks before filing for divorce.",
+
+    waiting_period:
+      "Nevada does not impose a mandatory waiting period after filing for divorce. Uncontested cases can be finalized relatively quickly after filing.",
+
+    filing_fee_range:
+      "Filing fees are approximately $300 to $370 depending on the county. Clark County and Washoe County fees may differ from rural counties.",
+
+    fault_type:
+      "Nevada is a no-fault divorce state. The primary grounds are incompatibility and living separate and apart for one year.",
+
+    parenting_class_required:
+      "Nevada requires parents to complete a court-approved parenting class (COPE program) when minor children are involved in a divorce proceeding, particularly in Clark County.",
+
+    fee_waiver_available:
+      "Nevada courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Nevada Judiciary – Self-Help Center: Divorce",
+        url: "https://selfhelp.nvcourts.gov/self-help/divorce"
+      },
+      {
+        title: "Nevada Judiciary – Court Forms",
+        url: "https://selfhelp.nvcourts.gov/self-help/forms"
+      },
+      {
+        title: "Nevada Judiciary – Fee Waiver Information",
+        url: "https://selfhelp.nvcourts.gov/self-help/fee-waiver"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Oklahoma",
+    slug: "oklahoma",
+    abbreviation: "OK",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Oklahoma for six months before filing for divorce. The petition must be filed in the county where either spouse has resided for at least 30 days.",
+
+    waiting_period:
+      "Oklahoma requires a mandatory 10-day waiting period for divorces without minor children and a 90-day waiting period when minor children are involved.",
+
+    filing_fee_range:
+      "Filing fees are approximately $180 to $250 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Oklahoma allows both no-fault and fault-based divorce. The no-fault ground is incompatibility.",
+
+    parenting_class_required:
+      "Oklahoma requires both parents to attend a court-approved parenting education course when minor children are involved in a divorce proceeding.",
+
+    fee_waiver_available:
+      "Oklahoma courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Oklahoma State Courts Network – Self-Help: Divorce",
+        url: "https://www.oscn.net/static/forms/aoc_forms/dissolution.asp"
+      },
+      {
+        title: "Oklahoma State Courts Network – Court Forms",
+        url: "https://www.oscn.net/static/forms/aoc_forms/"
+      },
+      {
+        title: "Oklahoma State Courts Network – Court Information",
+        url: "https://www.oscn.net/applications/oscn/start.asp"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Kansas",
+    slug: "kansas",
+    abbreviation: "KS",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Kansas for at least 60 days before filing for divorce.",
+
+    waiting_period:
+      "Kansas requires a mandatory 60-day waiting period from the date the petition is filed before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $175 to $200 depending on the judicial district. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Kansas allows both no-fault and fault-based divorce. The no-fault ground is incompatibility.",
+
+    parenting_class_required:
+      "Kansas requires parents to complete a court-approved parenting education program in many judicial districts when minor children are involved.",
+
+    fee_waiver_available:
+      "Kansas courts allow individuals who meet income criteria to file a Poverty Affidavit to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Kansas Judicial Branch – Self-Help: Divorce",
+        url: "https://www.kscourts.org/Public/Self-Help/Divorce"
+      },
+      {
+        title: "Kansas Judicial Branch – Court Forms",
+        url: "https://www.kscourts.org/Public/Court-Forms"
+      },
+      {
+        title: "Kansas Judicial Branch – Fee Information",
+        url: "https://www.kscourts.org/Public/Court-Information"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Utah",
+    slug: "utah",
+    abbreviation: "UT",
+
+    residency_requirement:
+      "The petitioner must have been a resident of Utah and the county of filing for at least three months before filing for divorce.",
+
+    waiting_period:
+      "Utah requires a mandatory 30-day waiting period from the date the petition is filed before a divorce decree can be entered. The court may waive this period for good cause.",
+
+    filing_fee_range:
+      "Filing fees are approximately $325 to $360. Additional fees may apply for service of process and other court costs.",
+
+    fault_type:
+      "Utah allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences.",
+
+    parenting_class_required:
+      "Utah requires both divorcing parents to complete a mandatory divorce education class when minor children are involved, prior to the entry of a divorce decree.",
+
+    fee_waiver_available:
+      "Utah courts allow individuals who meet income criteria to file a Motion to Waive Fees to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Utah Courts – Divorce Information",
+        url: "https://www.utcourts.gov/en/self-help/case-categories/divorce.html"
+      },
+      {
+        title: "Utah Courts – Court Forms",
+        url: "https://www.utcourts.gov/en/self-help/forms.html"
+      },
+      {
+        title: "Utah Courts – Fee Waiver Information",
+        url: "https://www.utcourts.gov/en/self-help/case-categories/fee-waiver.html"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Iowa",
+    slug: "iowa",
+    abbreviation: "IA",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Iowa for at least one year before filing for dissolution of marriage, unless the other spouse is a resident of Iowa and was personally served in Iowa.",
+
+    waiting_period:
+      "Iowa requires a mandatory 90-day waiting period from the date the petition is served before a dissolution decree can be entered.",
+
+    filing_fee_range:
+      "Filing fees are approximately $185 to $265 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Iowa is a no-fault divorce state. The sole ground for dissolution is that the marriage has broken down and there is no reasonable likelihood of reconciliation.",
+
+    parenting_class_required:
+      "Iowa requires parents to complete a court-approved Children in the Middle program or similar parenting education course when minor children are involved.",
+
+    fee_waiver_available:
+      "Iowa courts allow individuals who meet income criteria to file an Application to Proceed Without Payment of Fees to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Iowa Judicial Branch – Divorce Information",
+        url: "https://www.iowacourts.gov/for-the-public/representing-yourself/divorce/"
+      },
+      {
+        title: "Iowa Judicial Branch – Court Forms",
+        url: "https://www.iowacourts.gov/for-the-public/court-forms/"
+      },
+      {
+        title: "Iowa Judicial Branch – Fee Waiver Information",
+        url: "https://www.iowacourts.gov/for-the-public/representing-yourself/"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Arkansas",
+    slug: "arkansas",
+    abbreviation: "AR",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Arkansas for at least 60 days before filing and for three months before the divorce is granted.",
+
+    waiting_period:
+      "Arkansas requires a mandatory 30-day waiting period from the date the complaint is filed before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $150 to $200 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Arkansas allows both no-fault and fault-based divorce. The no-fault ground requires living separate and apart for 18 consecutive months.",
+
+    parenting_class_required:
+      "Arkansas requires both parents to attend a court-approved Helping Children Cope with Divorce class when minor children are involved.",
+
+    fee_waiver_available:
+      "Arkansas courts allow individuals who meet income criteria to file a Motion to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Arkansas Judiciary – Self-Help: Divorce",
+        url: "https://www.arcourts.gov/forms-and-publications/court-forms/divorce"
+      },
+      {
+        title: "Arkansas Judiciary – Court Forms",
+        url: "https://www.arcourts.gov/forms-and-publications/court-forms"
+      },
+      {
+        title: "Arkansas Judiciary – Court Information",
+        url: "https://www.arcourts.gov/courts/circuit-courts"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Mississippi",
+    slug: "mississippi",
+    abbreviation: "MS",
+
+    residency_requirement:
+      "At least one spouse must have been a bona fide resident of Mississippi for six months before filing for divorce.",
+
+    waiting_period:
+      "Mississippi requires a mandatory 60-day waiting period from the date the complaint is filed before a divorce can be granted on the ground of irreconcilable differences.",
+
+    filing_fee_range:
+      "Filing fees are approximately $150 to $200 depending on the county. Additional fees may apply for service of process and court costs.",
+
+    fault_type:
+      "Mississippi allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences, which requires both parties' consent.",
+
+    parenting_class_required:
+      "Mississippi does not have a statewide parenting class requirement, but individual chancellors may order parenting education when minor children are involved.",
+
+    fee_waiver_available:
+      "Mississippi courts allow individuals who cannot afford filing fees to file a Pauper's Affidavit to request a waiver of court costs.",
+
+    citations: [
+      {
+        title: "Mississippi Judiciary – Court Information",
+        url: "https://courts.ms.gov/"
+      },
+      {
+        title: "Mississippi Judiciary – Chancery Court",
+        url: "https://courts.ms.gov/trialcourts/chancery/chancery.php"
+      },
+      {
+        title: "Mississippi Judiciary – Court Forms",
+        url: "https://courts.ms.gov/forms/forms.php"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Nebraska",
+    slug: "nebraska",
+    abbreviation: "NE",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Nebraska for at least one year before filing for dissolution of marriage, or the marriage must have been performed in Nebraska and the filing spouse must have resided in the state from the time of marriage to the time of filing.",
+
+    waiting_period:
+      "Nebraska requires a mandatory 60-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $150 to $200 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Nebraska is a no-fault divorce state. The sole ground for dissolution is an irretrievable breakdown of the marriage.",
+
+    parenting_class_required:
+      "Nebraska requires parents to complete a court-approved parenting education program when minor children are involved in a dissolution proceeding.",
+
+    fee_waiver_available:
+      "Nebraska courts allow individuals who meet income criteria to file an Application to Proceed In Forma Pauperis to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Nebraska Judicial Branch – Self-Help: Divorce",
+        url: "https://supremecourt.nebraska.gov/self-help/divorce-702"
+      },
+      {
+        title: "Nebraska Judicial Branch – Court Forms",
+        url: "https://supremecourt.nebraska.gov/self-help/forms"
+      },
+      {
+        title: "Nebraska Judicial Branch – Fee Waiver Information",
+        url: "https://supremecourt.nebraska.gov/self-help"
+      }
+    ],
+
+    last_verified: "January 2026"
+  },
+  {
+    name: "Idaho",
+    slug: "idaho",
+    abbreviation: "ID",
+
+    residency_requirement:
+      "At least one spouse must have been a resident of Idaho for six weeks before filing for divorce. The petition must be filed in the county where the respondent resides, or in the county where the petitioner resides if the respondent is not a resident of Idaho.",
+
+    waiting_period:
+      "Idaho requires a mandatory 20-day waiting period from the date the respondent is served before a divorce can be finalized.",
+
+    filing_fee_range:
+      "Filing fees are approximately $207 to $250 depending on the county. Additional fees may apply for service of process.",
+
+    fault_type:
+      "Idaho allows both no-fault and fault-based divorce. The no-fault ground is irreconcilable differences.",
+
+    parenting_class_required:
+      "Idaho does not have a statewide parenting class requirement, but many courts require parents to complete a parenting education course when minor children are involved.",
+
+    fee_waiver_available:
+      "Idaho courts allow individuals who meet income criteria to file a Motion and Affidavit for Fee Waiver to request a waiver of court filing fees.",
+
+    citations: [
+      {
+        title: "Idaho Supreme Court – Self-Help: Divorce",
+        url: "https://www.isc.idaho.gov/self-help/divorce"
+      },
+      {
+        title: "Idaho Supreme Court – Court Forms",
+        url: "https://www.isc.idaho.gov/ifcr"
+      },
+      {
+        title: "Idaho Supreme Court – Court Assistance",
+        url: "https://www.isc.idaho.gov/self-help"
+      }
+    ],
+
+    last_verified: "January 2026"
   }
 ];
