@@ -22,6 +22,11 @@
   </url>
 
   <url>
+    <loc>https://informerlegal.com/states/arkansas/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://informerlegal.com/states/california/</loc>
     <priority>0.8</priority>
   </url>
@@ -42,12 +47,42 @@
   </url>
 
   <url>
+    <loc>https://informerlegal.com/states/idaho/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://informerlegal.com/states/illinois/</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://informerlegal.com/states/indiana/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/iowa/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/kansas/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/kentucky/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/maryland/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/massachusetts/</loc>
     <priority>0.8</priority>
   </url>
 
@@ -62,7 +97,27 @@
   </url>
 
   <url>
+    <loc>https://informerlegal.com/states/mississippi/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://informerlegal.com/states/missouri/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/nebraska/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/nevada/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/new-jersey/</loc>
     <priority>0.8</priority>
   </url>
 
@@ -82,7 +137,22 @@
   </url>
 
   <url>
+    <loc>https://informerlegal.com/states/oklahoma/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/oregon/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://informerlegal.com/states/pennsylvania/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/south-carolina/</loc>
     <priority>0.8</priority>
   </url>
 
@@ -93,6 +163,11 @@
 
   <url>
     <loc>https://informerlegal.com/states/texas/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informerlegal.com/states/utah/</loc>
     <priority>0.8</priority>
   </url>
 
