@@ -252,7 +252,11 @@ function generateHTML(state, stateIndex) {
   <header>
     <section class="state-intro">
       <h1>${state.name} Divorce Forms & Filing Requirements</h1>
-      <p class="last-verified">Last Verified: February 2026</p>
+      <div class="trust-bar">
+        <span>Information Verified: January 2026</span>
+        <span>Sources: Official State Court Websites</span>
+        <span>Content Type: Informational Resource (Not Legal Advice)</span>
+      </div>
       <p>
         ${state.name} divorce laws require specific formatting, disclosures, and filing procedures.
         Our <a href="/#divorce-forms-by-state">State-Specific Divorce Forms</a> for ${state.name}

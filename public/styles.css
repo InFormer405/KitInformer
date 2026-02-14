@@ -408,3 +408,20 @@ section {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
 }
+
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.trust-bar span {
+  font-size: 0.8125rem;
+  color: #8fa2b7;
+  white-space: nowrap;
+}
