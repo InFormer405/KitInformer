@@ -66,6 +66,28 @@ function generateArticleSchema(state) {
   };
 }
 
+function generateRelatedStates(state) {
+  const others = states.filter(s => s.slug !== state.slug);
+  for (let i = others.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [others[i], others[j]] = [others[j], others[i]];
+  }
+  const selected = others.slice(0, 4);
+  const links = selected.map(s =>
+    `          <li><a href="/states/${s.slug}/">${s.name} Divorce Filing Requirements</a></li>`
+  ).join('\n');
+  return `
+    <section class="related-states">
+      <div class="container">
+        <h2>Explore Divorce Filing Requirements in Other States</h2>
+        <ul>
+${links}
+        </ul>
+      </div>
+    </section>
+`;
+}
+
 function generateConversionLayer(state) {
   return `
     <section class="conversion-layer">
@@ -134,6 +156,7 @@ function generateHTML(state) {
   const faqSchema = JSON.stringify(generateFAQSchema(state), null, 2);
   const articleSchema = JSON.stringify(generateArticleSchema(state), null, 2);
   const conversionLayer = generateConversionLayer(state);
+  const relatedStates = generateRelatedStates(state);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -223,12 +246,7 @@ ${citationsList}
       </div>
     </section>
 
-    <section class="related-states">
-      <h2>Explore Divorce Forms in Other States</h2>
-      <ul>
-        <li><a href="/states/">View All States</a></li>
-      </ul>
-    </section>
+${relatedStates}
 
   </main>
 
