@@ -116,6 +116,9 @@ function generateConversionLayer(state) {
             <img src="/images/products/${state.slug}-no-children.png"
                  alt="${state.name} Divorce Kit — No Children"
                  class="product-image"
+                 loading="lazy"
+                 width="600"
+                 height="800"
                  onerror="this.style.display='none'" />
             <h3>${state.name} Divorce Kit</h3>
             <span class="blue-pill">No Children</span>
@@ -130,6 +133,9 @@ function generateConversionLayer(state) {
             <img src="/images/products/${state.slug}-with-children.png"
                  alt="${state.name} Divorce Kit — With Children"
                  class="product-image"
+                 loading="lazy"
+                 width="600"
+                 height="800"
                  onerror="this.style.display='none'" />
             <h3>${state.name} Divorce Kit</h3>
             <span class="blue-pill">With Children</span>
