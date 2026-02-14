@@ -1,4 +1,5 @@
 import { states } from '../data/state-divorce-data.js';
+import { products } from '../data/products-data.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -65,6 +66,34 @@ function generateArticleSchema(state) {
   };
 }
 
+function generateProductCards(state) {
+  const stateProducts = products.filter(p => p.state === state.abbreviation);
+  if (stateProducts.length === 0) return '';
+
+  const cards = stateProducts.map(product => {
+    const pillLabel = product.children ? 'With Children' : 'No Children';
+    return `        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.onerror=null;this.src='/images/products/placeholder.svg';" />
+          <h3>${product.name}</h3>
+          <span class="blue-pill">${pillLabel}</span>
+          <p class="gold-price">$${product.price}</p>
+          <p class="price-note">One-time payment</p>
+          <p class="product-desc">${product.description}</p>
+        </div>`;
+  }).join('\n');
+
+  return `
+    <section class="section">
+      <div class="container">
+        <h2>${state.name} Divorce Form Kits</h2>
+        <div class="product-grid">
+${cards}
+        </div>
+      </div>
+    </section>
+`;
+}
+
 function generateHTML(state) {
   const firstCitation = state.citations.length > 0 ? state.citations[0] : null;
   const citationSource = firstCitation ? `<p><em>Source: ${firstCitation.title}</em></p>` : '';
@@ -75,6 +104,7 @@ function generateHTML(state) {
 
   const faqSchema = JSON.stringify(generateFAQSchema(state), null, 2);
   const articleSchema = JSON.stringify(generateArticleSchema(state), null, 2);
+  const productSection = generateProductCards(state);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -153,7 +183,7 @@ function generateHTML(state) {
         <p>${state.parenting_class_required}</p>
       </div>
     </section>
-
+${productSection}
     <section class="section">
       <div class="container">
         <h2>Sources & Verification</h2>
