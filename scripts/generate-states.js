@@ -66,28 +66,57 @@ function generateArticleSchema(state) {
   };
 }
 
-function generateProductCards(state) {
-  const stateProducts = products.filter(p => p.state === state.abbreviation);
-  if (stateProducts.length === 0) return '';
-
-  const cards = stateProducts.map(product => {
-    const pillLabel = product.children ? 'With Children' : 'No Children';
-    return `        <div class="product-card">
-          <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.onerror=null;this.src='/images/products/placeholder.svg';" />
-          <h3>${product.name}</h3>
-          <span class="blue-pill">${pillLabel}</span>
-          <p class="gold-price">$${product.price}</p>
-          <p class="price-note">One-time payment</p>
-          <p class="product-desc">${product.description}</p>
-        </div>`;
-  }).join('\n');
-
+function generateConversionLayer(state) {
   return `
-    <section class="section">
+    <section class="conversion-layer">
       <div class="container">
         <h2>${state.name} Divorce Form Kits</h2>
+        <p class="conversion-intro">
+          Filing for divorce in ${state.name} requires precise documentation and
+          compliance with court formatting rules. Our ${state.name} Divorce Kits
+          are structured to align with state requirements and reduce avoidable delays.
+        </p>
+
+        <div class="filing-fee-box">
+          <h3>Filing Fees in ${state.name}</h3>
+          <p class="filing-fee-highlight">
+            Typical filing fees: ${state.filing_fee_range}
+          </p>
+          <p>
+            Every InFormer Divorce Kit includes the official ${state.name}
+            fee waiver request forms at no additional cost.
+            Approval is determined by the court.
+          </p>
+        </div>
+
         <div class="product-grid">
-${cards}
+          <div class="product-card">
+            <img src="/images/products/${state.slug}-no-children.png"
+                 alt="${state.name} Divorce Kit — No Children"
+                 class="product-image"
+                 onerror="this.style.display='none'" />
+            <h3>${state.name} Divorce Kit</h3>
+            <span class="blue-pill">No Children</span>
+            <p class="gold-price">$175</p>
+            <p class="price-note">One-time payment</p>
+            <p class="product-desc">
+              Complete divorce forms and structured instructions for uncontested cases without minor children.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <img src="/images/products/${state.slug}-with-children.png"
+                 alt="${state.name} Divorce Kit — With Children"
+                 class="product-image"
+                 onerror="this.style.display='none'" />
+            <h3>${state.name} Divorce Kit</h3>
+            <span class="blue-pill">With Children</span>
+            <p class="gold-price">$199</p>
+            <p class="price-note">One-time payment</p>
+            <p class="product-desc">
+              Complete divorce forms and structured instructions for uncontested cases involving minor children.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -104,7 +133,7 @@ function generateHTML(state) {
 
   const faqSchema = JSON.stringify(generateFAQSchema(state), null, 2);
   const articleSchema = JSON.stringify(generateArticleSchema(state), null, 2);
-  const productSection = generateProductCards(state);
+  const conversionLayer = generateConversionLayer(state);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -183,7 +212,7 @@ function generateHTML(state) {
         <p>${state.parenting_class_required}</p>
       </div>
     </section>
-${productSection}
+${conversionLayer}
     <section class="section">
       <div class="container">
         <h2>Sources & Verification</h2>
