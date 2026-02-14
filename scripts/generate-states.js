@@ -320,6 +320,33 @@ ${faqSchema}
 ${articleSchema}
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "State-Specific Divorce Forms",
+      "item": "https://informerlegal.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "All State Divorce Filing Requirements",
+      "item": "https://informerlegal.com/states/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "${state.name} Divorce Filing Requirements",
+      "item": "https://informerlegal.com/states/${state.slug}/"
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
 `;
