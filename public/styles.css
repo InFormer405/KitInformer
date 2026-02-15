@@ -100,8 +100,9 @@ footer p {
 
 .product-image {
   width: 100%;
-  border-radius: 14px;
-  margin-bottom: 14px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 .price-row {

@@ -178,13 +178,7 @@ function generateConversionLayer(state) {
 
         <div class="product-grid">
           <div class="product-card">
-            <img src="/images/products/${state.slug}-no-children.png"
-                 alt="${state.name} Divorce Kit — No Children"
-                 class="product-image"
-                 loading="lazy"
-                 width="600"
-                 height="800"
-                 onerror="this.style.display='none'" />
+            <img src="/images/products/raw/no-children/${state.abbreviation.toLowerCase()}-no-children.png" alt="${state.name} Divorce Kit No Children" class="product-image">
             <h3>${state.name} Divorce Kit</h3>
             <span class="blue-pill">No Children</span>
             <p class="gold-price">$175</p>
@@ -195,13 +189,7 @@ function generateConversionLayer(state) {
           </div>
 
           <div class="product-card">
-            <img src="/images/products/${state.slug}-with-children.png"
-                 alt="${state.name} Divorce Kit — With Children"
-                 class="product-image"
-                 loading="lazy"
-                 width="600"
-                 height="800"
-                 onerror="this.style.display='none'" />
+            <img src="/images/products/raw/with-children/${state.abbreviation.toLowerCase()}-with-children.png" alt="${state.name} Divorce Kit With Children" class="product-image">
             <h3>${state.name} Divorce Kit</h3>
             <span class="blue-pill">With Children</span>
             <p class="gold-price">$199</p>
