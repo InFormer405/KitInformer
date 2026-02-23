@@ -1,37 +1,51 @@
+import crypto from "crypto";
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  try {
-    const body = await request.text();
-    const event = JSON.parse(body);
+  const signature = request.headers.get("stripe-signature");
+  const body = await request.text();
 
-    console.log("Stripe event received:", event.type);
+  const expectedSig = crypto
+    .createHmac("sha256", env.STRIPE_WEBHOOK_SECRET)
+    .update(body, "utf8")
+    .digest("hex");
 
-    if (event.type === "checkout.session.completed") {
-      const session = event.data.object;
-
-      const customerEmail = session.customer_details?.email;
-
-      if (!customerEmail) {
-        console.log("No customer email found.");
-        return new Response("No email", { status: 200 });
-      }
-
-      // TODO: Replace with your actual product URL
-      const downloadLink = "https://informerlegal.com/downloads/divorce-kit.pdf";
-
-      console.log(`Send this link to: ${customerEmail}`);
-      console.log(`Download link: ${downloadLink}`);
-
-      // For now just log it.
-      // Next step we wire email sending.
-
-    }
-
-    return new Response("Webhook received", { status: 200 });
-
-  } catch (err) {
-    console.error("Webhook error:", err);
-    return new Response("Webhook error", { status: 400 });
+  if (!signature || !signature.includes(expectedSig)) {
+    return new Response("Invalid signature", { status: 400 });
   }
+
+  const event = JSON.parse(body);
+
+  if (event.type !== "checkout.session.completed") {
+    return new Response("Ignored", { status: 200 });
+  }
+
+  const session = event.data.object;
+
+  const email = session.customer_details?.email || null;
+
+  const priceId =
+    session.metadata?.priceId ||
+    null;
+
+  const state =
+    session.metadata?.state ||
+    null;
+
+  if (!email || !priceId || !state) {
+    return new Response("Missing data", { status: 400 });
+  }
+
+  await fetch(env.APPS_SCRIPT_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email,
+      priceId,
+      state
+    })
+  });
+
+  return new Response("Success", { status: 200 });
 }
