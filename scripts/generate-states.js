@@ -183,8 +183,10 @@ function generateConversionLayer(state) {
             <span class="blue-pill">No Children</span>
             <p class="gold-price">$175</p>
             <p class="price-note">One-time payment</p>
-            <p class="product-desc">
-              Complete divorce forms and structured instructions for uncontested cases without minor children.
+            <a href="https://buy.stripe.com/14AeVd9CT33D3pncok8ww00" class="checkout-btn">Begin Your Divorce Process</a>
+            <p class="card-subtext">
+              Instant Download &bull; Court-Compliant &bull; Secure &amp; Confidential<br>
+              Includes Free Court Fee Waiver Forms
             </p>
           </div>
 
@@ -194,8 +196,10 @@ function generateConversionLayer(state) {
             <span class="blue-pill">With Children</span>
             <p class="gold-price">$199</p>
             <p class="price-note">One-time payment</p>
-            <p class="product-desc">
-              Complete divorce forms and structured instructions for uncontested cases involving minor children.
+            <a href="https://buy.stripe.com/3cIcN58yP8nX3pnbkg8ww01" class="checkout-btn">Begin Your Divorce Process</a>
+            <p class="card-subtext">
+              Instant Download &bull; Court-Compliant &bull; Secure &amp; Confidential<br>
+              Includes Free Court Fee Waiver Forms
             </p>
           </div>
         </div>
