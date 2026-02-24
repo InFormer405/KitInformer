@@ -166,8 +166,9 @@ footer p {
 
 .cta-subtext {
   font-size: 13px;
-  color: #a9b8cc;
-  margin-top: 10px;
+  color: #bcc8da;
+  font-weight: 500;
+  margin-top: 14px;
   text-align: center;
   letter-spacing: 0.3px;
 }
@@ -180,9 +181,12 @@ footer p {
 }
 
 .value-bullets li {
+  display: flex;
+  align-items: baseline;
   margin-bottom: 8px;
   font-size: 14px;
   color: #cfd8e6;
+  line-height: 1.4;
 }
 
 .value-bullets li::before {
@@ -190,6 +194,7 @@ footer p {
   color: #c6a95d;
   font-weight: bold;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .blue-pill {
