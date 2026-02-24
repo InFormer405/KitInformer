@@ -142,7 +142,7 @@ footer p {
 .cta-button {
   display: block;
   width: 100%;
-  padding: 16px 20px;
+  padding: 18px 20px;
   margin-top: 20px;
   background: linear-gradient(135deg, #1a2f4f, #0e1a2b);
   color: #ffffff;
@@ -172,6 +172,26 @@ footer p {
   letter-spacing: 0.3px;
 }
 
+.value-bullets {
+  margin-top: 14px;
+  margin-bottom: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.value-bullets li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #cfd8e6;
+}
+
+.value-bullets li::before {
+  content: "\2714";
+  color: #c6a95d;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
 .blue-pill {
   display: inline-flex;
   align-items: center;
@@ -185,8 +205,8 @@ footer p {
   line-height: 1;
   white-space: nowrap;
   box-shadow:
-    0 0 6px 2px rgba(21, 101, 255, 0.4),
-    0 0 14px 4px rgba(21, 101, 255, 0.2);
+    0 0 4px 1px rgba(21, 101, 255, 0.25),
+    0 0 10px 3px rgba(21, 101, 255, 0.12);
 }
 
 .product-desc {
