@@ -284,7 +284,7 @@ function generateHTML(state, stateIndex) {
         ${citationSource}
       </div>
     </section>
-
+${conversionLayer}
     <section class="section">
       <div class="container">
         <h2>${state.name} Divorce Filing Fees</h2>
@@ -314,7 +314,7 @@ function generateHTML(state, stateIndex) {
         <p>${state.parenting_class_required}</p>
       </div>
     </section>
-${conversionLayer}
+
     <section class="comparison-section">
       <div class="container">
         <h2>How InFormer Compares</h2>
