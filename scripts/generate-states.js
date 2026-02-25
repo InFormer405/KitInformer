@@ -268,7 +268,7 @@ function generateHTML(state, stateIndex) {
   </header>
 
   <main>
-
+${conversionLayer}
     <section class="section">
       <div class="container">
         <h2>${state.name} Residency Requirement</h2>
@@ -284,7 +284,7 @@ function generateHTML(state, stateIndex) {
         ${citationSource}
       </div>
     </section>
-${conversionLayer}
+
     <section class="section">
       <div class="container">
         <h2>${state.name} Divorce Filing Fees</h2>
