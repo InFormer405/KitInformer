@@ -7,15 +7,15 @@
 }
 
 /* ===============================
-   PREMIUM DEPTH BACKGROUND
+   PREMIUM MARBLE DEPTH BACKGROUND
 ================================ */
 body {
   background-color: #0b1623;
   background-image:
-    radial-gradient(at 18% 25%, rgba(255,255,255,0.03) 0%, transparent 55%),
-    radial-gradient(at 82% 70%, rgba(255,255,255,0.025) 0%, transparent 60%),
-    radial-gradient(at 40% 85%, rgba(255,255,255,0.02) 0%, transparent 65%),
-    linear-gradient(135deg, #0b1623 0%, #0e1b2a 45%, #0a1420 100%);
+    radial-gradient(at 15% 20%, rgba(255,255,255,0.06) 0%, transparent 55%),
+    radial-gradient(at 85% 75%, rgba(255,255,255,0.05) 0%, transparent 60%),
+    radial-gradient(at 40% 85%, rgba(255,255,255,0.04) 0%, transparent 65%),
+    linear-gradient(135deg, #0b1623 0%, #0f1c2c 45%, #0a1420 100%);
   background-attachment: fixed;
 
   color: #f5f5f5;
@@ -172,7 +172,6 @@ footer p {
   text-decoration: none;
   transition: all 0.25s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  box-sizing: border-box;
 }
 
 .cta-button:hover {
