@@ -522,3 +522,71 @@ h3 {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+.section {
+  padding: 24px 0;
+}
+
+h2 {
+  margin-bottom: 0.6rem;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Vertical Rhythm Tightening ===== */
+
+.section {
+  padding: 24px 0;
+}
+
+h2 {
+  margin-bottom: 0.6rem;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Subtle Section Dividers ===== */
+
+.section + .section {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ===== InFormer Global Brand ===== */
+
+.brand-header {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(
+    to bottom,
+    #1c3553 0%,
+    #13263d 60%,
+    #0f1f32 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0 1px 0 #c6a95d;
+}
