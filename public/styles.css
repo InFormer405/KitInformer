@@ -126,21 +126,21 @@ margin: 8px 0 12px 0;
 
   background: linear-gradient(
     180deg,
-    #6e4f12 0%,
-    #b8891f 20%,
-    #f8e27a 40%,
+    #5a3e0d 0%,
+    #b8891f 18%,
+    #ffd95e 38%,
     #ffffff 50%,
-    #f8e27a 60%,
-    #b8891f 80%,
-    #6e4f12 100%
+    #ffd95e 62%,
+    #b8891f 82%,
+    #5a3e0d 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   text-shadow:
-    0 2px 0 #3a2a08,
-    0 4px 6px rgba(0, 0, 0, 0.7);
+    0 3px 0 #2e2005,
+    0 6px 10px rgba(0, 0, 0, 0.8);
 }
 
 .price-note {
@@ -606,21 +606,21 @@ p {
 
   background: linear-gradient(
     180deg,
-    #6e4f12 0%,
-    #b8891f 20%,
-    #f8e27a 40%,
+    #5a3e0d 0%,
+    #b8891f 18%,
+    #ffd95e 38%,
     #ffffff 50%,
-    #f8e27a 60%,
-    #b8891f 80%,
-    #6e4f12 100%
+    #ffd95e 62%,
+    #b8891f 82%,
+    #5a3e0d 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   text-shadow:
-    0 2px 0 #3a2a08,
-    0 4px 6px rgba(0, 0, 0, 0.7);
+    0 3px 0 #2e2005,
+    0 6px 10px rgba(0, 0, 0, 0.8);
 }
 
 
