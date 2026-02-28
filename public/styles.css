@@ -590,3 +590,11 @@ p {
 
   text-shadow: 0 1px 0 #c6a95d;
 }
+
+/* FIX GOLD PRICE GRADIENT (Mobile Rendering Fix) */
+.gold-price {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
