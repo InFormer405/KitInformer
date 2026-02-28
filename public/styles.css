@@ -118,24 +118,29 @@ margin: 8px 0 12px 0;
 }
 
 .gold-price {
-font-size: 32px;
-font-weight: 800;
-letter-spacing: -0.02em;
-line-height: 1;
-margin: 0;
-background: linear-gradient(
-90deg,
-#b58828 0%,
-#cca030 18%,
-#e6be42 35%,
-#f5da65 50%,
-#e6be42 65%,
-#cca030 82%,
-#b58828 100%
-);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #8c6a18 0%,
+    #caa63a 18%,
+    #f5da65 38%,
+    #fff3b0 50%,
+    #f5da65 62%,
+    #caa63a 82%,
+    #8c6a18 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 1px 0 #5a4310,
+    0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .price-note {
@@ -593,8 +598,29 @@ p {
 
 /* FIX GOLD PRICE GRADIENT (Mobile Rendering Fix) */
 .gold-price {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #8c6a18 0%,
+    #caa63a 18%,
+    #f5da65 38%,
+    #fff3b0 50%,
+    #f5da65 62%,
+    #caa63a 82%,
+    #8c6a18 100%
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 1px 0 #5a4310,
+    0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 
