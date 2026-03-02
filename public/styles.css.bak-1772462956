@@ -732,22 +732,3 @@ h1{
 .site-brand {
   margin-bottom: 16px !important;
 }
-
-/* ===== MAIN PAGE BRAND FIX ===== */
-.hero .brand-name .informer-gold,
-header .brand-name .informer-gold,
-body > .brand-name .informer-gold {
-  font-size: clamp(56px, 6vw, 88px) !important;
-  line-height: 1.02 !important;
-}
-
-
-/* ===== FORCE FULL WIDTH HERO ON MAIN PAGE ===== */
-body > div,
-main,
-.hero,
-.section {
-  max-width: 1200px !important;
-  width: 100% !important;
-}
-

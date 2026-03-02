@@ -9,14 +9,20 @@
   <link rel="stylesheet" href="/styles.css?v=999" />
 </head>
 <body>
-<nav class="breadcrumb">
+
+  <div class="site-brand">
+    <a class="brand-mark" href="/">InFormer</a>
+  </div>
+
+
+  <nav class="breadcrumb">
     Divorce Forms &amp; Filing Requirements by State
   </nav>
 
   <!-- 1) HERO SECTION -->
   <header>
   <div class="brand-header">
-    <div class="brand-name"><span class="informer-gold">InFormer</span></div>
+    <div class="brand-name">InFormer</div>
   </div>
     <section class="state-intro">
       <h1>Divorce Forms &amp; Filing Requirements by State (2026)</h1>
