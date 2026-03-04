@@ -9,44 +9,37 @@
   <link rel="stylesheet" href="/styles.css?v=2" />
 <script type="application/ld+json">
 {
-  "": "https://schema.org",
-  "": [
-    {
-      "": "BreadcrumbList",
-      "itemListElement": [
-        {"":"ListItem","position":1,"name":"Home","item":"https://informerlegal.com/"},
-        {"":"ListItem","position":2,"name":"All State Divorce Forms","item":"https://informerlegal.com/states/"},
-        {"":"ListItem","position":3,"name":"California Divorce Forms","item":"https://informerlegal.com/states/california/"}
-      ]
-    },
-    {
-      "": "Article",
-      "mainEntityOfPage": {"":"WebPage","":"https://informerlegal.com/states/california/"},
-      "headline": "California Divorce Forms & Filing Requirements",
-      "author": {"":"Organization","name":"InFormer"},
-      "publisher": {"":"Organization","name":"InFormer"}
-    },
-    {
-      "": "FAQPage",
-      "mainEntity": [
-        {
-          "": "Question",
-          "name": "How do I file for divorce in California?",
-          "acceptedAnswer": {"":"Answer","text":"In general, you must meet California residency requirements, complete the required forms, file with the Superior Court, serve your spouse, complete financial disclosures, and finalize the judgment. Steps can vary by county and case type."}
-        },
-        {
-          "": "Question",
-          "name": "What are the residency requirements for divorce in California?",
-          "acceptedAnswer": {"":"Answer","text":"Typically, at least one spouse must have lived in California for 6 months and in the filing county for 3 months before filing."}
-        },
-        {
-          "": "Question",
-          "name": "Can I file an uncontested divorce in California without a lawyer?",
-          "acceptedAnswer": {"":"Answer","text":"Many people complete an uncontested divorce without an attorney, but you still must file the correct paperwork, serve properly, and complete required disclosures. Court rules and local requirements vary."}
-        }
-      ]
-    }
-  ]
+  "@context": "https://schema.org",
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"What are the residency requirements for divorce in California?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"At least one spouse must live in California for six months and in the county where the divorce is filed for at least three months before filing."
+}
+},
+{
+"@type":"Question",
+"name":"How much does it cost to file for divorce in California?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"The typical filing fee is about $435 though it may vary by county."
+}
+},
+{
+"@type":"Question",
+"name":"How long does a divorce take in California?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"California has a mandatory six month waiting period before the divorce can be finalized."
+}
+}
+]
 }
 </script>
 </head>
