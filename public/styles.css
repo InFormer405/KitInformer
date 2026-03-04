@@ -810,3 +810,47 @@ main,
   margin: 12px 0 !important;
 }
 
+
+.quick-overview {
+  background: #0f1a26;
+  border: 1px solid #1f2e3d;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 2rem 0;
+}
+
+.quick-overview h2 {
+  margin-bottom: 12px;
+}
+
+.quick-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-facts li {
+  margin-bottom: 8px;
+  color: #cfd8e6;
+  line-height: 1.5;
+}
+
+
+.divorce-steps {
+  background: #0c1622;
+  border: 1px solid #1f2e3d;
+  border-radius: 14px;
+  padding: 28px;
+  margin: 2rem 0;
+}
+
+.steps-list {
+  padding-left: 20px;
+}
+
+.steps-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #cfd8e6;
+}
+
