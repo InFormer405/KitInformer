@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://informerlegalforms.com/sitemap.xml
+Sitemap: https://informerlegal.com/sitemap.xml
