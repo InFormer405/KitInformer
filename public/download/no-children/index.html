@@ -5,40 +5,76 @@
   <title>Download Your Divorce Kit</title>
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {font-family: Arial;background:#0a0f1c;color:white;text-align:center;padding:40px;}
+    .container {max-width:700px;margin:auto;}
+    .download-btn {display:none;margin-top:30px;padding:15px 30px;font-size:20px;background:#1a73e8;color:white;text-decoration:none;border-radius:8px;}
+  </style>
 </head>
-<body style="font-family:Arial;background:#0a0f1c;color:white;text-align:center;padding:40px;">
+<body>
 
-<h1>Thank You For Your Purchase</h1>
-<p>Your divorce kit is ready.</p>
-
-<p id="status">Preparing your download...</p>
-
-<a id="downloadBtn" style="display:none;padding:15px 25px;background:#1a73e8;color:white;text-decoration:none;border-radius:6px;">
-Download Your Kit
-</a>
+<div class="container">
+  <h1>Thank You For Your Purchase</h1>
+  <p>Your divorce kit is ready.</p>
+  <p id="status">Preparing your download...</p>
+  <a id="downloadBtn" class="download-btn" target="_blank">Download Your Kit</a>
+</div>
 
 <script>
 const files = {
-  // 👉 PASTE ONLY your "-no-children" links here
+"missouri-no-children":"https://drive.google.com/uc?export=download&id=1ZB03Woj1LthYxYoLsXuD1suExCjrAjtK",
+"wisconsin-no-children":"https://drive.google.com/uc?export=download&id=15tvAnEdWoAJgnyS7V4o-7t_bADAopjJC",
+"oregon-no-children":"https://drive.google.com/uc?export=download&id=1gF9ez7EV3yvJIJtgT421KsdHsz_QVf79",
+"south-carolina-no-children":"https://drive.google.com/uc?export=download&id=1Om0pEeffErL2FSJGy7Ghx0TgWp2tS1a9",
+"rhode-island-no-children":"https://drive.google.com/uc?export=download&id=1noLDxB8h3JeoM_ASlZeCA1WuwpN_kUI9",
+"south-dakota-no-children":"https://drive.google.com/uc?export=download&id=1eS1L43KYxXFIzYg6tHqPUjv0EXn5HwdT",
+"mississippi-no-children":"https://drive.google.com/uc?export=download&id=10UxAmeFY38Czf-98-JCrN6btVKkukGuy",
+"minnesota-no-children":"https://drive.google.com/uc?export=download&id=1EKB7A3OCf7-z6utHvba0K1JUF1iwxcOu",
+"michigan-no-children":"https://drive.google.com/uc?export=download&id=1TzZGtah3i-I2vHxEEOhi8i3lJp9pj-Qi",
+"montana-no-children":"https://drive.google.com/uc?export=download&id=1ecnMZf2TzAYY2vnfnPg6UQRuzP33-6wj",
+"texas-no-children":"https://drive.google.com/uc?export=download&id=1sis81E6t1qI0h1VSvNTmFU_YzDwGJ2LT",
+"nevada-no-children":"https://drive.google.com/uc?export=download&id=1raqC1V7T8BLwbe8YoaE5SZ6DBvvH8p-S",
+"west-virginia-no-children":"https://drive.google.com/uc?export=download&id=1yanqInGqlB_91bljb6b3J9dqbJ7_2azm",
+"tennessee-no-children":"https://drive.google.com/uc?export=download&id=1nL-lsMcJcQgcNlpsYJ3PZPxQfdeTwJA6",
+"new-mexico-no-children":"https://drive.google.com/uc?export=download&id=1qdSqPZZ-MjMglK2-bO1KyRhcuvEA4k0y",
+"pennsylvania-no-children":"https://drive.google.com/uc?export=download&id=1mEgc2OvvBgXDHTgi-0yzAEqyGOS8N8Gd",
+"north-carolina-no-children":"https://drive.google.com/uc?export=download&id=1dkeOWkFb5PPEIZYigFH-D2g64M6nZBzH",
+"utah-no-children":"https://drive.google.com/uc?export=download&id=1BPH1gJ6lTfGQ9l-Twirn4rnV60pBEX-A",
+"nebraska-no-children":"https://drive.google.com/uc?export=download&id=1yHG7uIzOXuatOcRKPLNEhNVxThKSIiJs",
+"new-jersey-no-children":"https://drive.google.com/uc?export=download&id=1zEJ61K0-ivGBQR-2ejOeNB9pABhi0tVn",
+"vermont-no-children":"https://drive.google.com/uc?export=download&id=1P5Esor1MsMtHjqUYswakATUhiSyWSVM4",
+"massachusetts-no-children":"https://drive.google.com/uc?export=download&id=15vkRxSqEoTeYYxM0A-YGZwRa9QG0ZkY-",
+"new-hampshire-no-children":"https://drive.google.com/uc?export=download&id=1LmNUCRH30-jbvLA_vvzyCyxW3OPWJPq9",
+"north-dakota-no-children":"https://drive.google.com/uc?export=download&id=14fRWEEUlR4WQcCOJH-32A8MGlpH7tnIM",
+"washington-no-children":"https://drive.google.com/uc?export=download&id=1TbY3FySZwzpBP7ftQqARUklbuH-bsJyB",
+"ohio-no-children":"https://drive.google.com/uc?export=download&id=1NU0A_6GJOFSKaTCpELizR4JIVwVrIysD",
+"oklahoma-no-children":"https://drive.google.com/uc?export=download&id=1b1PsHg-LbvVI23I7bEuB0tCucmtWAhPJ",
+"illinois-no-children":"https://drive.google.com/uc?export=download&id=1mWE40-AcjaimQUPaH7SnBolYNeOobZ8t",
+"kansas-no-children":"https://drive.google.com/uc?export=download&id=1A29qDruNux_XkA66nTse2tRmvcbSKpNt",
+"alabama-no-children":"https://drive.google.com/uc?export=download&id=1auAC0ud8hZphGk71oq_KrgIQHQH-T7NX",
+"kentucky-no-children":"https://drive.google.com/uc?export=download&id=1bSt3hxK3iFnlgnFc8xexb-Bspkyu6lgQ",
+"connecticut-no-children":"https://drive.google.com/uc?export=download&id=1-beXP9f15gEDDdLnYZWB-elGsez16Pk4",
+"arkansas-no-children":"https://drive.google.com/uc?export=download&id=1eY_vOyd87GyfzGfco9-Z1kgrhMrPdMFL",
+"iowa-no-children":"https://drive.google.com/uc?export=download&id=1J8zJtu_i1s2dhUNk6Q5UiTkeIY8bQD7E",
+"indiana-no-children":"https://drive.google.com/uc?export=download&id=1S8ayy5yMc5f_LV1DVnh5ru3dAMxRVOzZ",
+"georgia-no-children":"https://drive.google.com/uc?export=download&id=10VaOvr554aV06TyAuBcilU7ziwd0gSHL",
+"arizona-no-children":"https://drive.google.com/uc?export=download&id=1c9C5uqDSVfybGoUbwCXWU2jBwNOw39Mt",
+"delaware-no-children":"https://drive.google.com/uc?export=download&id=1lDAsEb24dPFetj_sEgilcepj2GVTdIY4",
+"california-no-children":"https://drive.google.com/uc?export=download&id=111_fkHBce_LXwjwCp9F5wpsj6S7iqZNG"
 };
 
-const params = new URLSearchParams(window.location.search);
-const state = params.get("state");
+const state = (new URLSearchParams(window.location.search).get("state") || "").toLowerCase().trim();
+const btn = document.getElementById("downloadBtn");
+const status = document.getElementById("status");
 
-if (!state) {
-  document.getElementById("status").textContent = "Invalid link.";
-} else {
-  const key = `${state}-no-children`;
-  const file = files[key];
+const file = files[state + "-no-children"];
 
-  if (!file) {
-    document.getElementById("status").textContent = "File not found.";
-  } else {
-    const btn = document.getElementById("downloadBtn");
-    btn.href = file;
-    btn.style.display = "inline-block";
-    document.getElementById("status").textContent = "Your download is ready.";
-  }
+if(file){
+  btn.href = file;
+  btn.style.display = "inline-block";
+  status.innerText = "Your download is ready.";
+}else{
+  status.innerText = "Download unavailable.";
 }
 </script>
 
