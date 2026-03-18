@@ -1,81 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body style="background:black;color:white;text-align:center;padding:100px;">
 
-<head>
-<meta charset="UTF-8">
-<title>Download Your Divorce Kit</title>
-
-<meta name="robots" content="noindex,nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-body{
-font-family: Arial, sans-serif;
-background:#0a0f1c;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-.container{
-max-width:600px;
-margin:auto;
-}
-
-.download-btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-font-size:20px;
-background:#1a73e8;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>Thank You For Your Purchase</h1>
-
-<p>Your divorce kit with minor children forms is ready for download.</p>
-
-<a id="downloadBtn" class="download-btn">Download Your Kit</a>
-
-<p style="margin-top:40px;font-size:14px;">
-Please save the file immediately after downloading.
-</p>
-
-</div>
-
-
-<script>
-
-const params = new URLSearchParams(window.location.search);
-const state = params.get("state");
-
-const files = {
-
-california:"PUT_CA_CHILDREN_DRIVE_LINK",
-texas:"PUT_TX_CHILDREN_DRIVE_LINK",
-florida:"PUT_FL_CHILDREN_DRIVE_LINK",
-new-york:"PUT_NY_CHILDREN_DRIVE_LINK"
-
-};
-
-if(files[state]){
-document.getElementById("downloadBtn").href = files[state];
-}else{
-document.querySelector(".container").innerHTML = "<h1>Invalid Download Link</h1>";
-}
-
-</script>
+<button onclick="alert('clicked')" style="padding:20px;font-size:20px;">
+TEST BUTTON
+</button>
 
 </body>
 </html>
+<h2>TEST VERSION 123</h2>
