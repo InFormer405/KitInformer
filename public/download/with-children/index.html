@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
-<body style="background:black;color:white;text-align:center;padding:100px;">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download Your Divorce Kit</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<button onclick="alert('clicked')" style="padding:20px;font-size:20px;">
-TEST BUTTON
-</button>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0f1c;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+    .download-btn {
+      display: none;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #1a73e8;
+      color: white;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Thank You For Your Purchase</h1>
+    <p>Your divorce kit with minor children forms is ready for download.</p>
+
+    <p id="status">Preparing your download...</p>
+
+    <button id="downloadBtn" class="download-btn">
+      Download Your Kit
+    </button>
+
+    <p style="margin-top:40px;font-size:14px;">
+      Please save the file immediately after downloading.
+    </p>
+  </div>
+
+  <script>
+    const files = {
+      "texas-with-children": "https://drive.google.com/uc?export=download&id=1peW5JHmEP548Yq1EsafYTmK2axGyZPMU"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const state = (params.get("state") || "").toLowerCase().trim();
+
+    const status = document.getElementById("status");
+    const btn = document.getElementById("downloadBtn");
+
+    if (!state) {
+      status.textContent = "Invalid download link.";
+    } else {
+      const key = state + "-with-children";
+      const file = files[key];
+
+      if (!file) {
+        status.textContent = "Download unavailable for this state.";
+      } else {
+        btn.style.display = "inline-block";
+        status.textContent = "Your download is ready.";
+
+        btn.onclick = function () {
+          window.location.href = file;
+        };
+      }
+    }
+  </script>
 
 </body>
 </html>
-<h2>TEST VERSION 123</h2>
