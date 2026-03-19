@@ -187,7 +187,7 @@ function generateConversionLayer(state) {
               <li>Official State-Specific Divorce Forms</li>
               <li>Includes Free Court Fee Waiver Forms</li>
             </ul>
-            <a href="https://buy.stripe.com/14AeVd9CT33D3pncok8ww00?state=${state}?state=${state}" class="cta-button">
+            <a href="https://buy.stripe.com/14AeVd9CT33D3pncok8ww00?state=${state.slug}?state=${state.slug}" class="cta-button">
               Begin Filing Now
             </a>
             <p class="cta-subtext">
@@ -205,7 +205,7 @@ function generateConversionLayer(state) {
               <li>Official State-Specific Divorce Forms</li>
               <li>Includes Free Court Fee Waiver Forms</li>
             </ul>
-            <a href="https://buy.stripe.com/3cIcN58yP8nX3pnbkg8ww01?state=${state}?state=${state}" class="cta-button">
+            <a href="https://buy.stripe.com/3cIcN58yP8nX3pnbkg8ww01?state=${state.slug}?state=${state.slug}" class="cta-button">
               Begin Filing Now
             </a>
             <p class="cta-subtext">
