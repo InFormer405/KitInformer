@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Download Your Divorce Kit</title>
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>Download Your Divorce Kit</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0a0f1c;
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-    .download-btn {
-      display: none;
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 20px;
-      background: #1a73e8;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-  </style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0f1c;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+.download-btn {
+  display: none;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 20px;
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Thank You For Your Purchase</h1>
-    <p>Your divorce kit is ready.</p>
+<div class="container">
+<h1>Thank You For Your Purchase</h1>
+<p>Your divorce kit is ready.</p>
 
-    <p id="status">Preparing your download...</p>
+<p id="status">Preparing your download...</p>
 
-    <a id="downloadBtn" class="download-btn" target="_blank">
-      Download Your Kit
-    </a>
+<a id="downloadBtn" class="download-btn" target="_blank">
+Download Your Kit
+</a>
 
-    <p style="margin-top:40px;font-size:14px;">
-      Please save the file immediately after downloading.
-    </p>
-  </div>
+<p style="margin-top:40px;font-size:14px;">
+Please save the file immediately after downloading.
+</p>
+</div>
 
-  <script>
-    const files = {
-      // KEEP YOUR EXISTING FULL FILE LIST HERE
-    };
+<script>
+const files = {
 
-    const params = new URLSearchParams(window.location.search);
-    const state = (params.get("state") || "").toLowerCase().trim();
-    const token = (params.get("token") || "").toLowerCase().trim();
+  "missouri-with-children": "https://drive.google.com/uc?export=download&id=1gteEFIMGRHI8OSsO8JKdIjf6CrXRQaVE",
+  "wisconsin-with-children": "https://drive.google.com/uc?export=download&id=11-acXf7r5eisHFhKoajY8RrMlMwMb-wg",
+  "south-carolina-with-children": "https://drive.google.com/uc?export=download&id=18eDc9kKDOUp8GdGm3SO_oMa-OOz1oUPg",
+  "massachusetts-with-children": "https://drive.google.com/uc?export=download&id=1OIrj6dOCLByUy8m0wVZmXEj-7F38P4Bh",
+  "south-dakota-with-children": "https://drive.google.com/uc?export=download&id=1xtOF5sQKUkzD0JNPKyc566g3ZP9aZm4O",
+  "nevada-with-children": "https://drive.google.com/uc?export=download&id=1aff8qSlgeZZbabwNtXuMggTPwirCcvEk",
+  "rhode-island-with-children": "https://drive.google.com/uc?export=download&id=1MNUHrF7rKAyXwFAwK65WpiAWk5jZkk-_",
+  "new-jersey-with-children": "https://drive.google.com/uc?export=download&id=13kXC6t5Nx6Vpdz60IzXPG3RcbMojkYYe",
+  "ohio-with-children": "https://drive.google.com/uc?export=download&id=1G7_HXYfwx7-m3DOD-Ll2bV1D4SC_2Zyy",
+  "west-virginia-with-children": "https://drive.google.com/uc?export=download&id=1B70m_l_KimFWVP8itbk-jUxcNWesO3pn",
+  "montana-with-children": "https://drive.google.com/uc?export=download&id=15TokiDjWXzMWm4C3Zx20pda97STCuM6a",
+  "new-hampshire-with-children": "https://drive.google.com/uc?export=download&id=1ezZ8AggI9cXKJfYViS7GKMVpTbvSQmmj",
+  "washington-with-children": "https://drive.google.com/uc?export=download&id=1lLZu5Al6Kx5wfGW2fwR0YJz1QHDiWmUu",
+  "mississippi-with-children": "https://drive.google.com/uc?export=download&id=1LbHTobIMbREISB6aqp_qisy6NFmceF5X",
+  "new-york-with-children": "https://drive.google.com/uc?export=download&id=1uLzUCiwb4PG6L6NUOtS3K_SVY-M_M4aa",
+  "maine-with-children": "https://drive.google.com/uc?export=download&id=137Y1jiR9Z_j0PgQ_wSFlkDqkRh6R_9SE",
+  "tennessee-with-children": "https://drive.google.com/uc?export=download&id=1kkRXCDXLKAAq5mn0VP2HiPFVPVjHTxzO",
+  "pennsylvania-with-children": "https://drive.google.com/uc?export=download&id=18f0kQP0RXq0-OtKT1ztpB4sccAoyZYqp",
+  "north-carolina-with-children": "https://drive.google.com/uc?export=download&id=1UH_xTArZhoUXJc0qXZI1-hHclLX8dPcQ",
+  "missouri-with-children": "https://drive.google.com/uc?export=download&id=1gteEFIMGRHI8OSsO8JKdIjf6CrXRQaVE",
+  "oregon-with-children": "https://drive.google.com/uc?export=download&id=1y5cjXs1PTM3-c0OExWlKpXskGFd4EuME",
+  "new-mexico-with-children": "https://drive.google.com/uc?export=download&id=16UJQN6n_AS9To46JitrJu96qMvdF7mP-",
+  "texas-with-children": "https://drive.google.com/uc?export=download&id=1peW5JHmEP548Yq1EsafYTmK2axGyZPMU",
+  "nebraska-with-children": "https://drive.google.com/uc?export=download&id=1y8iulA0r2ZtfyTF9vTj4P1DejO_lYWvL",
+  "oklahoma-with-children": "https://drive.google.com/uc?export=download&id=1HDdf0sHs583zt502Ql3mcfvDkKpoIlXi",
+  "virginia-with-children": "https://drive.google.com/uc?export=download&id=1EzvFo3diqsASZDqXKhxfBHeaGGWltD4B",
+  "wyoming-with-children": "https://drive.google.com/uc?export=download&id=1G6KxKdUKMWnRroyFVJdP6z6B5zY1MLbd",
+  "vermont-with-children": "https://drive.google.com/uc?export=download&id=1D-7EFbA-x-N_OaXnFGMBakEFIYSwtr7b",
+  "florida-with-children": "https://drive.google.com/uc?export=download&id=1A4jP4tnc9COqyr68AZpCRFzVqetSQawu",
+  "california-with-children": "https://drive.google.com/uc?export=download&id=1McXLg53dRB7VC6t4QXh-wpIiwAc9ZuYP",
+  "indiana-with-children": "https://drive.google.com/uc?export=download&id=1j0Fvp6z7lQZKecVUT7f1ITLIwMW3GX0p",
+  "kentucky-with-children": "https://drive.google.com/uc?export=download&id=17RX3wNSc1GQB1UDK1SIjZz5IrNoLOqkV",
+  "illinois-with-children": "https://drive.google.com/uc?export=download&id=1Rm3PwXn5mgzsjXPcx5a1y1jJKcmVhh-t",
+  "minnesota-with-children": "https://drive.google.com/uc?export=download&id=1UojnX3TesLubW-8aIqz18z-DPhuS_5z0",
+  "alabama-with-children": "https://drive.google.com/uc?export=download&id=1wq0NoaQL_Ag0j1giYT6oWCJv-1LD4i_y",
+  "delaware-with-children": "https://drive.google.com/uc?export=download&id=1iSoS_1y5mf6Tx4LFLPEzmw1n-x1f8wvT",
+  "louisiana-with-children": "https://drive.google.com/uc?export=download&id=1Jq8albIkJqVJu-gs9wYrdg_yR4JNlZIt",
+  "utah-with-children": "https://drive.google.com/uc?export=download&id=1n9GFHJzpTUB6LQ_pWQPt___lPWgGtCPv",
+  "maryland-with-children": "https://drive.google.com/uc?export=download&id=18G5in7JEbZN_U-zKZdgrcnYvv9evsV8X",
+  "michigan-with-children": "https://drive.google.com/uc?export=download&id=1YjWY3YDpGDK_-C56Us32RISn8S2iYG4Z",
+  "connecticut-with-children": "https://drive.google.com/uc?export=download&id=1V05eZPrq621RGspsSnFUVyaW5peYEoM9",
+  "hawaii-with-children": "https://drive.google.com/uc?export=download&id=1YmYyFTzmCTAk3231FBJd8L1NfuXEVQu-",
+  "north-dakota-with-children": "https://drive.google.com/uc?export=download&id=1LMX9joaAB5DaFuEnt8krNKNtNJcUET-7",
+  "alaska-with-children": "https://drive.google.com/uc?export=download&id=1bZgPG_W_K-azi1wGCyuW0s1yYO8LuXoJ",
+  "kansas-with-children": "https://drive.google.com/uc?export=download&id=1ZlvFLwUqV2Ep_36Ahm5LoJpuXk4GZLoR",
+  "iowa-with-children": "https://drive.google.com/uc?export=download&id=1YMRDdCN_ZMAmtuIZ0xd96OX_NNlNJcyQ",
+  "colorado-with-children": "https://drive.google.com/uc?export=download&id=1jtDLlFPQzzDgCgZy7g3uTt2MuC34qmqz",
+  "georgia-with-children": "https://drive.google.com/uc?export=download&id=1DNm-_WBAd6vz6Qazd7BX16zsI_ozzGZd",
+  "idaho-with-children": "https://drive.google.com/uc?export=download&id=1IZqhEGYVUoaHcXEefC6lbt3Bzw2aE7V9",
+  "arkansas-with-children": "https://drive.google.com/uc?export=download&id=1Idfh5sMOtPbuAqckugO8czvwX9c_IZCE",
+  "arizona-with-children": "https://drive.google.com/uc?export=download&id=1Ix1xXX6eqZvJzMzEWX_Ek1HxxBKeaQxN"
 
-    const status = document.getElementById("status");
-    const btn = document.getElementById("downloadBtn");
+};
 
-    if (!state) {
-      status.textContent = "Invalid download link.";
+const params = new URLSearchParams(window.location.search);
+const state = (params.get("state") || "").toLowerCase().trim();
+const token = (params.get("token") || "").toLowerCase().trim();
+
+const status = document.getElementById("status");
+const btn = document.getElementById("downloadBtn");
+
+if (!state) {
+  status.textContent = "Invalid download link.";
+} else {
+  const expectedToken = state + "-secure";
+
+  if (token !== expectedToken) {
+    status.textContent = "Invalid download link.";
+  } else {
+    const key = state + "-with-children";
+    const file = files[key];
+
+    if (!file) {
+      status.textContent = "Download unavailable for this state.";
     } else {
-      const expectedToken = state + "-secure";
-
-      if (token !== expectedToken) {
-        status.textContent = "Invalid download link.";
-      } else {
-        const key = state + "-with-children";
-        const file = files[key];
-
-        if (!file) {
-          status.textContent = "Download unavailable for this state.";
-        } else {
-          btn.href = file;
-          btn.style.display = "inline-block";
-          status.textContent = "Your download is ready.";
-        }
-      }
+      btn.href = file;
+      btn.style.display = "inline-block";
+      status.textContent = "Your download is ready.";
     }
-  </script>
+  }
+}
+</script>
 
 </body>
 </html>
