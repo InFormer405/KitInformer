@@ -113,12 +113,10 @@ const status = document.getElementById("status");
 const btn = document.getElementById("downloadBtn");
 
 if (!state) {
-  status.textContent = "Invalid download link.";
 } else {
   const expectedToken = state + "-secure";
 
   if (token !== expectedToken) {
-    status.textContent = "Invalid download link.";
   } else {
     const key = state + "-with-children";
     const file = files[key];
@@ -133,6 +131,18 @@ if (!state) {
   }
 }
 </script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const sessionId = params.get("session_id");
 
+const state = localStorage.getItem("selectedState");
+const product = localStorage.getItem("selectedProduct");
+
+if (!sessionId || !state || !product) {
+  document.body.innerHTML = "<h1>Access denied</h1>";
+} else {
+  console.log("Access granted:", state, product);
+}
+</script>
 </body>
 </html>
