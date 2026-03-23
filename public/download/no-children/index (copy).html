@@ -104,31 +104,30 @@ const files = {
 
 };
 
-<script>
 const params = new URLSearchParams(window.location.search);
-const sessionId = params.get("session_id");
-
-const state = localStorage.getItem("selectedState");
-const product = localStorage.getItem("selectedProduct");
+const state = (params.get("state") || "").toLowerCase().trim();
+const token = (params.get("token") || "").toLowerCase().trim();
 
 const status = document.getElementById("status");
 const btn = document.getElementById("downloadBtn");
 
-if (!sessionId || !state || !product) {
-  status.textContent = "Access denied";
+if (!state) {
 } else {
+  const expectedToken = state + "-secure";
 
-  const key = `${state}-${product}`;
-  const file = files[key];
-
-  if (!file) {
-    status.textContent = "Download unavailable for this state.";
+  if (token !== expectedToken) {
   } else {
-    btn.href = file;
-    btn.style.display = "inline-block";
-    status.textContent = "Your download is ready.";
-  }
+    const key = state + "-no-children";
+    const file = files[key];
 
+    if (!file) {
+      status.textContent = "Download unavailable for this state.";
+    } else {
+      btn.href = file;
+      btn.style.display = "inline-block";
+      status.textContent = "Your download is ready.";
+    }
+  }
 }
 </script>
 <script>
