@@ -154,33 +154,10 @@ function generateVisibleFAQ(state, stateIndex) {
 }
 
 function generateConversionLayer(state) {
-
   return `
     <section class="conversion-layer">
       <div class="container">
         <h2>${state.name} Divorce Form Kits</h2>
-
-        <p>
-          File your uncontested divorce in ${state.name} without paying thousands in legal fees.
-          Get the exact forms and step-by-step instructions you need — available instantly after purchase.
-        </p>
-
-        <ul>
-          <li>✔ Instant download after purchase</li>
-          <li>✔ Designed for ${state.name} courts</li>
-          <li>✔ Step-by-step filing instructions included</li>
-          <li>✔ Works for uncontested divorces</li>
-        </ul>
-
-        <h3>What’s Included in Your ${state.name} Divorce Kit</h3>
-        <ul>
-          <li>Divorce petition forms</li>
-          <li>Child custody and support forms (if applicable)</li>
-          <li>Property and financial disclosure forms</li>
-          <li>Step-by-step filing instructions</li>
-          <li>Guidance on court process and timelines</li>
-        </ul>
-
         <p class="conversion-intro">
           Filing for divorce in ${state.name} requires precise documentation and
           compliance with court formatting rules. Our ${state.name} Divorce Kits
@@ -199,51 +176,6 @@ function generateConversionLayer(state) {
           </p>
         </div>
 
-        <h3>Who This Is For</h3>
-        <ul>
-          <li>Uncontested divorces</li>
-          <li>Couples who agree on major terms</li>
-          <li>People looking to avoid high legal fees</li>
-        </ul>
-
-        <h3>Who This May NOT Be Suitable For</h3>
-        <ul>
-          <li>Contested or high-conflict divorces</li>
-          <li>Disputes over custody or assets</li>
-          <li>Situations requiring legal representation</li>
-        </ul>
-
-        <h3>Why People Choose Our Divorce Kits</h3>
-        <ul>
-          <li>State-specific documents (${state.name} compliant)</li>
-          <li>Instant digital download — no waiting</li>
-          <li>Designed for uncontested divorce situations</li>
-          <li>Simple, step-by-step structure</li>
-        </ul>
-
-        <h3>What Happens After Purchase</h3>
-        <ol>
-          <li>Complete your secure payment</li>
-          <li>Instant access to your download page</li>
-          <li>Download your ${state.name}-specific divorce forms immediately</li>
-          <li>Follow the included instructions to complete your filing</li>
-        </ol>
-
-        <p>
-          Your download is available immediately after purchase. Be sure to save your files right away.
-        </p>
-
-        <h3>Important Information</h3>
-        <p>
-          These divorce kits are designed for informational and self-help purposes only.
-          They are intended for uncontested divorce situations where both parties agree on all major terms.
-        </p>
-
-        <p>
-          This service does not provide legal advice. If you have a complex situation,
-          disputes, or legal questions, you should consult a qualified attorney in ${state.name}.
-        </p>
-
         <div class="product-grid">
           <div class="product-card">
             <img src="/images/products/raw/no-children/${state.abbreviation.toLowerCase()}-no-children.png" alt="${state.name} Divorce Kit No Children" class="product-image">
@@ -255,13 +187,13 @@ function generateConversionLayer(state) {
               <li>Official State-Specific Divorce Forms</li>
               <li>Includes Free Court Fee Waiver Forms</li>
             </ul>
-
-            <a href="https://buy.stripe.com/14AeVd9CT33D3pncok8ww00"
-               class="cta-button"
-               onclick="localStorage.setItem('selectedState','${state.slug}'); localStorage.setItem('selectedProduct','no-children');">
+<a href="https://buy.stripe.com/14AeVd9CT33D3pncok8ww00"
+   class="cta-button"
+   onclick="localStorage.setItem('selectedState','${state.slug}'); localStorage.setItem('selectedProduct','no-children');">
+  Begin Filing Now
+</a>
               Begin Filing Now
             </a>
-
             <p class="cta-subtext">
               Court-Compliant &bull; Instant Digital Access &bull; Secure
             </p>
@@ -277,13 +209,9 @@ function generateConversionLayer(state) {
               <li>Official State-Specific Divorce Forms</li>
               <li>Includes Free Court Fee Waiver Forms</li>
             </ul>
-
-            <a href="https://buy.stripe.com/3cIcN58yP8nX3pnbkg8ww01"
-               class="cta-button"
-               onclick="localStorage.setItem('selectedState','${state.slug}'); localStorage.setItem('selectedProduct','with-children');">
+            <a href="https://buy.stripe.com/3cIcN58yP8nX3pnbkg8ww01?state=${state.slug}" class="cta-button">
               Begin Filing Now
             </a>
-
             <p class="cta-subtext">
               Court-Compliant &bull; Instant Digital Access &bull; Secure
             </p>
@@ -291,9 +219,8 @@ function generateConversionLayer(state) {
         </div>
       </div>
     </section>
-  `;
-  }
-
+`;
+}
 
 function generateHTML(state, stateIndex) {
   const firstCitation = state.citations.length > 0 ? state.citations[0] : null;
