@@ -853,4 +853,38 @@ main,
   line-height: 1.6;
   color: #cfd8e6;
 }
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
 
+@media (min-width: 700px) {
+  .states-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .states-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.state-link {
+  display: block;
+  padding: 12px;
+  background: #11151c;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 6px;
+  text-align: center;
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.state-link:hover {
+  background: rgba(212,175,55,0.1);
+  border-color: #D4AF37;
+}
